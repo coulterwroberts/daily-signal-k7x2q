@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Daily Signal · Sunday, October 25</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: one email-width column, read top to bottom; sections are labelled bands, items are hairline-separated rows. */
+:root {
+  --paper: #f4f5f8;
+  --sheet: #ffffff;
+  --ink: #11141b;
+  --muted: #5a6271;
+  --rule: #e2e5eb;
+  --accent: #bf4f0d;
+  --band: #11141b;
+  --band-ink: #f4f5f8;
+  --band-muted: #a9b0bd;
+  --left: #2456c4;
+  --right: #c22f2f;
+  --ok: #1d7a4b;
+  --warn: #a8700f;
+  --unv: #6a4fb8;
+  --chip-bg: #f0f2f6;
+  --font-display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --font-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0d1015; --sheet: #151920; --ink: #eceef2; --muted: #9aa3b2; --rule: #262c36;
+    --accent: #f0803f; --band: #1c222c; --band-ink: #eceef2; --band-muted: #9aa3b2;
+    --left: #79a2ff; --right: #ff7d7d; --ok: #52c58c; --warn: #e6b04c; --unv: #ab92ff; --chip-bg: #1d222b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0d1015; --sheet: #151920; --ink: #eceef2; --muted: #9aa3b2; --rule: #262c36;
+  --accent: #f0803f; --band: #1c222c; --band-ink: #eceef2; --band-muted: #9aa3b2;
+  --left: #79a2ff; --right: #ff7d7d; --ok: #52c58c; --warn: #e6b04c; --unv: #ab92ff; --chip-bg: #1d222b;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 48px;
+}
+.wrap { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Masthead */
+.mast { display: flex; flex-direction: column; gap: 6px; }
+.mast h1 {
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(44px, 12vw, 68px); line-height: 0.9; letter-spacing: 0.01em; margin: 0;
+}
+.mast h1 span { color: var(--accent); }
+.dateline { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.jump { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.jump a {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;
+  text-decoration: none; padding: 4px 8px; background: var(--chip-bg); color: var(--ink); border-radius: 3px;
+}
+.jump a:hover { color: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); }
+
+/* Tags */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 2px 6px; border: 1px solid currentColor; border-radius: 3px; line-height: 1.4; white-space: nowrap;
+}
+.t-ok { color: var(--ok); } .t-warn { color: var(--warn); } .t-unv { color: var(--unv); }
+.t-left { color: var(--left); } .t-right { color: var(--right); } .t-plain { color: var(--muted); }
+
+/* One Thing band */
+.one { background: var(--band); color: var(--band-ink); padding: 22px 20px; border-radius: 6px; display: flex; flex-direction: column; gap: 10px; }
+.one .kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.one h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(28px, 7vw, 36px); line-height: 1; margin: 0; text-wrap: balance; text-transform: uppercase; }
+.one p { margin: 0; }
+.one .why { color: var(--band-muted); font-size: 15px; }
+.one .why b { color: var(--band-ink); }
+.src { font-size: 12.5px; color: var(--muted); }
+.one .src { color: var(--band-muted); }
+.src a { color: inherit; }
+
+/* Sections */
+section { display: flex; flex-direction: column; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; margin-bottom: 4px; }
+.sec-head h2 { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1; margin: 0; text-transform: uppercase; letter-spacing: 0.01em; }
+.sec-head .note { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: right; }
+.item { padding-block: 14px; border-top: 1px solid var(--rule); min-width: 0; }
+.sec-head + .item, .sec-head + .stats + .item { border-top: 0; }
+.item h3 { font-size: 17px; line-height: 1.3; margin: 0 0 4px; text-wrap: balance; }
+.item h3 a { text-decoration: none; }
+.item h3 a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+.item p { margin: 0; font-size: 15px; }
+.item p + p { margin-top: 6px; }
+.lead { color: var(--muted); }
+.cut { margin-top: 6px; font-size: 14.5px; }
+.cut b { color: var(--accent); }
+
+/* What they're saying */
+.story-title { font-size: 17px; font-weight: 700; margin: 0 0 10px; }
+.voices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.voice { background: var(--sheet); padding: 12px 14px; border-top: 3px solid var(--muted); min-width: 0; }
+.voice.left { border-top-color: var(--left); } .voice.right { border-top-color: var(--right); }
+.voice .who { font-weight: 700; font-size: 14.5px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.voice p { margin: 4px 0 0; font-size: 14.5px; }
+.split { margin-top: 10px; font-size: 14.5px; }
+.split b { color: var(--accent); }
+.filter { font-size: 13.5px; color: var(--muted); padding-top: 12px; border-top: 1px solid var(--rule); }
+
+/* Scoreboard */
+.board { display: flex; flex-direction: column; gap: 6px; padding-block: 12px 4px; }
+.score { display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: center; background: var(--sheet); padding: 8px 12px; font-variant-numeric: tabular-nums; }
+.wl { font-family: var(--font-display); font-weight: 800; font-size: 22px; line-height: 1; text-align: center; }
+.wl.w { color: var(--ok); } .wl.l { color: var(--right); }
+.score .teams { font-weight: 700; font-size: 15px; min-width: 0; }
+.score .when { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; text-align: right; }
+
+/* Market stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); margin-block: 12px 2px; }
+.stat { background: var(--sheet); padding: 10px 12px; font-variant-numeric: tabular-nums; }
+.stat .k { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat .v { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.1; }
+.up { color: var(--ok); } .down { color: var(--right); }
+@media (max-width: 520px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.cal { display: grid; grid-template-columns: 56px 1fr; gap: 4px 12px; font-size: 14.5px; margin-top: 6px; }
+.cal dt { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; color: var(--accent); padding-top: 2px; }
+.cal dd { margin: 0; }
+
+/* Odds bars (to scale, 0-100%) */
+.bar { position: relative; height: 12px; background: var(--chip-bg); margin-top: 10px; }
+.bar .ghost { position: absolute; inset: 0 auto 0 0; background: var(--rule); }
+.bar .fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); }
+.bar .fill.d { background: var(--left); }
+.bar .notch { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); }
+.barlabel { display: flex; justify-content: space-between; gap: 8px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 420px) { .duo { grid-template-columns: 1fr; } }
+
+/* Wisdom */
+blockquote { margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; text-wrap: balance; }
+blockquote footer { font-size: 13px; font-weight: 400; color: var(--muted); margin-top: 6px; }
+
+/* Daily L */
+.dl { background: var(--band); color: var(--band-ink); border-radius: 6px; padding: 20px; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: start; }
+.dl .big { font-family: var(--font-display); font-weight: 800; font-size: 120px; line-height: 0.78; color: var(--accent); grid-row: span 3; }
+.dl .kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--band-muted); }
+.dl h2 { font-family: var(--font-display); font-weight: 800; font-size: 34px; line-height: 1; margin: 0; text-transform: uppercase; }
+.dl .why { margin: 0; font-weight: 600; }
+.dl .roast { grid-column: 1 / -1; margin: 6px 0 0; color: var(--band-muted); font-size: 15px; }
+.dl .roast b { color: var(--band-ink); }
+.dl .src { grid-column: 1 / -1; color: var(--band-muted); }
+@media (max-width: 420px) { .dl .big { font-size: 88px; } }
+
+.bn-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.bn-top h3 { margin: 0; }
+.ticks { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; font-size: 14px; }
+.tick { font-family: var(--font-mono); font-size: 12px; padding: 2px 7px; background: var(--chip-bg); border-radius: 3px; }
+.risk { color: var(--muted); }
+.risk b { color: var(--right); }
+.intro { font-size: 14.5px; color: var(--muted); padding-top: 10px; margin: 0; }
+.foot { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+*{box-sizing:border-box} body{margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);display:flex;gap:6px;overflow-x:auto;padding-block:10px;border-bottom:1px solid var(--rule);scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:6px 10px;background:var(--chip-bg);color:var(--ink);border-radius:3px;white-space:nowrap}
+.nav a:hover{color:var(--accent)}
+.sixty{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.sixty li{padding-left:0}
+.sixty a{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-right:6px}
+.group{display:flex;flex-direction:column;gap:24px;scroll-margin-top:60px}
+.gtitle{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:clamp(34px,9vw,46px);line-height:.95;margin:8px 0 -6px;color:var(--accent)}
+.sec{scroll-margin-top:60px}
+.sec-head h3{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1;margin:0;text-transform:uppercase;letter-spacing:.01em}
+.item h4{font-size:17px;line-height:1.3;margin:0 0 4px;text-wrap:balance}
+.item h4 a{text-decoration:none}
+.item h4 a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.sec-head + .item{border-top:0}
+.after{margin-top:8px!important}
+.score .rec{font-family:var(--font-mono);font-size:11px;color:var(--muted);font-weight:500;margin-left:6px}
+.score .nxt{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+.learned{font-size:13px;color:var(--muted);margin:0}
+.dl .src a{color:var(--band-muted)}
+</style></head>
+<body><div class="wrap">
+  <header class="mast">
+    <h1>The Daily <span>Signal</span></h1>
+    <div class="dateline">Sunday, October 25 · Built for you and your friend</div>
+    
+    <div class="legend">Tags: <span class="tag t-ok">Confirmed</span><span class="tag t-warn">Disputed</span><span class="tag t-unv">Unverified</span><span class="tag t-left">Left</span><span class="tag t-right">Right</span></div>
+  </header>
+  <nav class="nav" aria-label="Sections"><a href="#g-talk">The Talk</a><a href="#g-money">AI &amp; Money</a><a href="#g-sports">Sports</a><a href="#g-brain">Brain Food</a></nav>
+  <article class="one" id="one">
+    <div class="kicker">The one thing</div>
+    <h2>OpenAI Says AI Just Settled Quasi-Riemann Hypothesis</h2>
+    <p>Among 377 results OpenAI announced on Oct 6, one claims to settle the 'quasi-Riemann hypothesis,' a weaker cousin of math's biggest open problem. Stanford's Jared Duker Lichtman calls it 'the most significant AI-for-math achievement so far, by quite a margin.' Number theorists are still working through the proof.</p>
+    <p class="why"><b>Why you care:</b> You wanted the wildest real AI news, and this one is being checked by named experts, not just hyped on Reddit.</p>
+    <div class="src"><a href="https://www.quantamagazine.org/ai-proved-the-quasi-riemann-hypothesis-what-happens-now-20261019/" target="_blank" rel="noopener">Quanta Magazine</a></div>
+  </article>
+  <section class="sec"><div class="sec-head"><h3>60 seconds</h3></div><ul class="sixty"><li><a href="#g-talk">The Talk</a> Trump says no Iran strike today, a Qatari delegation is in Iran, and left and right read the same weekend very differently.</li><li><a href="#g-money">AI &amp; Money</a> GEV reports Oct 28 and SK Hynix Oct 29. SK Hynix consensus already assumes a record. Research, not advice.</li><li><a href="#g-sports">Sports</a> Texas beat Ole Miss 34-27 behind an 'edgy' Arch Manning; the 49ers lost 29-20 in Atlanta mostly by penalizing themselves.</li><li><a href="#g-brain">Brain Food</a> A Berkeley Fields medalist stopped grading homework because AI aces it, and mathematicians are vetting an AI proof.</li><li><a href="#l">The Daily L</a> Jack Jones, for two flags on one Falcons drive.</li></ul></section>
+  <div class="group" id="g-talk"><h2 class="gtitle">The Talk</h2><section class="sec" id="world">
+      <div class="sec-head"><h3>World Chatter</h3></div>
+      <div class="item">
+      <h4><a href="https://www.theamericanconservative.com/iran-war-day-240-trump-says-no-strikes-on-iran-planned-for-sunday/" target="_blank" rel="noopener">Iran: 'No strike today,' but nobody is relaxing</a></h4><p>Trump told reporters Sunday there would be no attack on Iran before the weekend ends. He also said he holds two very different sets of intelligence reports, and framed it as 'make a deal with them, or finish them off.'</p><p>Multiple outlets reported a Qatari delegation in Iran trying to restart diplomacy.</p><p><span class="tag t-left">Left (Drop Site)</span> Left outlet Drop Site says Trump's threats and regional military moves are escalating tensions, while Iran warns it could hit energy infrastructure and undersea cables.</p><p><span class="tag t-right">Right (American Conservative)</span> TAC emphasizes that no strike happened Sunday and diplomacy remains possible, with Qatari mediation in play and direct U.S.-Iran fighting still low-intensity.</p>
+      <p class="cut"><b>Cut through it:</b> Trump said Sunday there would be no strike before the weekend ended; reports still described diplomacy and escalation risks as unresolved.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed: Trump's statement</span><span class="tag t-warn">Disputed: what he intends</span></div><div class="src"><a href="https://www.theamericanconservative.com/iran-war-day-240-trump-says-no-strikes-on-iran-planned-for-sunday/" target="_blank" rel="noopener">The American Conservative</a> · <a href="https://www.dropsitenews.com/p/trump-threatens-global-economy-iran" target="_blank" rel="noopener">Drop Site News</a></div></div>
+    </section><section class="sec" id="fringe">
+      <div class="sec-head"><h3>Fringe Chatter</h3></div>
+      <div class="item">
+      <h4><a href="https://www.metabunk.org/threads/looking-for-help-interpreting-a-video-content.15012/" target="_blank" rel="noopener">The UAP video that stumped a MUFON volunteer</a></h4><p>A former Minnesota MUFON volunteer posted a 2012 video of a bright, flashing object passing over a moving vehicle. He calls it 'unexplainable' and says it has bothered him for years.</p><p>Metabunk regulars aren't buying it. Mick West says it looks fake, and his stabilized version shows bad tracking, not physical motion. Another member spotted a light reflecting off the car trim, and another thinks the twinkle is the phone's autofocus sensor reflected in the window.</p>
+      <p class="cut"><b>Cut through it:</b> That's a weak chain of custody.</p>
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://www.metabunk.org/threads/looking-for-help-interpreting-a-video-content.15012/" target="_blank" rel="noopener">Metabunk</a></div></div>
+    </section></div><div class="group" id="g-money"><h2 class="gtitle">AI &amp; Money</h2><section class="sec" id="ai">
+      <div class="sec-head"><h3>AI: The Wild Stuff</h3></div>
+      <div class="item">
+      <h4><a href="https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html" target="_blank" rel="noopener">Berkeley's Fields medalist quits grading homework</a></h4><p>Richard Borcherds saw students using AI to get top scores, so he now grades homework on completion only. He said AI may soon outperform human mathematicians in many tasks.</p><p>The interview came after OpenAI's announcement that AI agents apparently solved the Navier-Stokes problem; that claim remains unverified.</p>
+      <p class="cut"><b>Cut through it:</b> He also expects academic inertia to keep things the same for a couple of years.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed: Borcherds' comments</span><span class="tag t-unv">Unverified: Navier-Stokes claim</span></div><div class="src"><a href="https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html" target="_blank" rel="noopener">The Daily Californian</a></div></div>
+    </section><section class="sec" id="bottlenecks">
+      <div class="sec-head"><h3>AI Bottleneck Watch</h3><span class="note">Ideas to research · not advice</span></div>
+      <div class="item">
+      <div class="bn-top"><h4>Power: gas turbines</h4><span class="tag t-ok">Tight supply</span></div>
+      <p>GE Vernova's equipment backlog plus slot reservations rose from 100 GW to 116 GW, with a target of at least 125 GW by year-end. Only 53 GW is firm backlog; 63 GW is reservations. It is taking 2031 delivery slots, with output near 20 GW a year rising to 24 GW by 2028. Siemens Energy has 69 GW firm plus 26 GW reserved and lead times of three years or more. Mitsubishi Heavy's large-frame backlog is 35 GW, up from 23 GW.</p>
+      <div class="ticks">Exposed: <span class="tick">GEV <span class="down">-11.5% 5d</span></span><span class="tick">Siemens Energy</span><span class="tick">Mitsubishi Heavy</span></div>
+      <p class="risk"><b>Risk:</b> Reservations aren't firm orders, and GW figures use different definitions, so adding them overstates demand. Financing worries and new suppliers are risks.</p>
+      </div><div class="item">
+      <div class="bn-top"><h4>Grid: transformers and switchgear</h4><span class="tag t-warn">Tight, data conflicts</span></div>
+      <p>Power transformer lead times run 128 weeks (Giga Energy) to 160+ (BADGER), and generator step-up units run 144. Switchgear averages 44 weeks. Eaton's Q2 sales were $8.5B, up 21%, with data-centre revenue up about 65%. Siemens Energy plans 50% more transformer capacity by 2030. Per Bloomberg via Giga, only about a third of roughly 12 GW of 2026 US data-centre capacity was under construction.</p>
+      <div class="ticks">Exposed: <span class="tick">ETN</span><span class="tick">Hitachi Energy</span><span class="tick">Siemens Energy</span><span class="tick">GEV (via Prolec GE)</span></div>
+      <p class="risk"><b>Risk:</b> Lead times are consultant estimates. New plants could ease supply by 2027-28, and data-centre delays would cut orders. I found no price data for ETN or Hitachi.</p>
+      </div><div class="item">
+      <div class="bn-top"><h4>Memory: HBM and DRAM</h4><span class="tag t-unv">Event Oct 29</span></div>
+      <p>Consensus for SK Hynix Q3 operating profit is 76.96T won, a margin of about 78.4%, which would be a sixth straight record. J.P. Morgan estimates SK Hynix at 54% of Nvidia's HBM supply this year. Samsung reportedly posted a record Q3.</p>
+      <div class="ticks">Exposed: <span class="tick">SK Hynix</span><span class="tick">Samsung</span><span class="tick">MU <span class="down">-0.1% 5d</span></span></div>
+      <p class="risk"><b>Risk:</b> Consensus already assumes a record, so the bar is high. Samsung HBM4 share gains, capacity additions and memory cyclicality all threaten it. I couldn't confirm contract price levels, and share data is secondary and sums to 101%.</p>
+      </div><p class="filter">Magnets, copper and chips weren't researched this week, so no numbers. For reference only: MP $38.3 (-4.7% in 5 days), FCX $65.18 (-6.3%), TSM $418.51 (+1.4%).</p>
+    </section><section class="sec" id="markets">
+      <div class="sec-head"><h3>Markets &amp; Watchlist</h3></div>
+      <div class="stats"><div class="stat"><div class="k">SPY · 5d</div><div class="v down">-0.4%</div><div class="k">$759.97</div></div><div class="stat"><div class="k">QQQ · 5d</div><div class="v down">-0.8%</div><div class="k">$704.4</div></div><div class="stat"><div class="k">NVDA · 5d</div><div class="v down">-1.5%</div><div class="k">$210.96</div></div><div class="stat"><div class="k">MSFT · 5d</div><div class="v down">-0.9%</div><div class="k">$524.51</div></div></div><div class="item">
+      <h4><a href="https://www.cnbc.com/2026/10/26/spacex-closes-40-billion-debt-deal-for-ai-chips-elon-musk-.html" target="_blank" rel="noopener">Musk says SpaceX has closed $40B in debt financing to buy GPUs</a></h4><p>Musk posted that SpaceX closed $40 billion in mostly callable debt to buy GPUs, arriving in Q1 and Q2 2027. Bloomberg earlier reported a special-purpose vehicle to keep it off the balance sheet, with Goldman leading and Apollo among the investors.</p><p>He also predicted widespread failures and consolidation among 'neocloud' companies; the 200-plus count is unverified. SpaceX said its 'Super Intelligence' segment's Q3 revenue was $7.56B, up from $813M.</p>
+      <p class="cut"><b>Cut through it:</b> 'Closed' is Musk's word. The structure details come from Bloomberg's unnamed sources.</p>
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://www.cnbc.com/2026/10/26/spacex-closes-40-billion-debt-deal-for-ai-chips-elon-musk-.html" target="_blank" rel="noopener">CNBC</a></div></div><p class="filter">Watch: GEV Q3 on Oct 28 and SK Hynix Q3 on Oct 29. Risk: good news may already be priced in. Research, not advice.</p>
+    </section><section class="sec" id="opportunity">
+      <div class="sec-head"><h3>Opportunity Signals</h3></div>
+      <div class="item">
+      <h4><a href="https://www.reddit.com/r/singularity/comments/1xfh36p/developer_uses_claude_to_overhaul_his_parents_tv/" target="_blank" rel="noopener">Everyone's TV is a billboard</a></h4><p>Problem: smart TVs are full of ads and clunky interfaces. A developer reportedly used Claude to rebuild a smart-TV interface and strip ads.</p><p>Simple version: a plug-and-play installer or support service for non-technical owners. This is a Reddit headline only, so treat the claim as unverified.</p>
+      
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://www.reddit.com/r/singularity/comments/1xfh36p/developer_uses_claude_to_overhaul_his_parents_tv/" target="_blank" rel="noopener">r/singularity</a></div></div><div class="item">
+      <h4><a href="https://www.producthunt.com/products/agentgrid-io" target="_blank" rel="noopener">A shared desk for humans and many AI agents</a></h4><p>Problem: teams juggle Claude, GPT, Cursor and other agents with no shared context. AgentGrid.io launched a shared workspace with live docs, controlled access and version history.</p><p>Simple version: pick one niche, like agencies or research teams, and own the audit trail.</p>
+      
+      <div class="tags"><span class="tag t-plain">Plain</span></div><div class="src"><a href="https://www.producthunt.com/products/agentgrid-io" target="_blank" rel="noopener">Product Hunt</a></div></div>
+    </section></div><div class="group" id="g-sports"><h2 class="gtitle">Sports</h2><section class="sec" id="sports">
+      <div class="sec-head"><h3>Sports</h3></div>
+      <div class="board">
+      <div class="score"><span class="wl w">W</span>
+      <span class="teams">Texas 34, Ole Miss 27 <span class="rec">5-2</span><span class="nxt">Next: vs Mississippi St · Sat, Oct 31, 6:30 PM CT</span></span>
+      <span class="when">Sat</span></div>
+      <div class="score"><span class="wl l">L</span>
+      <span class="teams">Falcons 29, 49ers 20 <span class="rec">6-1</span><span class="nxt">Next: vs Raiders · Sun, Nov 8, 3:05 PM CT</span></span>
+      <span class="when">Sun</span></div>
+      <div class="score"><span class="wl w">W</span>
+      <span class="teams">Steelers 16, Saints 10 <span class="rec">5-2</span><span class="nxt">Next: vs Browns · Sun, Nov 1, 12:00 PM CT</span></span>
+      <span class="when">Sun</span></div></div><div class="item">
+      <h4><a href="https://www.burntorangenation.com/texas-longhorns-football/106337/arch-manning-edgy-texas-longhorns-ole-miss" target="_blank" rel="noopener">Edgy Arch beats Ole Miss, 34-27</a></h4><p>After back-to-back losses to unranked teams, with late turnovers and benching chatter, Texas improved to 5-2. Arch Manning ran for his first two rushing touchdowns of the season.</p><p>Sarkisian: 'He's edgy right now, and honestly, I appreciate that about him.' He also called more routes over the middle. Next up: Mississippi State, Oct 31.</p>
+      <p class="cut"><b>Cut through it:</b> Burnt Orange Nation says Arch is still mistake-prone. It was progress, not a cure.</p>
+      <div class="src"><a href="https://www.burntorangenation.com/texas-longhorns-football/106337/arch-manning-edgy-texas-longhorns-ole-miss" target="_blank" rel="noopener">Burnt Orange Nation</a></div></div><div class="item">
+      <h4><a href="https://www.ninersnation.com/san-francisco-49ers-news/164799/san-francisco-49ers-3-quick-takeaways-loss-atlanta-falcons-brock-purdy-kyle-shanahan" target="_blank" rel="noopener">49ers fall to 6-1 by tripping over their own flags</a></h4><p>San Francisco lost 29-20 in Atlanta despite outgaining the Falcons by over 100 yards. One drive had illegal contact, holding, pass interference, 12 men on the field and an offside call. It ended in an 11-play, 90-yard touchdown.</p><p>Late, Brandin Cooks false-started, and Brock Purdy threw an interception on the next play. The Niners play the Raiders Nov 8.</p>
+      <p class="cut"><b>Cut through it:</b> They came in as 2.5-point favorites with just four receivers active. The loss was mostly self-inflicted.</p>
+      <div class="src"><a href="https://www.ninersnation.com/san-francisco-49ers-news/164799/san-francisco-49ers-3-quick-takeaways-loss-atlanta-falcons-brock-purdy-kyle-shanahan" target="_blank" rel="noopener">Niners Nation</a></div></div><p class="filter">Rodgers: the Steelers beat the Saints 16-10 to go 5-2 and host the Browns Nov 1. Nothing Rodgers-specific in today's material.</p>
+    </section></div><div class="group" id="g-brain"><h2 class="gtitle">Brain Food</h2><section class="sec" id="science">
+      <div class="sec-head"><h3>Science</h3></div>
+      <div class="item">
+      <h4><a href="https://www.sciencedaily.com/releases/2026/10/261024222000.htm" target="_blank" rel="noopener">Three feeding black holes in one distant galaxy</a></h4><p>Astronomers found three actively feeding supermassive black holes in galaxy J0148-4214, seen as it was about 1.2 billion years after the Big Bang. The team was led by the Max Planck Institute.</p><p>Two sit 620 light-years apart near the center, and the third is about 5,500 light-years out. Lead author Hannah Übler calls it 'the first evidence of three active black holes in a single galaxy in the distant Universe.'</p>
+      
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><div class="src"><a href="https://www.sciencedaily.com/releases/2026/10/261024222000.htm" target="_blank" rel="noopener">ScienceDaily</a></div></div>
+    </section><section class="sec" id="health">
+      <div class="sec-head"><h3>Health &amp; Longevity</h3></div>
+      <div class="item">
+      <h4><a href="https://www.reddit.com/r/singularity/comments/1xet21r/bespoke_mrna_vaccine_significantly_reduces_risk/" target="_blank" rel="noopener">mRNA melanoma vaccine posts a phase 3 win</a></h4><p>The headline says a 'bespoke' mRNA vaccine significantly reduced the risk of melanoma recurrence or death, billed as the first successful phase 3 mRNA cancer vaccine trial.</p><p>I only have the Reddit title, with no data on size, follow-up or side effects.</p>
+      
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://www.reddit.com/r/singularity/comments/1xet21r/bespoke_mrna_vaccine_significantly_reduces_risk/" target="_blank" rel="noopener">r/singularity</a></div></div>
+    </section></div>
+  
+  <footer class="foot">
+    <p style="margin:0">Picked by Gemini, written by Claude, fact-checked by GPT. Tags are the agents' best read, not verdicts. Nothing here is financial advice.</p>
+    <p style="margin:0">This edition: <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-25.html" target="_blank" rel="noopener">https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-25.html</a></p>
+  </footer>
+</div></body></html>
