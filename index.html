@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Daily Signal · Sunday, October 25</title>
+<title>The Daily Signal · Thursday, October 29</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
 <style>
@@ -195,92 +195,120 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .score .nxt{display:block;font-weight:400;font-size:13px;color:var(--muted)}
 .learned{font-size:13px;color:var(--muted);margin:0}
 .dl .src a{color:var(--band-muted)}
+.vote{display:flex;gap:6px;margin-top:10px}
+.vote button{font:inherit;font-size:15px;line-height:1;padding:6px 10px;border:1px solid var(--rule);background:var(--sheet);border-radius:999px;cursor:pointer;filter:grayscale(1);opacity:.75}
+.vote button:hover{opacity:1;filter:none}
+.vote button[aria-pressed="true"]{filter:none;opacity:1;border-color:var(--accent);background:var(--chip-bg)}
+.one .vote button,.dl .vote button{background:transparent;border-color:rgba(255,255,255,.25)}
+.voter{font-family:var(--font-mono);font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.voter button{font:inherit;padding:3px 8px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:3px;cursor:pointer}
+.voter button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
 </style></head>
 <body><div class="wrap">
   <header class="mast">
     <h1>The Daily <span>Signal</span></h1>
-    <div class="dateline">Sunday, October 25 · Built for you and your friend</div>
+    <div class="dateline">Thursday, October 29 · Built for the two of you</div>
+    <div class="voter" id="voter" hidden></div>
     
     <div class="legend">Tags: <span class="tag t-ok">Confirmed</span><span class="tag t-warn">Disputed</span><span class="tag t-unv">Unverified</span><span class="tag t-left">Left</span><span class="tag t-right">Right</span></div>
   </header>
-  <nav class="nav" aria-label="Sections"><a href="#g-talk">The Talk</a><a href="#g-money">AI &amp; Money</a><a href="#g-sports">Sports</a><a href="#g-brain">Brain Food</a><a href="#l">Daily L</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="#g-talk">The Talk</a><a href="#g-money">AI &amp; Money</a><a href="#g-sports">Sports</a><a href="#g-brain">Brain Food</a></nav>
   <article class="one" id="one">
     <div class="kicker">The one thing</div>
-    <h2>OpenAI and Anthropic cut several model prices sharply</h2>
-    <p>OpenAI cut GPT-5.6 Luna from $1 / $6 / $0.10 to $0.20 / $1.20 / $0.02 per million tokens. Its new GPT-6 Sol launched at $2 / $10 / $0.20, half the discounted GPT-5.6 Sol. Anthropic cut Fable 5.1's cache-read price by 75%, which the author says correlates with a 70-75% reduction in agentic-coding costs.</p>
-    <p class="why"><b>Why you care:</b> Token prices decide which AI side projects pencil out and who is burning cash on compute.</p>
-    <div class="src"><a href="https://minimaxir.com/2026/10/cheap-llms/" target="_blank" rel="noopener">minimaxir</a></div>
+    <h2>Anthropic files to go public. The numbers are wild.</h2>
+    <p>Anthropic filed its S-1 for an IPO. Share price and some numbers are still blank. Zvi Mowshowitz's read: $141B raised, $131B on hand, H1 cash flow +$3.9B, and roughly $800B in compute commitments. Q3 revenue was $16.8B, up 45% in three months, which he calls slow.</p>
+    <p class="why"><b>Why you care:</b> That compute bill is the demand signal behind every power, memory and chip bottleneck you follow.</p>
+    <div class="src"><a href="https://thezvi.substack.com/p/anthropic-files-its-s-1" target="_blank" rel="noopener">Zvi Mowshowitz: Anthropic Files Its S-1</a> · <a href="https://thezvi.substack.com/p/ai-192-anthropic-is-going-public" target="_blank" rel="noopener">Zvi Mowshowitz: AI #192</a></div>
+    <div class="vote" data-s="one" data-h="Anthropic files to go public. The numbers are wild." data-u="https://thezvi.substack.com/p/anthropic-files-its-s-1"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
   </article>
-  <section class="sec"><div class="sec-head"><h3>60 seconds</h3></div><ul class="sixty"><li><a href="#g-talk">The Talk</a> The Pentagon built a chaplain hotline, and per The Intercept, the chaplains didn't ask for it.</li><li><a href="#g-money">AI &amp; Money</a> GEV reports Oct 28 on firm backlog vs. reservations; SK Hynix reports Oct 29 on whether record profit is already priced in. Both are research items, not advice.</li><li><a href="#g-sports">Sports</a> Texas moved from No. 19 to No. 11 in the AP poll after beating Ole Miss. The 49ers lost 29-20 to Atlanta.</li><li><a href="#g-brain">Brain Food</a> On 200 biopsy-proven lesions in the author's test, a 10-year-old image model beat two frontier LLMs at spotting skin cancer.</li><li><a href="#l">The Daily L</a> Pete Hegseth, for an office meant to cut bureaucracy.</li></ul></section>
-  <div class="group" id="g-talk"><h2 class="gtitle">The Talk</h2><section class="sec" id="world">
-      <div class="sec-head"><h3>World Chatter</h3><span class="note">Labeled by sourcing</span></div>
+  <section class="sec"><div class="sec-head"><h3>60 seconds</h3></div><ul class="sixty"><li><a href="#g-talk">The Talk</a> AI super PACs spent big in primaries, then went quiet when voters turned on data centers.</li><li><a href="#g-money">AI &amp; Money</a> Alphabet fell about 10% after hours on negative free cash flow. Microsoft dipped despite strong Azure.</li><li><a href="#g-sports">Sports</a> Niners lost to Atlanta without their top receivers, then traded for DeForest Buckner. Texas is 5-2 and hosts Mississippi State Saturday.</li><li><a href="#g-brain">Brain Food</a> Archaeologists may have found the world's oldest shipwreck, about 4,500 years old, off Turkey.</li></ul></section>
+  <div class="group" id="g-talk"><h2 class="gtitle">The Talk</h2><section class="sec" id="saying">
+      <div class="sec-head"><h3>What They're Saying</h3><span class="note">Titles only today</span></div>
+      <div class="item"><p class="story-title">Hasan Piker sues Scott Jennings</p><div class="voices">
+        <div class="voice left">
+          <div class="who">The Young Turks <span class="tag t-left">Left</span></div>
+          <p>TYT says Piker is suing Jennings for $72.5M after Jennings called him a &quot;violent racist.&quot; Ana Kasparian discusses.</p>
+          <div class="tags"><span class="tag t-unv">Unverified</span> <a class="src" href="https://www.youtube.com/watch?v=Yyp8qBd0JcY" target="_blank" rel="noopener">Watch</a></div>
+        </div></div><p class="split"><b>Where they actually split:</b> Only one channel covered it, and Jennings' side isn't in the material.</p><div class="vote" data-s="saying" data-h="Hasan Piker sues Scott Jennings" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item"><p class="story-title">Musk's data-center buyout offer in Southaven</p><div class="voices">
+        <div class="voice left">
+          <div class="who">The Young Turks <span class="tag t-left">Left</span></div>
+          <p>TYT says Musk is offering buyouts to homeowners in Southaven, Mississippi, to build data centers. TYT calls the offer outrageous.</p>
+          <div class="tags"><span class="tag t-unv">Unverified</span> <a class="src" href="https://www.youtube.com/watch?v=u64jGSOqNZs" target="_blank" rel="noopener">Watch</a></div>
+        </div></div><p class="split"><b>Where they actually split:</b> One source, title and description only. Terms and Musk's side aren't in the material.</p><div class="vote" data-s="saying" data-h="Musk's data-center buyout offer in Southaven" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item"><p class="story-title">Kushner and the Matthew Cole book</p><div class="voices">
+        <div class="voice other">
+          <div class="who">Breaking Points <span class="tag t-plain">Populist</span></div>
+          <p>Ryan interviews Matthew Cole about his reporting. Breaking Points says Cole's reporting alleges corruption involving the UAE and Saudis; Kushner's response is linked in the source description.</p>
+          <div class="tags"><span class="tag t-warn">Disputed</span> <a class="src" href="https://www.youtube.com/watch?v=qydWq6V9WVg" target="_blank" rel="noopener">Watch</a></div>
+        </div></div><p class="split"><b>Where they actually split:</b> Cole's reporting alleges it, Kushner contests it, and I can't judge either from titles.</p><div class="vote" data-s="saying" data-h="Kushner and the Matthew Cole book" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><p class="filter">Benny Johnson and Tucker Carlson, the right-leaning channels today, covered none of these. The View skipped them too.</p>
+    </section><section class="sec" id="world">
+      <div class="sec-head"><h3>World Chatter</h3></div>
       <div class="item">
-      <h4><a href="https://theintercept.com/2026/10/25/hegseth-military-christian-religion/" target="_blank" rel="noopener">Chaplains say they didn't want Hegseth's hotline</a></h4><p>Hegseth announced a new Office of Religious Affairs on Sept 30. He says it gives chaplains access to him without 'bureaucratic dilution.'</p><p>Current and former chaplains told The Intercept they don't want it. One non-Christian chaplain, speaking anonymously, fears it will push one religion.</p><p><span class="tag t-left">Left</span> The Pentagon is framing a war as a Christian mission, and non-Christian chaplains are the ones exposed.</p><p><span class="tag t-right">Hegseth's stated case</span> Chaplains deserve a direct line to the top, with no layers filtering them.</p>
-      <p class="cut"><b>Cut through it:</b> One outlet, one anonymous chaplain on the record. The office itself is real; the fear that it will be misused is a prediction.</p>
-      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://theintercept.com/2026/10/25/hegseth-military-christian-religion/" target="_blank" rel="noopener">The Intercept</a></div></div><div class="item">
-      <h4><a href="https://www.theamericanconservative.com/iran-substantially-increased-efforts-to-target-americans/" target="_blank" rel="noopener">A reported DNI memo says Iran's plotting against Americans has 'substantially increased'</a></h4><p>Axios reported a Friday memo from DNI Jay Clayton to Rubio, which reportedly describes Iranian plots against US citizens as having reached 'advanced stages.' We haven't seen the memo itself.</p><p>The US pulled nonessential staff from its Saudi embassy Wednesday. Brent closed Friday at $117, and regular gas averages $4.30.</p><p><span class="tag t-right">Right (American Conservative)</span> Escalating risk to Americans abroad is the story, and the war's costs are showing up at the pump.</p>
-      <p class="cut"><b>Cut through it:</b> The memo is relayed secondhand. The embassy move and the oil price are the concrete data points.</p>
-      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://www.theamericanconservative.com/iran-substantially-increased-efforts-to-target-americans/" target="_blank" rel="noopener">The American Conservative</a></div></div><div class="item">
-      <h4><a href="https://www.theamericanconservative.com/as-france-burns-its-literary-world-is-engulfed-by-scandal/" target="_blank" rel="noopener">Did AI write France's hottest novel?</a></h4><p>Le Figaro's Samuel Fitoussi alleged that Thélyson Orélien's Goncourt-contender was AI-written. The Pangram detector reportedly flagged it as wholly AI, though Pangram is unreliable and Orélien denies the accusation.</p><p>Defenders say the accusers are motivated by racism. The columnist replies that a claim's truth doesn't depend on who makes it, and notes Pangram isn't wholly reliable.</p>
-      <p class="cut"><b>Cut through it:</b> Detector output is evidence, not proof. Motive-hunting doesn't settle it either.</p>
-      <div class="tags"><span class="tag t-warn">Disputed</span></div><div class="src"><a href="https://www.theamericanconservative.com/as-france-burns-its-literary-world-is-engulfed-by-scandal/" target="_blank" rel="noopener">The American Conservative</a></div></div>
-    </section><section class="sec" id="fringe">
-      <div class="sec-head"><h3>Fringe Chatter</h3></div>
-      <div class="item">
-      <h4><a href="https://www.metabunk.org/threads/rare-things-that-have-been-documented-much-better-than-ufos.13047/" target="_blank" rel="noopener">UFO believers vs. the camera test</a></h4><p>Believers argue that thousands or millions of encounters can't all be mistakes. Skeptics ask where the clear video is.</p><p>The thread argues that rare events like the Chelyabinsk meteor and twin tornadoes can be filmed from many angles, showing that rarity doesn't imply poor documentation. It's an older thread (2023).</p>
-      <p class="cut"><b>Cut through it:</b> The skeptics' bar is multiple angles, independent sources, and engineering unlike any human technology. No one in the thread claims it's been met.</p>
-      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://www.metabunk.org/threads/rare-things-that-have-been-documented-much-better-than-ufos.13047/" target="_blank" rel="noopener">Metabunk</a></div></div>
+      <h4><a href="https://theintercept.com/2026/10/29/midterms-election-money-ai-super-pac/" target="_blank" rel="noopener">AI's political money went shy</a></h4><p>The Intercept says only 5% of AI super PAC direct spending has gone to contested general-election races. It reached that figure from FEC records and race ratings.</p><p>The industry bankrolled primaries earlier this year, then pulled back as public anger over data centers and job loss grew.</p><p><span class="tag t-left">Left</span> Public Citizen's Rick Claypool says the companies underestimated how much the public despises the data center buildout.</p>
+      <p class="cut"><b>Cut through it:</b> Both sides can sit with this: money that was meant to look like a kingmaker is now avoiding the spotlight.</p>
+      <div class="tags"><span class="tag t-unv">One outlet's analysis</span></div><div class="src"><a href="https://theintercept.com/2026/10/29/midterms-election-money-ai-super-pac/" target="_blank" rel="noopener">The Intercept</a></div><div class="vote" data-s="world" data-h="AI's political money went shy" data-u="https://theintercept.com/2026/10/29/midterms-election-money-ai-super-pac/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://theintercept.com/2026/10/29/aipac-israel-midterms-spending-elections-congress/" target="_blank" rel="noopener">AIPAC says it's stepping back. Critics say look closer.</a></h4><p>AIPAC says it will no longer officially endorse or give directly to candidates. The Intercept expects it to keep spending through its super PAC.</p><p>The Intercept argues it's weakened but still dominant, since its candidates usually still win.</p><p><span class="tag t-left">Left</span> A radioactive brand pushed AIPAC underground, but the money keeps flowing through pass-throughs.</p>
+      <p class="cut"><b>Cut through it:</b> Today's material is left-leaning only, so AIPAC's own case isn't represented here.</p>
+      <div class="tags"><span class="tag t-unv">One-sided sourcing</span></div><div class="src"><a href="https://theintercept.com/2026/10/29/aipac-israel-midterms-spending-elections-congress/" target="_blank" rel="noopener">The Intercept</a></div><div class="vote" data-s="world" data-h="AIPAC says it's stepping back. Critics say look closer." data-u="https://theintercept.com/2026/10/29/aipac-israel-midterms-spending-elections-congress/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section></div><div class="group" id="g-money"><h2 class="gtitle">AI &amp; Money</h2><section class="sec" id="ai">
       <div class="sec-head"><h3>AI: The Wild Stuff</h3></div>
       <div class="item">
-      <h4><a href="https://lynchlab.net/llm-skin-cancer" target="_blank" rel="noopener">In one author's skin-cancer test, a 2015 image model outscored GPT-6 and Fable 5.1</a></h4><p>On 200 biopsy-proven lesions, a fine-tuned Inception v3 got 125 right (62%). GPT-6 Astra and Claude Fable 5.1 got 84 and 85 (42%).</p><p>The CNN trained for about twenty minutes on one H100 and is small enough to run in a phone browser.</p>
-      <p class="cut"><b>Cut through it:</b> A single author's test on a six-way choice, using lesions hard enough to get biopsied. Specialist beats generalist here; it isn't a clinical verdict.</p>
-      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://lynchlab.net/llm-skin-cancer" target="_blank" rel="noopener">Lynch Lab</a></div></div>
+      <h4><a href="https://thezvi.substack.com/p/anthropic-files-its-s-1" target="_blank" rel="noopener">Anthropic's S-1: profitable, huge commitments</a></h4><p>Zvi reads it as profitable, saying the $80B &quot;loss&quot; was from stock-price revaluation of notes. He says the core plan is &quot;closing the loop,&quot; meaning recursive self-improvement.</p><p>Zvi says the founders will largely retain control via a Class F share, and Q3 growth slowed.</p>
+      <p class="cut"><b>Cut through it:</b> Treat the figures as Zvi's reading until you check the filing.</p>
+      <div class="tags"><span class="tag t-unv">Via Zvi's read</span></div><div class="src"><a href="https://thezvi.substack.com/p/anthropic-files-its-s-1" target="_blank" rel="noopener">Zvi Mowshowitz</a></div><div class="vote" data-s="ai" data-h="Anthropic's S-1: profitable, huge commitments" data-u="https://thezvi.substack.com/p/anthropic-files-its-s-1"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://thezvi.substack.com/p/ai-192-anthropic-is-going-public" target="_blank" rel="noopener">Google announces Gemini 4 Carbon. You can't use it.</a></h4><p>Google announced Gemini 4 Carbon. Zvi says Carbon appears to be a large leap over Argon, but outsiders still can't test it yet.</p><p>He also flags that red teamers reached Anthropic's Slack through third-party vulnerabilities.</p>
+      
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://thezvi.substack.com/p/ai-192-anthropic-is-going-public" target="_blank" rel="noopener">Zvi Mowshowitz</a></div><div class="vote" data-s="ai" data-h="Google announces Gemini 4 Carbon. You can't use it." data-u="https://thezvi.substack.com/p/ai-192-anthropic-is-going-public"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.404media.co/senators-wyden-markey-letter-to-meta-smart-glasses/" target="_blank" rel="noopener">Senators grill Meta over &quot;pervert glasses&quot;</a></h4><p>Senators Wyden and Markey sent Meta a letter demanding answers on smart-glasses privacy. It cites Meta's own disclosures that glasses imagery may be retained and used to train AI, sometimes with human reviewers.</p><p>More than 70 people have sued over intimate images exposed to data labelers.</p>
+      <p class="cut"><b>Cut through it:</b> Bystanders never agreed to be training data.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><div class="src"><a href="https://www.404media.co/senators-wyden-markey-letter-to-meta-smart-glasses/" target="_blank" rel="noopener">404 Media</a></div><div class="vote" data-s="ai" data-h="Senators grill Meta over &quot;pervert glasses&quot;" data-u="https://www.404media.co/senators-wyden-markey-letter-to-meta-smart-glasses/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section><section class="sec" id="bottlenecks">
       <div class="sec-head"><h3>AI Bottleneck Watch</h3><span class="note">Ideas to research · not advice</span></div>
       <div class="item">
-      <div class="bn-top"><h4>Power: gas turbines</h4><span class="tag t-ok">Tight; Q3 on Oct 28</span></div>
-      <p>GE Vernova's equipment backlog plus reservations rose from 100 GW to 116 GW, targeting 125 GW by year-end. Only 53 GW is firm; 63 GW is reservations. Total backlog is $176B, and it is taking 2031 slots. Output is about 20 GW a year, rising to 24 GW by 2028. Siemens Energy has 69 GW firm plus 26 GW reserved, with lead times of three years or more.</p>
-      <div class="ticks">Exposed: <span class="tick">GEV <span class="down">-11.5% 5d</span></span><span class="tick">Siemens Energy</span><span class="tick">Mitsubishi Heavy</span><span class="tick">Ansaldo Energia</span></div>
-      <p class="risk"><b>Risk:</b> Reservations aren't firm orders. AI capex financing worries, new suppliers, and mismatched GW definitions all cut against it. GEV is down 11.5% over five days at $815, but the pullback sources conflict and I have no multiples.</p>
-      </div><div class="item">
-      <div class="bn-top"><h4>Grid: transformers and switchgear</h4><span class="tag t-warn">Tight; data conflicts</span></div>
-      <p>Power-transformer lead times are 128 weeks (Giga Energy) or 160+ (BADGER). Switchgear averages 44 weeks. Eaton Q2 sales were $8.5B, up 21%, with data-centre revenue up about 65%. Bloomberg, via Giga, says only a third of roughly 12 GW of 2026 US data-centre capacity was under construction, with equipment shortages cited.</p>
-      <div class="ticks">Exposed: <span class="tick">Eaton</span><span class="tick">Hitachi</span><span class="tick">Siemens Energy</span><span class="tick">GEV (Prolec GE)</span></div>
-      <p class="risk"><b>Risk:</b> Lead times are consultant estimates. New plants could ease supply by 2027-28, and data-centre delays would cut orders. No price or multiple data was retrieved.</p>
-      </div><div class="item">
-      <div class="bn-top"><h4>Memory: HBM and DRAM</h4><span class="tag t-plain">Strong demand; Oct 29 print</span></div>
-      <p>The SK Hynix Q3 operating-profit consensus is 76.96T won, a margin of about 78.4%. That would be a sixth straight record quarter. Q2 HBM share was reportedly SK Hynix 50%, Samsung 33% and Micron 18% (sums to 101%, secondary source). J.P. Morgan puts SK Hynix at 54% of Nvidia's HBM supply this year. Micron is up on the day.</p>
-      <div class="ticks">Exposed: <span class="tick">SK Hynix</span><span class="tick">Samsung</span><span class="tick">Micron (MU)</span></div>
-      <p class="risk"><b>Risk:</b> Consensus already assumes record profit. Samsung HBM4 share gains, added capacity, price cyclicality and slower AI capex are the risks.</p>
-      </div><div class="item">
-      <div class="bn-top"><h4>Rare-earth magnets</h4><span class="tag t-plain">Not researched</span></div>
-      <p>No research this week, so no numbers.</p>
-      <div class="ticks">Exposed: <span class="tick">MP <span class="down">-4.7% 5d</span></span><span class="tick">Lynas</span><span class="tick">USA Rare Earth</span></div>
+      <div class="bn-top"><h4>Power: gas turbines</h4><span class="tag t-ok">Tight to 2030</span></div>
+      <p>GE Vernova's backlog plus reservations rose from 100 GW to 116 GW, but only 53 GW is firm. It's taking 2031 slots and builds about 20 GW a year. Siemens Energy has 69 GW firm plus 26 GW reserved, with lead times of three years or more.</p>
+      <div class="ticks">Exposed: <span class="tick">GEV <span class="up">+10% 5d</span></span><span class="tick">Siemens Energy</span><span class="tick">Mitsubishi Heavy</span></div>
+      <p class="risk"><b>Risk:</b> Reservations aren't firm orders, and the GW figures use different definitions, so adding them overstates demand. GEV reported Q3 Oct 28 and I have no results. Research sources disagree on the earlier pullback.</p>
+      <div class="vote" data-s="bottlenecks" data-h="Power: gas turbines" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <div class="bn-top"><h4>Grid: transformers and switchgear</h4><span class="tag t-warn">Tight, sources conflict</span></div>
+      <p>Power transformer lead times run 128 weeks (Giga) to 160+ (BADGER). Eaton's Q2 data-centre revenue rose about 65%. Only about a third of roughly 12 GW of US data-centre capacity slated for 2026 was under construction.</p>
+      <div class="ticks">Exposed: <span class="tick">ETN</span><span class="tick">Hitachi</span><span class="tick">Siemens Energy</span><span class="tick">GEV <span class="up">+10% 5d</span></span></div>
+      <p class="risk"><b>Risk:</b> Lead-time figures are consultant estimates, and I have no price data. New plants could ease supply by 2027-28, and project delays would cut orders.</p>
+      <div class="vote" data-s="bottlenecks" data-h="Grid: transformers and switchgear" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <div class="bn-top"><h4>Memory: HBM and DRAM</h4><span class="tag t-unv">Earnings today</span></div>
+      <p>SK Hynix reports Q3 today. Consensus operating profit is 76.96T won, which would be a sixth straight record. J.P. Morgan sees it supplying 54% of Nvidia's HBM this year.</p>
+      <div class="ticks">Exposed: <span class="tick">SK Hynix</span><span class="tick">Samsung</span><span class="tick">MU <span class="up">+11% 5d</span></span></div>
+      <p class="risk"><b>Risk:</b> Consensus already assumes records. Risks: Samsung HBM4 gains, new capacity ending the shortage, price cyclicality, and slower AI capex.</p>
+      <div class="vote" data-s="bottlenecks" data-h="Memory: HBM and DRAM" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <div class="bn-top"><h4><a href="https://www.fool.com/investing/2026/10/29/should-you-buy-mp-materials-stock-at-38/?.tsrc=rss" target="_blank" rel="noopener">Magnets: rare earths</a></h4><span class="tag t-unv">Not researched</span></div>
+      <p>No evidence retrieved this week, so no numbers. MP is $42.33, up 9.8% in five days.</p>
+      <div class="ticks">Exposed: <span class="tick">MP <span class="up">+9.8% 5d</span></span><span class="tick">Lynas</span><span class="tick">USA Rare Earth</span></div>
+      <p class="risk"><b>Risk:</b> Unverified. Re-run research before leaning on anything here.</p>
+      <div class="vote" data-s="bottlenecks" data-h="Magnets: rare earths" data-u="https://www.fool.com/investing/2026/10/29/should-you-buy-mp-materials-stock-at-38/?.tsrc=rss"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <div class="bn-top"><h4>Copper</h4><span class="tag t-unv">Not researched</span></div>
+      <p>No evidence retrieved this week.</p>
+      <div class="ticks">Exposed: <span class="tick">FCX <span class="up">+2.5% 5d</span></span><span class="tick">BHP</span><span class="tick">Southern Copper</span></div>
       <p class="risk"><b>Risk:</b> Unverified.</p>
-      </div><div class="item">
-      <div class="bn-top"><h4>Copper supply</h4><span class="tag t-plain">Not researched</span></div>
-      <p>No research this week, so no numbers.</p>
-      <div class="ticks">Exposed: <span class="tick">FCX <span class="down">-6.3% 5d</span></span><span class="tick">BHP</span><span class="tick">Southern Copper</span></div>
+      <div class="vote" data-s="bottlenecks" data-h="Copper" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <div class="bn-top"><h4>Chips and advanced packaging</h4><span class="tag t-unv">Not researched</span></div>
+      <p>No evidence retrieved this week, including TSMC CoWoS capacity and Q3 results.</p>
+      <div class="ticks">Exposed: <span class="tick">TSM <span class="up">+5.7% 5d</span></span><span class="tick">Amkor</span><span class="tick">ASE</span><span class="tick">Lam Research</span></div>
       <p class="risk"><b>Risk:</b> Unverified.</p>
-      </div><div class="item">
-      <div class="bn-top"><h4>Chips and advanced packaging</h4><span class="tag t-plain">Not researched</span></div>
-      <p>No research this week, including TSMC CoWoS capacity.</p>
-      <div class="ticks">Exposed: <span class="tick">TSM <span class="up">+1.4% 5d</span></span><span class="tick">Amkor</span><span class="tick">ASE</span><span class="tick">Lam Research</span></div>
-      <p class="risk"><b>Risk:</b> Unverified.</p>
-      </div>
+      <div class="vote" data-s="bottlenecks" data-h="Chips and advanced packaging" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section><section class="sec" id="markets">
       <div class="sec-head"><h3>Markets &amp; Watchlist</h3></div>
-      <div class="stats"><div class="stat"><div class="k">SPY · 5d</div><div class="v down">-0.4%</div><div class="k">$759.97</div></div><div class="stat"><div class="k">QQQ · 5d</div><div class="v down">-0.8%</div><div class="k">$704.4</div></div><div class="stat"><div class="k">NVDA · 5d</div><div class="v down">-1.5%</div><div class="k">$210.96</div></div><div class="stat"><div class="k">MSFT · 5d</div><div class="v down">-0.9%</div><div class="k">$524.51</div></div></div><p class="filter">The day's news: GEV is down 11.5% over five days into earnings, and MU rose 2.5% on the day. SPY slipped 0.5%.</p><p class="filter">Watch: GEV Q3 (Oct 28), firm backlog vs. reservations. SK Hynix Q3 (Oct 29), whether record profit is already priced in. Research notes, not advice.</p>
+      <div class="stats"><div class="stat"><div class="k">SPY · 5d</div><div class="v up">+0.8%</div><div class="k">$770.08</div></div><div class="stat"><div class="k">QQQ · 5d</div><div class="v up">+1.8%</div><div class="k">$717.49</div></div><div class="stat"><div class="k">NVDA · 5d</div><div class="v up">+1%</div><div class="k">$214.39</div></div><div class="stat"><div class="k">MSFT · 5d</div><div class="v up">+0.5%</div><div class="k">$523.45</div></div></div><div class="item">
+      <h4><a href="https://www.cnbc.com/2026/10/29/alphabet-google-search-ai-earnings.html" target="_blank" rel="noopener">Alphabet: more searches, less money</a></h4><p>Alphabet reported an earnings miss. Search revenue was about $63B, up 12% but below estimates for a second straight quarter, while query growth was the strongest in five years.</p><p>Free cash flow was negative $9B, three times the estimated deficit. The stock fell about 10% after hours.</p>
+      <p class="cut"><b>Cut through it:</b> Usage is up and revenue is lagging. That's the AI-search worry in one chart.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><div class="src"><a href="https://www.cnbc.com/2026/10/29/alphabet-google-search-ai-earnings.html" target="_blank" rel="noopener">CNBC</a></div><div class="vote" data-s="markets" data-h="Alphabet: more searches, less money" data-u="https://www.cnbc.com/2026/10/29/alphabet-google-search-ai-earnings.html"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.proactiveinvestors.com/companies/news/1100942/microsoft-shares-retreat-despite-strong-azure-growth-as-ai-spending-looms-1100942.html?.tsrc=rss" target="_blank" rel="noopener">Microsoft gives back early gains</a></h4><p>MSFT beat on the quarter, but investors weighed AI demand against much higher second-half infrastructure spending. Bank of America kept its Buy and raised its target to $630 from $600.</p><p>The stock is down 1.4% on the day.</p>
+      
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><div class="src"><a href="https://www.proactiveinvestors.com/companies/news/1100942/microsoft-shares-retreat-despite-strong-azure-growth-as-ai-spending-looms-1100942.html?.tsrc=rss" target="_blank" rel="noopener">Proactive Investors</a></div><div class="vote" data-s="markets" data-h="Microsoft gives back early gains" data-u="https://www.proactiveinvestors.com/companies/news/1100942/microsoft-shares-retreat-despite-strong-azure-growth-as-ai-spending-looms-1100942.html?.tsrc=rss"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><p class="filter">Watch: SK Hynix's print against the 76.96T won consensus, and whether big-spender cash burn (Alphabet) spooks or feeds the suppliers. Research notes only, not advice.</p>
     </section><section class="sec" id="opportunity">
       <div class="sec-head"><h3>Opportunity Signals</h3></div>
       <div class="item">
-      <h4><a href="https://minimaxir.com/2026/10/cheap-llms/" target="_blank" rel="noopener">Who's auditing the agent bill?</a></h4><p>Teams running coding agents face prices that change monthly. Cache reads are 96-99% of agent token spend, per the article.</p><p>Simple version: a dashboard that shows cache-read cost per task and re-prices the same workload across providers.</p>
+      <h4><a href="https://www.404media.co/meta-ai-training-uk-eu/" target="_blank" rel="noopener">Creators need an easy way to object to Meta's AI scraping</a></h4><p>Artists and small businesses are angry that Meta's commercial terms let it use content from sites linked to their accounts for AI. The change was pushed to Nov 20, and UK and EU users can object via a form buried in Instagram's privacy center.</p><p>Simple version: a free walkthrough or tool that guides creators through the objection form. Open question: this only helps UK and EU users, so the tool's audience is geographically limited.</p>
       
-      <div class="tags"><span class="tag t-plain">Idea</span></div><div class="src"><a href="https://minimaxir.com/2026/10/cheap-llms/" target="_blank" rel="noopener">minimaxir</a></div></div><div class="item">
-      <h4><a href="https://www.theamericanconservative.com/as-france-burns-its-literary-world-is-engulfed-by-scandal/" target="_blank" rel="noopener">Prize juries need an authorship process</a></h4><p>Publishers and prize committees now get AI-authorship accusations with only an unreliable detector to go on.</p><p>Simple version: a drafting-history check-in process, so disputes rest on evidence of how a book was written.</p>
-      
-      <div class="tags"><span class="tag t-plain">Idea</span></div><div class="src"><a href="https://www.theamericanconservative.com/as-france-burns-its-literary-world-is-engulfed-by-scandal/" target="_blank" rel="noopener">The American Conservative</a></div></div>
+      <div class="vote" data-s="opportunity" data-h="Creators need an easy way to object to Meta's AI scraping" data-u="https://www.404media.co/meta-ai-training-uk-eu/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section></div><div class="group" id="g-sports"><h2 class="gtitle">Sports</h2><section class="sec" id="sports">
       <div class="sec-head"><h3>Sports</h3></div>
       <div class="board">
@@ -288,59 +316,68 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <span class="teams">Texas 34, Ole Miss 27 <span class="rec">5-2</span><span class="nxt">Next: vs Mississippi St · Sat, Oct 31, 6:30 PM CT</span></span>
       <span class="when">Sat</span></div>
       <div class="score"><span class="wl l">L</span>
-      <span class="teams">Falcons 29, 49ers 20 <span class="rec">6-1</span><span class="nxt">Next: vs Raiders · Sun, Nov 8, 3:05 PM CT</span></span>
+      <span class="teams">Falcons 29, 49ers 20 <span class="rec">6-1</span><span class="nxt">Next: vs Raiders · Sun, Nov 8, 3:25 PM CT</span></span>
       <span class="when">Sun</span></div>
       <div class="score"><span class="wl w">W</span>
       <span class="teams">Steelers 16, Saints 10 <span class="rec">5-2</span><span class="nxt">Next: vs Browns · Sun, Nov 1, 12:00 PM CT</span></span>
       <span class="when">Sun</span></div></div><div class="item">
-      <h4><a href="https://www.burntorangenation.com/texas-longhorns-football/106328/texas-longhorns-coaches-poll-ap-top-25" target="_blank" rel="noopener">Texas climbs to No. 11 after beating Ole Miss</a></h4><p>The 34-27 win over then-No. 7 Ole Miss moved Texas from 19 to 11 in the AP poll and from 18 to 11 in the Coaches Poll, helped by losses elsewhere.</p><p>Next up is Mississippi State on Oct 31. The Bulldogs have lost three straight, and QB Kamario Taylor may miss it with turf toe.</p>
-      <p class="cut"><b>Cut through it:</b> Today's material has no Arch Manning or Sarkisian specifics, so I'm skipping the hot takes.</p>
-      <div class="tags"><span class="tag t-ok">Confirmed</span></div><div class="src"><a href="https://www.burntorangenation.com/texas-longhorns-football/106328/texas-longhorns-coaches-poll-ap-top-25" target="_blank" rel="noopener">Burnt Orange Nation</a></div></div><div class="item">
-      <h4><a href="https://www.ninersnation.com/san-francisco-49ers-rumors/164785/nfl-trade-rumors-49ers-could-make-a-run-at-colts-dt-deforest-buckner" target="_blank" rel="noopener">49ers drop one to Atlanta, and a Buckner reunion is floated</a></h4><p>The 49ers lost 29-20 to the Falcons. The preview had them scoring points and playing without Mike Evans; they got 20.</p><p>Schefter reports that Niners could chase Colts DT DeForest Buckner, 32, who has four sacks. The Colts will decide after three games, ahead of the Nov 10 deadline.</p>
+      <h4><a href="https://www.ninersnation.com/san-francisco-49ers-analysis/164957/brock-purdy-performance-slump-injuries-mike-evans-deebo-samuel" target="_blank" rel="noopener">Niners' Purdy slump has a receiver-shaped cause</a></h4><p>Purdy went 27 of 40 for 288 yards, one TD and two picks against Atlanta. San Francisco had only four eligible wide receivers, limiting Purdy's options.</p><p>Mike Evans (Achilles), Deebo Samuel (hamstring) and Demarcus Robinson (ankle) were out, and the 49ers hope the Week 8 bye gives them time to heal.</p>
       
-      <div class="tags"><span class="tag t-unv">Unverified</span></div><div class="src"><a href="https://www.ninersnation.com/san-francisco-49ers-rumors/164785/nfl-trade-rumors-49ers-could-make-a-run-at-colts-dt-deforest-buckner" target="_blank" rel="noopener">Niners Nation</a></div></div><p class="filter">Rodgers: the Steelers beat the Saints 16-10 and are 5-2, with the Browns next on Nov 1. No Rodgers-specific reporting in today's material.</p>
-    </section></div><div class="group" id="g-brain"><h2 class="gtitle">Brain Food</h2><section class="sec" id="science">
-      <div class="sec-head"><h3>Science</h3></div>
-      <div class="item">
-      <h4><a href="https://www.sciencedaily.com/releases/2026/10/261024222021.htm" target="_blank" rel="noopener">The mushroom that shows you tiny people</a></h4><p>Utah researchers used DNA sequencing to name Lanmaoa asiatica as the culprit behind 'Lilliputian' hallucinations in southwest China and the northern Philippines.</p><p>It showed no known psychoactive compounds, psilocybin included, so it may contain something new.</p>
-      
-      <div class="tags"><span class="tag t-ok">Confirmed</span></div><div class="src"><a href="https://www.sciencedaily.com/releases/2026/10/261024222021.htm" target="_blank" rel="noopener">ScienceDaily</a></div></div>
-    </section><section class="sec" id="health">
-      <div class="sec-head"><h3>Health &amp; Longevity</h3></div>
-      <div class="item">
-      <h4><a href="https://www.sciencedaily.com/releases/2026/10/261025222339.htm" target="_blank" rel="noopener">A painted-on liquid stopped cavities in kids</a></h4><p>In a Phase III trial of 830 children under 6 (JAMA Pediatrics), 38% silver diamine fluoride stopped decay in more than half of treated baby teeth when applied every six months.</p><p>No drilling, injections or sedation. It halts decay but doesn't rebuild lost tooth.</p>
-      
-      <div class="tags"><span class="tag t-warn">Evidence: strong</span></div><div class="src"><a href="https://www.sciencedaily.com/releases/2026/10/261025222339.htm" target="_blank" rel="noopener">ScienceDaily</a></div></div>
-    </section><section class="sec" id="serendipity">
-      <div class="sec-head"><h3>Serendipity</h3></div>
-      <div class="item">
-      <h4><a href="https://www.sciencedaily.com/releases/2026/10/261023023738.htm" target="_blank" rel="noopener">Language leans toward safety</a></h4><p>University of Vermont researchers analysed billions of uses of 20,000+ words. They say meaning is better described by power, danger and structure than by the 1950s valence-arousal-dominance model.</p><p>The new framework explains over 90% of variation in word meaning, against about 72% for the old one.</p>
-      
-      <div class="tags"><span class="tag t-ok">Confirmed</span></div><div class="src"><a href="https://www.sciencedaily.com/releases/2026/10/261023023738.htm" target="_blank" rel="noopener">ScienceDaily</a></div></div>
-    </section><section class="sec" id="wildcard">
-      <div class="sec-head"><h3>Wildcard</h3></div>
-      <div class="item">
-      <h4><a href="https://kottke.org/26/10/the-flipbook-of-the-rings" target="_blank" rel="noopener">1,000 artists hand-draw Fellowship of the Ring</a></h4><p>Led by animator Andy Bailey, over 1,000 artists are drawing a shot-for-shot flipbook of the full three-hour film: 120,000 pages.</p><p>The first 11 minutes are out. One artist's 10 seconds took 108 drawings and 30-40 hours.</p>
-      
-      <div class="tags"><span class="tag t-ok">Confirmed</span></div><div class="src"><a href="https://kottke.org/26/10/the-flipbook-of-the-rings" target="_blank" rel="noopener">Kottke</a></div></div>
-    </section><section class="sec" id="wisdom">
-      <div class="sec-head"><h3>Wisdom</h3></div>
-      <div class="item"><blockquote>Que sais-je? (What do I know?)<footer>Michel de Montaigne</footer></blockquote><p class="after">Use it before sharing the next 'AI wrote this' or 'it's definitely real' claim.</p></div>
-    </section><section class="sec" id="model">
-      <div class="sec-head"><h3>Mental Model</h3></div>
-      <p class="filter">Map vs. territory. GE Vernova's 116 GW headline is the map: only 53 GW is firm backlog, and the rest is reservations. The territory is what actually gets built, and Siemens Energy and Mitsubishi count GW differently, so adding them overstates the total.</p>
+      <div class="src"><a href="https://www.ninersnation.com/san-francisco-49ers-analysis/164957/brock-purdy-performance-slump-injuries-mike-evans-deebo-samuel" target="_blank" rel="noopener">Niners Nation</a></div><div class="vote" data-s="sports" data-h="Niners' Purdy slump has a receiver-shaped cause" data-u="https://www.ninersnation.com/san-francisco-49ers-analysis/164957/brock-purdy-performance-slump-injuries-mike-evans-deebo-samuel"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section></div>
   
-  <article class="dl" id="l">
-    <span class="big" aria-hidden="true">L</span>
-    <div class="kicker">The Daily L</div>
-    <h2>Pete Hegseth</h2>
-    <p class="why"></p>
-    <p class="roast"></p>
-    
-  </article>
   <footer class="foot">
     <p style="margin:0">Picked by Gemini, written by Claude, fact-checked by GPT. Tags are the agents' best read, not verdicts. Nothing here is financial advice.</p>
-    <p style="margin:0">This edition: <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-25.html" target="_blank" rel="noopener">https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-25.html</a></p>
+    <p style="margin:0">This edition: <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-29.html" target="_blank" rel="noopener">https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-29.html</a></p>
   </footer>
-</div></body></html>
+</div>
+<script>
+(() => {
+  const CFG = {"url":"http://localhost:5678/webhook/signal-vote","people":[["U07PS2CUUUC","Sir"],["U07Q28B5LUR","Madam"]],"edition":"2026-10-29"};
+  const ls = { get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} } };
+  const box = document.getElementById('voter');
+  let who = ls.get('signal_who');
+  const nameOf = (id) => (CFG.people.find(p => p[0] === id) || [])[1] || '';
+  function drawVoter(prompt) {
+    if (!CFG.url || !CFG.people.length) return;
+    box.hidden = false;
+    box.innerHTML = (prompt ? '<b>Who’s voting?</b>' : 'Voting as') + CFG.people.map(p => '<button type="button" data-who="' + p[0] + '" aria-pressed="' + (p[0] === who) + '">' + p[1] + '</button>').join('');
+  }
+  let after = null;
+  box.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-who]'); if (!b) return;
+    who = b.dataset.who; ls.set('signal_who', who); drawVoter(false);
+    if (after) { const f = after; after = null; f(); }
+  });
+  const queue = () => { try { return JSON.parse(ls.get('signal_queue') || '[]'); } catch (e) { return []; } };
+  const saveQueue = (a) => ls.set('signal_queue', JSON.stringify(a.slice(-300)));
+  async function flush() {
+    const a = queue(); if (!a.length || !CFG.url) return;
+    const left = [];
+    for (const v of a) { try { await fetch(CFG.url + '?' + new URLSearchParams(v).toString(), { mode: 'no-cors', cache: 'no-store' }); } catch (e) { left.push(v); } }
+    saveQueue(left);
+  }
+  const keyOf = (el) => 'signal_vote:' + CFG.edition + ':' + el.dataset.h;
+  document.querySelectorAll('.vote').forEach(el => {
+    const v = ls.get(keyOf(el));
+    el.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === v)));
+  });
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('.vote button'); if (!b) return;
+    const el = b.closest('.vote');
+    const go = () => {
+      const was = ls.get(keyOf(el));
+      const v = was === b.dataset.v ? '0' : b.dataset.v;
+      ls.set(keyOf(el), v);
+      el.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.v === v)));
+      const a = queue();
+      a.push({ who, edition: CFG.edition, section: el.dataset.s, headline: el.dataset.h, url: el.dataset.u || '', vote: v, at: new Date().toISOString() });
+      saveQueue(a); flush();
+    };
+    if (!who) { after = go; drawVoter(true); box.scrollIntoView({ behavior: 'smooth', block: 'center' }); } else go();
+  });
+  if (who) drawVoter(false);
+  flush();
+})();
+</script>
+</body></html>
