@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Daily Signal · Sir Coulter · Thursday, October 29</title>
+<title>The Morning Dispatch · Master Roberts · Thursday, October 29</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
 <style>
 /* Layout: one email-width column, read top to bottom; sections are labelled bands, items are hairline-separated rows. */
 :root {
@@ -182,7 +182,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .sixty{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px}
 .sixty li{padding-left:0}
 .sixty a{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-right:6px}
-.group{display:flex;flex-direction:column;gap:24px;scroll-margin-top:60px}
+.group{display:flex;flex-direction:column;gap:24px;scroll-margin-top:72px}
 .gtitle{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:clamp(34px,9vw,46px);line-height:.95;margin:8px 0 -6px;color:var(--accent)}
 .sec{scroll-margin-top:60px}
 .sec-head h3{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1;margin:0;text-transform:uppercase;letter-spacing:.01em}
@@ -223,37 +223,100 @@ details.moreitems>summary{padding:6px 0 10px}
 .glance .sixty{font-size:15.5px}
 .voter button{font:inherit;padding:3px 8px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:3px;cursor:pointer}
 .voter button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+
+/* ---- The Morning Dispatch: walnut, brass and ivory ---- */
+:root{--paper:#f7f2e8;--sheet:#fdfaf4;--ink:#2b241c;--muted:#6f6353;--rule:#e6dccb;--accent:#8a6a3b;--band:#231811;--band-ink:#efe5d2;--band-muted:#b9a68a;
+ --left:#2f4a6d;--right:#7d2e2b;--ok:#3f6b4a;--warn:#8a6a3b;--unv:#5d4a77;--chip-bg:#efe7d8;
+ --font-display:"Cormorant Garamond","Iowan Old Style",Garamond,Georgia,serif;--font-body:"EB Garamond","Iowan Old Style",Garamond,Georgia,serif;--font-mono:"EB Garamond","Iowan Old Style",Georgia,serif;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1c140e;--sheet:#251b14;--ink:#efe5d2;--muted:#b9a68a;--rule:#3a2c21;--accent:#c9a46a;--band:#2e2118;--band-ink:#efe5d2;--band-muted:#b9a68a;
+ --left:#9db4d6;--right:#d99a8f;--ok:#9cc4a4;--warn:#d8b77d;--unv:#b9a6d6;--chip-bg:#2e2219;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#1c140e;--sheet:#251b14;--ink:#efe5d2;--muted:#b9a68a;--rule:#3a2c21;--accent:#c9a46a;--band:#2e2118;--band-ink:#efe5d2;--band-muted:#b9a68a;--left:#9db4d6;--right:#d99a8f;--ok:#9cc4a4;--warn:#d8b77d;--unv:#b9a6d6;--chip-bg:#2e2219;color-scheme:dark}
+body{font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.mast{align-items:center;text-align:center;border-bottom:3px double var(--rule);padding-bottom:18px}
+.mast h1,.mast h1 span{font-family:var(--font-display);font-weight:500;text-transform:none;letter-spacing:.005em;font-size:clamp(40px,11vw,60px);line-height:1;color:var(--ink)}
+.dateline,.jump a,.tag,.one .kicker,.nav a,.sixty a,.voter,.score .rec,.wx-grid span,.legend{font-family:var(--font-body);letter-spacing:.16em;text-transform:uppercase;font-size:11.5px}
+.voter{justify-content:center;text-transform:none;letter-spacing:0;font-size:14px;font-style:italic}
+.nav a,.jump a{background:transparent;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;color:var(--muted)}
+.nav a:hover,.jump a:hover{color:var(--ink);border-color:var(--muted)}
+.one{border-radius:2px;padding:26px 24px}
+.one .kicker{color:#c9a46a}
+.one h2,.sec-head h2,.sec-head h3,.gtitle,.wx-t{font-family:var(--font-display);font-weight:500;text-transform:none;letter-spacing:0}
+.one h2{font-size:clamp(28px,7.5vw,38px);line-height:1.1}
+.gtitle{font-size:clamp(32px,8.5vw,42px);color:var(--ink);margin:18px 0 -4px;padding-top:14px;border-top:1px solid var(--rule)}
+.sec-head{border-bottom:1px solid var(--muted)}
+.sec-head h2{font-size:26px}.sec-head h3{font-size:23px}
+.item h4{font-family:var(--font-display);font-weight:600;font-size:21px;line-height:1.2}
+.tag{font-size:10px;border-radius:999px;padding:2px 8px}
+.wx{border-radius:2px}
+.wx-t{font-size:46px}
+.vote button{border-radius:999px}
+.wx-t,.wx-grid b,.score,.wx-l small{font-variant-numeric:lining-nums tabular-nums}
+.dateline{letter-spacing:.12em}
+.mast .legend,.mast .tags{justify-content:center}
+.mast .legend .tag{font-size:9.5px;padding:1px 7px}
 </style></head>
-<body><div class="wrap">
+<body><!-- dispatch-debug {&quot;from&quot;:&quot;editor&quot;,&quot;topKeys&quot;:[&quot;one_thing&quot;,&quot;sixty_seconds&quot;,&quot;sections&quot;,&quot;daily_l&quot;],&quot;found&quot;:{&quot;gossip&quot;:2,&quot;drama&quot;:2,&quot;sides&quot;:1,&quot;bottlenecks&quot;:1,&quot;bigmoney&quot;:1,&quot;sports&quot;:5,&quot;fbgossip&quot;:3,&quot;ai&quot;:2,&quot;science&quot;:1,&quot;wildcard&quot;:1},&quot;dailyL&quot;:true,&quot;editorChars&quot;:15553,&quot;writerChars&quot;:15559} --><div class="wrap">
   <header class="mast">
-    <h1>The Daily <span>Signal</span></h1>
-    <div class="dateline">Thursday, October 29 · Made for Sir Coulter</div>
-    <div class="voter" id="voter">👍/👎 any story to tune your edition · <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-29-marisol.html" target="_blank" rel="noopener">Madam Marisol's edition</a></div>
+    <h1>The Morning <span>Dispatch</span></h1>
+    <div class="dateline">Thursday, October 29 · Prepared for Master Roberts</div>
+    <div class="voter" id="voter">👍/👎 any story to tune your edition · <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-29-marisol.html" target="_blank" rel="noopener">Mrs. Roberts's edition</a></div>
     
     <div class="legend">Tags: <span class="tag t-ok">Confirmed</span><span class="tag t-warn">Disputed</span><span class="tag t-unv">Unverified</span><span class="tag t-left">Left</span><span class="tag t-right">Right</span></div>
   </header>
   <section class="wx" aria-label="Weather">
-    <div class="wx-now"><span class="wx-i" aria-hidden="true">☁️</span><span class="wx-t">68°</span><span class="wx-l">Cloudy<small>Austin · feels 68°</small></span></div>
+    <div class="wx-now"><span class="wx-i" aria-hidden="true">☁️</span><span class="wx-t">67°</span><span class="wx-l">Cloudy<small>Austin · feels 69°</small></span></div>
     <div class="wx-grid">
       <div><b>73° / 67°</b><span>High / low</span></div>
       <div><b>75%</b><span>Chance of rain</span></div>
-      <div><b>8 mph</b><span>Wind · UV 4</span></div>
+      <div><b>4 mph</b><span>Wind · UV 4</span></div>
       <div><b>6:46 PM</b><span>Sunset · rise 7:43 AM</span></div>
     </div>
-    <div class="wx-tmw">Tomorrow: 🌦️ Drizzle · 69° / 63° · 62% rain</div>
+    <div class="wx-tmw">Tomorrow: 🌦️ Drizzle · 69° / 63° · 65% rain</div>
   </section>
-  <nav class="nav" aria-label="Sections"><a href="#g-news">The Tea</a><a href="#g-local">Austin &amp; Texas</a><a href="#g-money">Money Minute</a><a href="#g-sports">Sports</a><a href="#g-cool">Cool Stuff</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="#g-news">The Tea</a><a href="#g-local">Austin &amp; Texas</a><a href="#g-money">Money Minute</a><a href="#g-sports">Sports</a><a href="#g-cool">Cool Stuff</a><a href="#l">Daily L</a></nav>
   <article class="one" id="one">
     <div class="kicker">The one thing</div>
-    <h2>Patrick Stewart has died</h2>
-    <p>Variety reports Stewart died Thursday at 86.,Ian McKellen, his close friend, wrote on Instagram: &quot;He wore his heart on his sleeve, which made him a man to rely on, to admire and in my case, love.&quot; McKellen also recalled Stewart taking the Star Trek role against his advice, and said it was a gift to film and theater audiences.</p>
-    <p class="why"><b>Why you care:</b> A TV titan is gone, and the internet is doing the full Picard/X-Men victory lap.</p>
-    <div class="src"><a href="https://variety.com/2026/film/news/ian-mckellen-patrick-stewart-tribute-1236934477/" target="_blank" rel="noopener">Variety</a> · <a href="https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html" target="_blank" rel="noopener">The New York Times</a></div>
-    <div class="vote" data-s="one" data-h="Patrick Stewart has died" data-u="https://variety.com/2026/film/news/ian-mckellen-patrick-stewart-tribute-1236934477/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
+    <h2>Air Force One Buzzes the White House Twice</h2>
+    <p>Trump arranged an Air Force One flyover over the White House for Halloween trick-or-treaters, and some residents were startled by the low pass. The plane made two passes, and some residents said they feared it was going to crash. AlertDC sent a warning at 5:24 p.m. ET, and the FAA told the Post the flight was coordinated and required a temporary ground stop at Reagan National.</p>
+    <p class="why"><b>Why you care:</b> It is the day's purest 'woah, wtf' moment, and the White House posted it as a flex.</p>
+    <div class="src"><a href="https://www.mediaite.com/media/news/air-force-one-flies-wildly-close-to-white-house-in-shocking-video/" target="_blank" rel="noopener">Mediaite</a></div>
+    <div class="vote" data-s="one" data-h="Air Force One Buzzes the White House Twice" data-u="https://www.mediaite.com/media/news/air-force-one-flies-wildly-close-to-white-house-in-shocking-video/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
   </article>
-  <section class="sec glance"><div class="sec-head"><h3>At a glance</h3></div><ul class="sixty"><li><a href="#g-news">The Tea</a> [Unverified] Alaska governor suggests election certification could be stopped or changed over a Peltola probe.</li><li><a href="#g-local">Austin &amp; Texas</a> Texas is now the epicenter of ICE's 287(g) network, with hundreds of agencies signed up and limited transparency, KXAN reports.</li><li><a href="#g-money">Money Minute</a> Micron (MU) dropped 5% in a day but is still up 9.1% over five days.</li></ul></section>
-  <div class="group" id="g-sports"><h2 class="gtitle">Sports</h2><section class="sec" id="sports">
-      <div class="sec-head"><h3>Games &amp; Picks</h3></div>
+  <section class="sec glance"><div class="sec-head"><h3>At a glance</h3></div><ul class="sixty"><li><a href="#g-news">The Tea</a> Trump is switching to tele-rallies in 19 states after canceling two in-person events in Iowa and Kansas.</li><li><a href="#g-local">Austin &amp; Texas</a> Texas plays Mississippi State Saturday at 6:30 PM CT.</li><li><a href="#g-money">Money Minute</a> Binance says a security incident had an estimated $6.3 billion impact, and it pledged to cover all losses.</li><li><a href="#g-sports">Sports</a> Spurs host Minnesota Saturday after beating Utah in overtime.</li><li><a href="#g-cool">Cool Stuff</a> A JWST lava planet may wear cloud sunscreen.</li><li><a href="#l">The Daily L</a> Tarek El Moussa defends a $150K BMW on a podcast called 'Money Rehab'.</li></ul></section>
+  <div class="group" id="g-news"><h2 class="gtitle">The Tea</h2><section class="sec" id="gossip">
+      <div class="sec-head"><h3>Celebrity Gossip</h3><span class="note">Heartbreak and hot takes</span></div>
+      <div class="item">
+      <h4><a href="https://www.tmz.com/2026/10/29/chrishell-stause-shocked-by-g-flip-breakup/" target="_blank" rel="noopener">Chrishell Stause blindsided by G Flip breakup</a></h4><p>TMZ says G Flip ended the four-year romance because the romantic feelings faded, and Chrishell did not see it coming.</p>
+      <div class="tags"><span class="tag t-ok">Split: Confirmed</span><span class="tag t-unv">Why: Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> TMZ's sources say it was not about Chrishell being 'difficult.' That is TMZ's account, not a statement from either of them.</p><div class="src"><a href="https://www.tmz.com/2026/10/29/chrishell-stause-shocked-by-g-flip-breakup/" target="_blank" rel="noopener">TMZ</a></div></details><div class="vote" data-s="gossip" data-h="Chrishell Stause blindsided by G Flip breakup" data-u="https://www.tmz.com/2026/10/29/chrishell-stause-shocked-by-g-flip-breakup/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.youtube.com/watch?v=pyGq2zegUfY" target="_blank" rel="noopener">Ana Navarro, Lauren Sánchez Bezos photo stirs fans</a></h4><p>The View teased a segment about Ana Navarro and a photo with Lauren Sánchez Bezos, but we only have the show description, not the actual exchange.</p>
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> We only have the show description, not her answer.</p><div class="src"><a href="https://www.youtube.com/watch?v=pyGq2zegUfY" target="_blank" rel="noopener">The View (YouTube)</a></div></details><div class="vote" data-s="gossip" data-h="Ana Navarro, Lauren Sánchez Bezos photo stirs fans" data-u="https://www.youtube.com/watch?v=pyGq2zegUfY"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="drama">
+      <div class="sec-head"><h3>Political Drama</h3><span class="note">Rally chaos</span></div>
+      <div class="item">
+      <h4><a href="https://thehill.com/homenews/campaign/6183027-trump-scheduled-virtual-rally-blitz/" target="_blank" rel="noopener">Trump scraps two rallies, goes virtual in 19 states</a></h4><p>The RNC says Trump will do tele-rallies in 19 states after cancelling in-person events in Iowa and Kansas.</p>
+      <div class="tags"><span class="tag t-ok">Cancellations: Confirmed</span><span class="tag t-warn">Marshall's explanation: Disputed</span></div><details class="more"><summary>More</summary><p>Kansas Sen. Roger Marshall says Trump skipped his state because Marshall is 'doing so well' in the polls. Mediaite notes a new poll shows him trailing.</p><p><span class="tag t-right">RNC</span> Voters want to hear from Trump before Election Day, and tele-rallies reach them.</p><p class="cut"><b>Cut through it:</b> 'Doing so well' and 'trailing in a new poll' are hard to fit in one sentence.</p><div class="src"><a href="https://thehill.com/homenews/campaign/6183027-trump-scheduled-virtual-rally-blitz/" target="_blank" rel="noopener">The Hill</a> · <a href="https://www.mediaite.com/politics/gop-senator-says-trump-scrapped-rally-in-his-state-because-hes-doing-so-well-as-new-poll-shows-him-trailing/" target="_blank" rel="noopener">Mediaite</a></div></details><div class="vote" data-s="drama" data-h="Trump scraps two rallies, goes virtual in 19 states" data-u="https://thehill.com/homenews/campaign/6183027-trump-scheduled-virtual-rally-blitz/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.mediaite.com/media/tv/trump-mocks-black-and-jewish-people-voting-for-el-sayed-youre-crazy-anyway/" target="_blank" rel="noopener">Trump to Black and Jewish voters: 'You're crazy anyway'</a></h4><p>At a South Carolina rally, Trump said Black or Jewish voters who back Michigan Democrat Abdul El-Sayed are 'crazy,' adding 'You're crazy anyway.'</p>
+      <div class="tags"><span class="tag t-ok">Quote: Confirmed</span><span class="tag t-warn">Brotherhood claim: Disputed</span></div><details class="more"><summary>More</summary><p>Trump called El-Sayed 'definitely Muslim Brotherhood,' pointing to a 2012 open letter he co-signed; El-Sayed denies the allegation.</p><p><span class="tag t-left">Critics</span> Trump is insulting voters, as he did with 'head examined' lines in 2024.</p><p><span class="tag t-right">Trump and Rogers</span> El-Sayed's record is a national security risk, according to Republican Mike Rogers.</p><p class="cut"><b>Cut through it:</b> The quote is on the record. The Muslim Brotherhood label is contested.</p><div class="src"><a href="https://www.mediaite.com/media/tv/trump-mocks-black-and-jewish-people-voting-for-el-sayed-youre-crazy-anyway/" target="_blank" rel="noopener">Mediaite</a></div></details><div class="vote" data-s="drama" data-h="Trump to Black and Jewish voters: 'You're crazy anyway'" data-u="https://www.mediaite.com/media/tv/trump-mocks-black-and-jewish-people-voting-for-el-sayed-youre-crazy-anyway/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="sides">
+      <div class="sec-head"><h3>Both Sides</h3></div>
+      <div class="item">
+      <h4></h4><p>Voters want to hear from Trump before Election Day, and tele-rallies reach them.</p>
+      </div>
+    </section></div><div class="group" id="g-local"><h2 class="gtitle">Austin &amp; Texas</h2><section class="sec"><p>Texas plays Mississippi State Saturday at 6:30 PM CT.</p></section></div><div class="group" id="g-money"><h2 class="gtitle">Money Minute</h2><section class="sec" id="bottlenecks">
+      <div class="sec-head"><h3>Smart Money Idea</h3><span class="note">Ideas, not advice</span></div>
+      <div class="item">
+      <div class="bn-top"><h4>Power: gas turbines</h4><span class="tag t-warn">Booked to ~2030</span></div>
+      <p>Gas turbines run the power plants AI data centers need, and they sell out years ahead. GE Vernova's backlog plus reservations hit 116 GW in Q2, with a 125 GW year-end target, but only 53 GW is firm. Siemens Energy quotes lead times of three years or more, and GE is taking 2031 slots.</p>
+      <div class="ticks">Exposed: <span class="tick">GEV <span class="up">+7.3% 5d</span></span><span class="tick">Siemens Energy</span><span class="tick">Mitsubishi Heavy</span></div>
+      <p class="risk"><b>Risk:</b> Reservations are not firm orders, and AI spending could slow. New suppliers are adding capacity. GEV reported Q3 on Oct 28, and those results are not in this brief.</p>
+      <div class="vote" data-s="bottlenecks" data-h="Power: gas turbines" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="bigmoney">
+      <div class="sec-head"><h3>Big Money Moves</h3><span class="note">What the giants hold</span></div>
+      <div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPTllYRGJHWDh3SXF3bnZkWjJnc0hHVjYyYkhYR0ljcmtGQ3Y5N19KdHNpWEd4dTlic3l5eW1mMmNjNkdxc3JsTElGcjY4aXVrN01PMy1VVUZUQ1l5Ul96MWk2Qm9BdkFVTUI2YjJiYlEtcXYxWkNkRnZ2MERXQW1qZzh6NEtpdw?oc=5" target="_blank" rel="noopener">Buffett's heir keeps Berkshire's bets concentrated</a></h4><p>A column says Greg Abel may have Berkshire concentrated in five stocks, citing a 69% figure; no filing date is given here.</p>
+      <div class="tags"><span class="tag t-plain">Columnist's claim</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> A Yahoo Finance headline revisits Buffett's $10 billion bank bets as an example of his patient style. The pattern is few, big, patient bets. Only headlines were available, no filing dates. Research note, not advice.</p><div class="src"><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPTllYRGJHWDh3SXF3bnZkWjJnc0hHVjYyYkhYR0ljcmtGQ3Y5N19KdHNpWEd4dTlic3l5eW1mMmNjNkdxc3JsTElGcjY4aXVrN01PMy1VVUZUQ1l5Ul96MWk2Qm9BdkFVTUI2YjJiYlEtcXYxWkNkRnZ2MERXQW1qZzh6NEtpdw?oc=5" target="_blank" rel="noopener">AOL.com</a> · <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxQQXRyNDZVYWxRVXJvTmxUMHdCVEZkVFRueXMwbk1OanBhTnBaNk02M2pNUTVWa1NaODZNVnR6WTVQRS1Ybk4wQ2ZpcW1MMDJ1QWFNdW11SGFLa3kwZ0pYbXdzazhBdGhWUF9jVUJiajRiMlpaU0F4MkNoMGZ6S3NyRnRwVDRwMkQzYnh4RVhDdEZremIycWs3SXh3?oc=5" target="_blank" rel="noopener">Yahoo Finance</a></div></details><div class="vote" data-s="bigmoney" data-h="Buffett's heir keeps Berkshire's bets concentrated" data-u="https://news.google.com/rss/articles/CBMihgFBVV95cUxPTllYRGJHWDh3SXF3bnZkWjJnc0hHVjYyYkhYR0ljcmtGQ3Y5N19KdHNpWEd4dTlic3l5eW1mMmNjNkdxc3JsTElGcjY4aXVrN01PMy1VVUZUQ1l5Ul96MWk2Qm9BdkFVTUI2YjJiYlEtcXYxWkNkRnZ2MERXQW1qZzh6NEtpdw?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section></div><div class="group" id="g-sports"><h2 class="gtitle">Sports</h2><section class="sec" id="sports">
+      <div class="sec-head"><h3>Games &amp; Picks</h3><span class="note">Picks, not facts</span></div>
       <div class="board">
       <div class="score"><span class="wl w">W</span>
       <span class="teams">Texas 34, Ole Miss 27 <span class="rec">5-2 · 8th in SEC</span><span class="nxt">Next: vs Mississippi St · Sat, Oct 31, 6:30 PM CT · <b>90% to win</b> · TEX -20.5</span></span>
@@ -266,9 +329,46 @@ details.moreitems>summary{padding:6px 0 10px}
       <span class="when">Sun</span></div>
       <div class="score"><span class="wl w">W</span>
       <span class="teams">Spurs 117, Jazz 111 <span class="rec">3-2 · 3rd in Southwest Division</span><span class="nxt">Next: vs Timberwolves · Sat, Oct 31, 7:00 PM CT · <b>72% to win</b></span></span>
-      <span class="when">Wed</span></div></div>
+      <span class="when">Wed</span></div></div><p class="filter">Longhorns (5-2) vs Mississippi State, Sat 6:30 PM CT. ESPN gives Texas 90%, line TEX -20.5. Alfred's pick: Texas 35, Miss State 13.</p><p class="filter">49ers (6-1, 1st NFC West) vs Raiders, Sun Nov 8, 3:25 PM CT. ESPN: SF 84%, line -9.5. Alfred's pick: 49ers win 30-17, with Purdy bouncing back after the Falcons loss.</p><details class="moreitems"><summary>+3 more in Games &amp; Picks</summary><p class="filter">Steelers (5-2, 1st AFC North) at Browns, Sun Nov 1, 12 PM CT. ESPN: PIT 66%, line -3.5. Alfred's pick: Steelers 20, Browns 16. Rodgers wins ugly.</p><p class="filter">Spurs (3-2, 3rd in Southwest) vs Timberwolves, Sat 7 PM CT. ESPN: SAS 72%. Alfred's pick: Spurs 114, Wolves 108, riding the Wemby-Vassell overtime win over Utah.</p><div class="item">
+      <h4><a href="https://www.burntorangenation.com/texas-longhorns-football/106524/will-muschamp-texas-longhorns-pass-defense" target="_blank" rel="noopener">Muschamp's defense takes away the easy throws</a></h4><p>Texas held Ole Miss QB Trinidad Chambliss to a career-low 48.1% completion rate and forced three interceptions.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p>Sarkisian fired Pete Kwiatkowski last December to hire Will Muschamp, and Texas now has the No. 7 defense in ESPN's SP+.</p><div class="src"><a href="https://www.burntorangenation.com/texas-longhorns-football/106524/will-muschamp-texas-longhorns-pass-defense" target="_blank" rel="noopener">Burnt Orange Nation</a></div></details><div class="vote" data-s="sports" data-h="Muschamp's defense takes away the easy throws" data-u="https://www.burntorangenation.com/texas-longhorns-football/106524/will-muschamp-texas-longhorns-pass-defense"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div></details>
+    </section><section class="sec" id="fbgossip">
+      <div class="sec-head"><h3>Football Gossip</h3><span class="note">Villains and vibes</span></div>
+      <div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQQklZNEE4VG9nNUstWlNwVl9VMkZ5eExKazlzX2huTUlpV25iOUpNb0w5RFh5MC1kN3dvV3VndDYxazlTN3ZFa3N0dU5wYVZ2a1VhWTVBT0N0d2hqUnFzMl9QNXhYYlpjU0tsdXFGYUUySDBxcnAwMDhsOGtOT1ZTZThhRllGWHJXQ1FSdUpYNEp0MmpDaURpSXQ1RDQ?oc=5" target="_blank" rel="noopener">Kiffin: SEC doesn't want LSU to win</a></h4><p>Lane Kiffin says he is shocked at LSU's kickoff time against Alabama and claims the SEC doesn't want LSU to win this year.</p>
+      <div class="tags"><span class="tag t-unv">His claim: Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> CBS reports the complaint, and nothing we have backs the conspiracy. A TigerRag headline says he also complained more about Bama on Barstool. Meanwhile he backs a 24-team playoff, which is good news for a team that needs a lot of chances.</p><div class="src"><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxQQklZNEE4VG9nNUstWlNwVl9VMkZ5eExKazlzX2huTUlpV25iOUpNb0w5RFh5MC1kN3dvV3VndDYxazlTN3ZFa3N0dU5wYVZ2a1VhWTVBT0N0d2hqUnFzMl9QNXhYYlpjU0tsdXFGYUUySDBxcnAwMDhsOGtOT1ZTZThhRllGWHJXQ1FSdUpYNEp0MmpDaURpSXQ1RDQ?oc=5" target="_blank" rel="noopener">CBS Sports</a> · <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxOSXRvaTE4Y0JUWmVxUnd3WTVIRjg1dThCM1I4dlRBcHFhZGtSSm5EUEw1REpuNHFrX3FUOHM4elhTaVpyOV9MMWdsNGoxUGJHQTBuUjVYb1hSekp2aTJwOGZiQURoemh5WVB5Wm9faUlLY05ORkFHaXJUa3ZzMEphVUpR?oc=5" target="_blank" rel="noopener">Yahoo Sports</a></div></details><div class="vote" data-s="fbgossip" data-h="Kiffin: SEC doesn't want LSU to win" data-u="https://news.google.com/rss/articles/CBMinAFBVV95cUxQQklZNEE4VG9nNUstWlNwVl9VMkZ5eExKazlzX2huTUlpV25iOUpNb0w5RFh5MC1kN3dvV3VndDYxazlTN3ZFa3N0dU5wYVZ2a1VhWTVBT0N0d2hqUnFzMl9QNXhYYlpjU0tsdXFGYUUySDBxcnAwMDhsOGtOT1ZTZThhRllGWHJXQ1FSdUpYNEp0MmpDaURpSXQ1RDQ?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUXR2eTdYRmZVbDk4T0UtNHQwRmh0OTBReUQ0b1JtV0h5ZXRNbDRvZ2xzUWo0dy1pZ1RQX0xZSGZwOFp0SkNvd1lndE5rZmRCWVl1VEg4OXBkN2pOZmxLWDZBdXp3djBNM3lFV3ZYazV2ZHpPV2xvQ05vTDJxU0hBTVoyVVFGd1hhNGxXSEdEMmx1MkJHdE5Hd0pINHNwS2kycnZjTHhIQmdoQQ?oc=5" target="_blank" rel="noopener">Sarkisian: SEC 'cannibalizing itself' with nine games</a></h4><p>Steve Sarkisian says the SEC is cannibalizing itself with a nine-game conference schedule.</p>
+      <div class="tags"><span class="tag t-plain">Headline only</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Only the headline is available. A 5-2 team complaining about brutal schedules is still a flex.</p><div class="src"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUXR2eTdYRmZVbDk4T0UtNHQwRmh0OTBReUQ0b1JtV0h5ZXRNbDRvZ2xzUWo0dy1pZ1RQX0xZSGZwOFp0SkNvd1lndE5rZmRCWVl1VEg4OXBkN2pOZmxLWDZBdXp3djBNM3lFV3ZYazV2ZHpPV2xvQ05vTDJxU0hBTVoyVVFGd1hhNGxXSEdEMmx1MkJHdE5Hd0pINHNwS2kycnZjTHhIQmdoQQ?oc=5" target="_blank" rel="noopener">On3</a></div></details><div class="vote" data-s="fbgossip" data-h="Sarkisian: SEC 'cannibalizing itself' with nine games" data-u="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUXR2eTdYRmZVbDk4T0UtNHQwRmh0OTBReUQ0b1JtV0h5ZXRNbDRvZ2xzUWo0dy1pZ1RQX0xZSGZwOFp0SkNvd1lndE5rZmRCWVl1VEg4OXBkN2pOZmxLWDZBdXp3djBNM3lFV3ZYazV2ZHpPV2xvQ05vTDJxU0hBTVoyVVFGd1hhNGxXSEdEMmx1MkJHdE5Hd0pINHNwS2kycnZjTHhIQmdoQQ?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><details class="moreitems"><summary>+1 more in Football Gossip</summary><div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQY2JQM0N6cWE1Q29feUF4S25XY2VsYnpwOURFeDNwMWFnRjd6OGpsYVNRMllyQ01XUnBDbTd2ajd4dGpfck1Hd2FpQzc0eHd3VUhkWGVYV2JGaFpSTzdweE02QlR4Y3RCMm9Yajd0YUk4NFV3QW9EX1ZFT1N1ZHhuT0R1U1lZUQ?oc=5" target="_blank" rel="noopener">Arch Manning draws a Justin Fields comparison</a></h4><p>Yahoo Sports says Arch's 2027 NFL Draft stock is slipping and compares him to Justin Fields.</p>
+      <div class="tags"><span class="tag t-plain">Opinion</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> This is one outlet's draft take and the headline is all we have. Saturday vs Mississippi State is a chance to answer it.</p><div class="src"><a href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQY2JQM0N6cWE1Q29feUF4S25XY2VsYnpwOURFeDNwMWFnRjd6OGpsYVNRMllyQ01XUnBDbTd2ajd4dGpfck1Hd2FpQzc0eHd3VUhkWGVYV2JGaFpSTzdweE02QlR4Y3RCMm9Yajd0YUk4NFV3QW9EX1ZFT1N1ZHhuT0R1U1lZUQ?oc=5" target="_blank" rel="noopener">Yahoo Sports</a></div></details><div class="vote" data-s="fbgossip" data-h="Arch Manning draws a Justin Fields comparison" data-u="https://news.google.com/rss/articles/CBMihgFBVV95cUxQY2JQM0N6cWE1Q29feUF4S25XY2VsYnpwOURFeDNwMWFnRjd6OGpsYVNRMllyQ01XUnBDbTd2ajd4dGpfck1Hd2FpQzc0eHd3VUhkWGVYV2JGaFpSTzdweE02QlR4Y3RCMm9Yajd0YUk4NFV3QW9EX1ZFT1N1ZHhuT0R1U1lZUQ?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div></details>
+    </section></div><div class="group" id="g-cool"><h2 class="gtitle">Cool Stuff</h2><section class="sec" id="ai">
+      <div class="sec-head"><h3>AI</h3><span class="note">Wild, mostly unchecked</span></div>
+      <div class="item">
+      <h4><a href="https://www.reddit.com/r/singularity/comments/1xin9cx/ai_supercomputer_up_for_sale_on_ebay/" target="_blank" rel="noopener">A $59.7M AI supercomputer is on eBay</a></h4><p>Minnesota reseller Core 4 Solutions listed a decommissioned 300-rack cluster for $59.7 million or best offer.</p>
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> It holds up to 9,600 Nvidia A100 GPUs and 1.4 petabytes of memory, with free local pickup or FedEx Ground.</p><div class="src"><a href="https://www.reddit.com/r/singularity/comments/1xin9cx/ai_supercomputer_up_for_sale_on_ebay/" target="_blank" rel="noopener">r/singularity</a></div></details><div class="vote" data-s="ai" data-h="A $59.7M AI supercomputer is on eBay" data-u="https://www.reddit.com/r/singularity/comments/1xin9cx/ai_supercomputer_up_for_sale_on_ebay/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.reddit.com/r/singularity/comments/1xiwplq/sam_altman_reveals_openai_barely_understood_how/" target="_blank" rel="noopener">Altman: AI agent swarms could automate AI research</a></h4><p>A Reddit post says Sam Altman admitted OpenAI barely understood how to scale agent swarms, yet they tackled hard math problems.</p>
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> It also says he expects major swarm progress within 3 months. This comes from a hype-heavy forum, with no primary source here.</p><div class="src"><a href="https://www.reddit.com/r/singularity/comments/1xiwplq/sam_altman_reveals_openai_barely_understood_how/" target="_blank" rel="noopener">r/singularity</a></div></details><div class="vote" data-s="ai" data-h="Altman: AI agent swarms could automate AI research" data-u="https://www.reddit.com/r/singularity/comments/1xiwplq/sam_altman_reveals_openai_barely_understood_how/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="science">
+      <div class="sec-head"><h3>Science</h3><span class="note">Lava and sunscreen</span></div>
+      <div class="item">
+      <h4><a href="https://www.sciencedaily.com/releases/2026/10/261026225603.htm" target="_blank" rel="noopener">JWST finds a lava planet with cloud sunscreen</a></h4><p>Webb observations suggest the molten planet TOI-561 b, 280 light-years away, may have an atmosphere with reflective silicate clouds that cool it.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Scientists expected the atmosphere to be gone, and they still don't know which gases it holds.</p><div class="src"><a href="https://www.sciencedaily.com/releases/2026/10/261026225603.htm" target="_blank" rel="noopener">ScienceDaily</a></div></details><div class="vote" data-s="science" data-h="JWST finds a lava planet with cloud sunscreen" data-u="https://www.sciencedaily.com/releases/2026/10/261026225603.htm"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="wildcard">
+      <div class="sec-head"><h3>Wildcard</h3><span class="note">Roman nanotech</span></div>
+      <div class="item">
+      <h4><a href="https://www.goodnewsnetwork.org/romans-made-color-changing-glass-and-weve-just-replicated-after-1600-years/" target="_blank" rel="noopener">Romans made color-changing glass. We just copied it.</a></h4><p>Sheffield researchers replicated the 4th-century Lycurgus Cup glass, which embeds gold and silver nanoparticles.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Light passing through shows reds and oranges, and reflected light looks opaque green. It may be the first nanotech.</p><div class="src"><a href="https://www.goodnewsnetwork.org/romans-made-color-changing-glass-and-weve-just-replicated-after-1600-years/" target="_blank" rel="noopener">Good News Network</a></div></details><div class="vote" data-s="wildcard" data-h="Romans made color-changing glass. We just copied it." data-u="https://www.goodnewsnetwork.org/romans-made-color-changing-glass-and-weve-just-replicated-after-1600-years/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section></div>
   
+  <article class="dl" id="l">
+    <span class="big" aria-hidden="true">L</span>
+    <div class="kicker">The Daily L</div>
+    <h2>Tarek El Moussa</h2>
+    <p class="why">He defended a $150K BMW purchase on a podcast called 'Money Rehab.'</p>
+    <p class="roast">Tarek insisted it's really about safety, and then kept talking. He said he is 'obsessed with things because I never had things,' and recalled buying his wife a white Ferrari on their second date. The podcast is literally called 'Money Rehab,' and he is the case study. Nobody asked for the Ferrari story, and nobody stopped him either. The explanation tour is the L.</p>
+    <div class="src"><a href="https://pagesix.com/2026/10/29/celebrity-news/hgtv-star-defends-buying-150k-bmw-for-his-16-year-old-daughter/" target="_blank" rel="noopener">Page Six</a></div>
+    <div class="vote" data-s="l" data-h="Tarek El Moussa" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
+  </article>
   <footer class="foot">
     <p style="margin:0">Picked by Gemini, written by Claude, fact-checked by GPT. Tags are the agents' best read, not verdicts. Nothing here is financial advice.</p>
     <p style="margin:0">Your 👍/👎 shape only your own edition.</p>
@@ -277,7 +377,7 @@ details.moreitems>summary{padding:6px 0 10px}
 </div>
 <script>
 (() => {
-  const CFG = {"url":"https://desktop-u5ut9ih.tail9f72eb.ts.net/webhook/signal-vote","people":[["U07PS2CUUUC","Sir Coulter"],["U07Q28B5LUR","Madam Marisol"]],"edition":"2026-10-29","who":"U07PS2CUUUC"};
+  const CFG = {"url":"https://desktop-u5ut9ih.tail9f72eb.ts.net/webhook/signal-vote","people":[["U07PS2CUUUC","Master Roberts"],["U07Q28B5LUR","Mrs. Roberts"]],"edition":"2026-10-29","who":"U07PS2CUUUC"};
   const ls = { get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} } };
   const box = document.getElementById('voter');
   let who = CFG.who || ls.get('signal_who');
