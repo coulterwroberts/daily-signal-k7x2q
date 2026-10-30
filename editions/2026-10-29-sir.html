@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Daily Signal · Sir Coulter · Thursday, October 29</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@500&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: one email-width column, read top to bottom; sections are labelled bands, items are hairline-separated rows. */
+:root {
+  --paper: #f4f5f8;
+  --sheet: #ffffff;
+  --ink: #11141b;
+  --muted: #5a6271;
+  --rule: #e2e5eb;
+  --accent: #bf4f0d;
+  --band: #11141b;
+  --band-ink: #f4f5f8;
+  --band-muted: #a9b0bd;
+  --left: #2456c4;
+  --right: #c22f2f;
+  --ok: #1d7a4b;
+  --warn: #a8700f;
+  --unv: #6a4fb8;
+  --chip-bg: #f0f2f6;
+  --font-display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --font-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0d1015; --sheet: #151920; --ink: #eceef2; --muted: #9aa3b2; --rule: #262c36;
+    --accent: #f0803f; --band: #1c222c; --band-ink: #eceef2; --band-muted: #9aa3b2;
+    --left: #79a2ff; --right: #ff7d7d; --ok: #52c58c; --warn: #e6b04c; --unv: #ab92ff; --chip-bg: #1d222b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0d1015; --sheet: #151920; --ink: #eceef2; --muted: #9aa3b2; --rule: #262c36;
+  --accent: #f0803f; --band: #1c222c; --band-ink: #eceef2; --band-muted: #9aa3b2;
+  --left: #79a2ff; --right: #ff7d7d; --ok: #52c58c; --warn: #e6b04c; --unv: #ab92ff; --chip-bg: #1d222b;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 48px;
+}
+.wrap { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Masthead */
+.mast { display: flex; flex-direction: column; gap: 6px; }
+.mast h1 {
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(44px, 12vw, 68px); line-height: 0.9; letter-spacing: 0.01em; margin: 0;
+}
+.mast h1 span { color: var(--accent); }
+.dateline { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.jump { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.jump a {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;
+  text-decoration: none; padding: 4px 8px; background: var(--chip-bg); color: var(--ink); border-radius: 3px;
+}
+.jump a:hover { color: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); }
+
+/* Tags */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 2px 6px; border: 1px solid currentColor; border-radius: 3px; line-height: 1.4; white-space: nowrap;
+}
+.t-ok { color: var(--ok); } .t-warn { color: var(--warn); } .t-unv { color: var(--unv); }
+.t-left { color: var(--left); } .t-right { color: var(--right); } .t-plain { color: var(--muted); }
+
+/* One Thing band */
+.one { background: var(--band); color: var(--band-ink); padding: 22px 20px; border-radius: 6px; display: flex; flex-direction: column; gap: 10px; }
+.one .kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.one h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(28px, 7vw, 36px); line-height: 1; margin: 0; text-wrap: balance; text-transform: uppercase; }
+.one p { margin: 0; }
+.one .why { color: var(--band-muted); font-size: 15px; }
+.one .why b { color: var(--band-ink); }
+.src { font-size: 12.5px; color: var(--muted); }
+.one .src { color: var(--band-muted); }
+.src a { color: inherit; }
+
+/* Sections */
+section { display: flex; flex-direction: column; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; margin-bottom: 4px; }
+.sec-head h2 { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1; margin: 0; text-transform: uppercase; letter-spacing: 0.01em; }
+.sec-head .note { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: right; }
+.item { padding-block: 14px; border-top: 1px solid var(--rule); min-width: 0; }
+.sec-head + .item, .sec-head + .stats + .item { border-top: 0; }
+.item h3 { font-size: 17px; line-height: 1.3; margin: 0 0 4px; text-wrap: balance; }
+.item h3 a { text-decoration: none; }
+.item h3 a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+.item p { margin: 0; font-size: 15px; }
+.item p + p { margin-top: 6px; }
+.lead { color: var(--muted); }
+.cut { margin-top: 6px; font-size: 14.5px; }
+.cut b { color: var(--accent); }
+
+/* What they're saying */
+.story-title { font-size: 17px; font-weight: 700; margin: 0 0 10px; }
+.voices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.voice { background: var(--sheet); padding: 12px 14px; border-top: 3px solid var(--muted); min-width: 0; }
+.voice.left { border-top-color: var(--left); } .voice.right { border-top-color: var(--right); }
+.voice .who { font-weight: 700; font-size: 14.5px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.voice p { margin: 4px 0 0; font-size: 14.5px; }
+.split { margin-top: 10px; font-size: 14.5px; }
+.split b { color: var(--accent); }
+.filter { font-size: 13.5px; color: var(--muted); padding-top: 12px; border-top: 1px solid var(--rule); }
+
+/* Scoreboard */
+.board { display: flex; flex-direction: column; gap: 6px; padding-block: 12px 4px; }
+.score { display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: center; background: var(--sheet); padding: 8px 12px; font-variant-numeric: tabular-nums; }
+.wl { font-family: var(--font-display); font-weight: 800; font-size: 22px; line-height: 1; text-align: center; }
+.wl.w { color: var(--ok); } .wl.l { color: var(--right); }
+.score .teams { font-weight: 700; font-size: 15px; min-width: 0; }
+.score .when { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; text-align: right; }
+
+/* Market stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); margin-block: 12px 2px; }
+.stat { background: var(--sheet); padding: 10px 12px; font-variant-numeric: tabular-nums; }
+.stat .k { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat .v { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.1; }
+.up { color: var(--ok); } .down { color: var(--right); }
+@media (max-width: 520px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.cal { display: grid; grid-template-columns: 56px 1fr; gap: 4px 12px; font-size: 14.5px; margin-top: 6px; }
+.cal dt { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; color: var(--accent); padding-top: 2px; }
+.cal dd { margin: 0; }
+
+/* Odds bars (to scale, 0-100%) */
+.bar { position: relative; height: 12px; background: var(--chip-bg); margin-top: 10px; }
+.bar .ghost { position: absolute; inset: 0 auto 0 0; background: var(--rule); }
+.bar .fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); }
+.bar .fill.d { background: var(--left); }
+.bar .notch { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); }
+.barlabel { display: flex; justify-content: space-between; gap: 8px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 420px) { .duo { grid-template-columns: 1fr; } }
+
+/* Wisdom */
+blockquote { margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; text-wrap: balance; }
+blockquote footer { font-size: 13px; font-weight: 400; color: var(--muted); margin-top: 6px; }
+
+/* Daily L */
+.dl { background: var(--band); color: var(--band-ink); border-radius: 6px; padding: 20px; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: start; }
+.dl .big { font-family: var(--font-display); font-weight: 800; font-size: 120px; line-height: 0.78; color: var(--accent); grid-row: span 3; }
+.dl .kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--band-muted); }
+.dl h2 { font-family: var(--font-display); font-weight: 800; font-size: 34px; line-height: 1; margin: 0; text-transform: uppercase; }
+.dl .why { margin: 0; font-weight: 600; }
+.dl .roast { grid-column: 1 / -1; margin: 6px 0 0; color: var(--band-muted); font-size: 15px; }
+.dl .roast b { color: var(--band-ink); }
+.dl .src { grid-column: 1 / -1; color: var(--band-muted); }
+@media (max-width: 420px) { .dl .big { font-size: 88px; } }
+
+.bn-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.bn-top h3 { margin: 0; }
+.ticks { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; font-size: 14px; }
+.tick { font-family: var(--font-mono); font-size: 12px; padding: 2px 7px; background: var(--chip-bg); border-radius: 3px; }
+.risk { color: var(--muted); }
+.risk b { color: var(--right); }
+.intro { font-size: 14.5px; color: var(--muted); padding-top: 10px; margin: 0; }
+.foot { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+*{box-sizing:border-box} body{margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);display:flex;gap:6px;overflow-x:auto;padding-block:10px;border-bottom:1px solid var(--rule);scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:6px 10px;background:var(--chip-bg);color:var(--ink);border-radius:3px;white-space:nowrap}
+.nav a:hover{color:var(--accent)}
+.sixty{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.sixty li{padding-left:0}
+.sixty a{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-right:6px}
+.group{display:flex;flex-direction:column;gap:24px;scroll-margin-top:60px}
+.gtitle{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:clamp(34px,9vw,46px);line-height:.95;margin:8px 0 -6px;color:var(--accent)}
+.sec{scroll-margin-top:60px}
+.sec-head h3{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1;margin:0;text-transform:uppercase;letter-spacing:.01em}
+.item h4{font-size:17px;line-height:1.3;margin:0 0 4px;text-wrap:balance}
+.item h4 a{text-decoration:none}
+.item h4 a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.sec-head + .item{border-top:0}
+.after{margin-top:8px!important}
+.score .rec{font-family:var(--font-mono);font-size:11px;color:var(--muted);font-weight:500;margin-left:6px}
+.score .nxt{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+.learned{font-size:13px;color:var(--muted);margin:0}
+.dl .src a{color:var(--band-muted)}
+.vote{display:flex;gap:6px;margin-top:10px}
+.vote button{font:inherit;font-size:15px;line-height:1;padding:6px 10px;border:1px solid var(--rule);background:var(--sheet);border-radius:999px;cursor:pointer;filter:grayscale(1);opacity:.75}
+.vote button:hover{opacity:1;filter:none}
+.vote button[aria-pressed="true"]{filter:none;opacity:1;border-color:var(--accent);background:var(--chip-bg)}
+.one .vote button,.dl .vote button{background:transparent;border-color:rgba(255,255,255,.25)}
+.voter{font-family:var(--font-mono);font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.wx{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+.wx-now{display:flex;align-items:center;gap:12px}
+.wx-i{font-size:34px;line-height:1}
+.wx-t{font-family:var(--font-display);font-weight:800;font-size:44px;line-height:1}
+.wx-l{display:flex;flex-direction:column;font-weight:600;font-size:16px}
+.wx-l small{font-weight:400;font-size:12.5px;color:var(--muted)}
+.wx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.wx-grid div{display:flex;flex-direction:column;min-width:0}
+.wx-grid b{font-size:15px;font-variant-numeric:tabular-nums}
+.wx-grid span{font-size:11.5px;color:var(--muted)}
+.wx-tmw{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:10px}
+@media (max-width:480px){.wx-grid{grid-template-columns:repeat(2,1fr);row-gap:10px}}
+details.more{margin-top:6px}
+details.more>summary,details.moreitems>summary{cursor:pointer;list-style:none;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);padding:4px 0}
+details.more>summary::-webkit-details-marker,details.moreitems>summary::-webkit-details-marker{display:none}
+details.more>summary::after{content:" ▾"} details.more[open]>summary::after{content:" ▴"}
+details.more p{margin-top:6px!important}
+details.moreitems{border-top:1px solid var(--rule);padding-top:8px}
+details.moreitems>summary{padding:6px 0 10px}
+.glance .sixty{font-size:15.5px}
+.voter button{font:inherit;padding:3px 8px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:3px;cursor:pointer}
+.voter button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+</style></head>
+<body><div class="wrap">
+  <header class="mast">
+    <h1>The Daily <span>Signal</span></h1>
+    <div class="dateline">Thursday, October 29 · Made for Sir Coulter</div>
+    <div class="voter" id="voter">👍/👎 any story to tune your edition · <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-29-marisol.html" target="_blank" rel="noopener">Madam Marisol's edition</a></div>
+    
+    <div class="legend">Tags: <span class="tag t-ok">Confirmed</span><span class="tag t-warn">Disputed</span><span class="tag t-unv">Unverified</span><span class="tag t-left">Left</span><span class="tag t-right">Right</span></div>
+  </header>
+  <section class="wx" aria-label="Weather">
+    <div class="wx-now"><span class="wx-i" aria-hidden="true">☁️</span><span class="wx-t">67°</span><span class="wx-l">Cloudy<small>Austin · feels 69°</small></span></div>
+    <div class="wx-grid">
+      <div><b>73° / 65°</b><span>High / low</span></div>
+      <div><b>75%</b><span>Chance of rain</span></div>
+      <div><b>4 mph</b><span>Wind · UV 4</span></div>
+      <div><b>6:46 PM</b><span>Sunset · rise 7:43 AM</span></div>
+    </div>
+    <div class="wx-tmw">Tomorrow: 🌧️ Rain · 68° / 62° · 59% rain</div>
+  </section>
+  <nav class="nav" aria-label="Sections"><a href="#g-news">The Tea</a><a href="#g-local">Austin &amp; Texas</a><a href="#g-money">Money Minute</a><a href="#g-sports">Sports</a><a href="#g-cool">Cool Stuff</a></nav>
+  <article class="one" id="one">
+    <div class="kicker">The one thing</div>
+    <h2>Texas Has a Third-Quarter Problem</h2>
+    <p>According to Burnt Orange Nation, Texas has been outscored 37-6 in third quarters since the opener. Against Ole Miss, a 24-3 halftime lead was gone about a minute into the fourth. The Horns still won 34-27.</p>
+    <p class="why"><b>Why you care:</b> Mississippi State comes Saturday, and as of Oct. 28 Texas ranks 110th nationally in third-quarter scoring, according to TeamRankings.</p>
+    <div class="src"><a href="https://www.burntorangenation.com/texas-longhorns-football/106509/texas-longhorns-third-quarter-offense-adjustments" target="_blank" rel="noopener">Burnt Orange Nation</a></div>
+    <div class="vote" data-s="one" data-h="Texas Has a Third-Quarter Problem" data-u="https://www.burntorangenation.com/texas-longhorns-football/106509/texas-longhorns-third-quarter-offense-adjustments"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
+  </article>
+  <section class="sec glance"><div class="sec-head"><h3>At a glance</h3></div><ul class="sixty"><li><a href="#g-news">The Tea</a> Microsoft plans a $25B bond sale to fund its AI buildout.</li><li><a href="#g-local">Austin &amp; Texas</a> Downtown Austin streets close this weekend for F1 and the Viva La Vida festival, per KXAN.</li><li><a href="#g-money">Money Minute</a> Berkshire reportedly added $330M to its Bending Spoons stake, according to StreetInsider (Unverified).</li><li><a href="#g-sports">Sports</a> Texas vs. Mississippi State Saturday at 6:30 PM CT — ESPN win chance 90%, line TEX -20.5.</li><li><a href="#g-cool">Cool Stuff</a> Linking radio telescopes turned Earth into one giant black hole camera.</li><li><a href="#l">The Daily L</a> Kyle Cooke went to war in someone else's Instagram comments.</li></ul></section>
+  <div class="group" id="g-news"><h2 class="gtitle">The Tea</h2><section class="sec" id="gossip">
+      <div class="sec-head"><h3>Celebrity Gossip</h3><span class="note">Cheap thrills</span></div>
+      <div class="item">
+      <h4><a href="https://www.elle.com/culture/celebrities/a74287150/katy-perry-justin-trudeau-42nd-birthday-trip-photos/" target="_blank" rel="noopener">Katy Perry posts birthday photos with Justin Trudeau</a></h4><p>Perry shared birthday photos from a climbing trip with Trudeau, including a kissing photo and a Brick gadget.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Her last slide showed a Brick, a gadget that blocks phone apps. A phone-free birthday, posted on Instagram.</p><div class="src"><a href="https://www.elle.com/culture/celebrities/a74287150/katy-perry-justin-trudeau-42nd-birthday-trip-photos/" target="_blank" rel="noopener">Elle</a></div></details><div class="vote" data-s="gossip" data-h="Katy Perry posts birthday photos with Justin Trudeau" data-u="https://www.elle.com/culture/celebrities/a74287150/katy-perry-justin-trudeau-42nd-birthday-trip-photos/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.cosmopolitan.com/entertainment/tv/a74286972/love-is-blind-rob-michaella-breakup-drama/" target="_blank" rel="noopener">Love Is Blind's Rob and Michaella: the aftermath</a></h4><p>Rob Feeley and Michaella Giorgio have each spoken out since their Love Is Blind split. According to Cosmopolitan, one version of the fallout centers on Rob's outburst at producers after his friend was cut off at a restaurant (Unverified in the brief's terms).</p>
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Per Cosmopolitan, it started when Rob had an outburst at producers after a restaurant cut off his friend's drinks.</p><div class="src"><a href="https://www.cosmopolitan.com/entertainment/tv/a74286972/love-is-blind-rob-michaella-breakup-drama/" target="_blank" rel="noopener">Cosmopolitan</a></div></details><div class="vote" data-s="gossip" data-h="Love Is Blind's Rob and Michaella: the aftermath" data-u="https://www.cosmopolitan.com/entertainment/tv/a74286972/love-is-blind-rob-michaella-breakup-drama/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section></div><div class="group" id="g-local"><h2 class="gtitle">Austin &amp; Texas</h2><section class="sec" id="texas">
+      <div class="sec-head"><h3>Texas News</h3><span class="note">Plan your route</span></div>
+      <div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxObHFlUFhPcUtRWWh3REhxcTVMZy1Jak5tal9xNFM3T1VhaXZyVmNwUXBMbDBhYXR5UFlQUUVDVHJJY1lZTnVmR3JJbkpmQVNHaFgwRW9oc3RZMXczakJxc1k5VENqeEZGUlpxQzd4N2xKTC1mRTJ2UWE1VnVFMk1zTHpJT1JST21oM05KNmowaFRPQV8zNXVwWU41VU1uYVNwUTNhNVJoUzlyTEo0R1FpQXJtRE1aNUXSAbwBQVVfeXFMTm9aQ0w5LXVpVG9LYUlpZ3hKMFltd2MzdzFKTnB6TDFDclhyOVhCdkItME1uc2gzdGZmYkQ0ZXRsU0F6UXhUOFpJd1hHT1kzMlRFWFZiN1Ryd3hzRk9rLTJDYmxyVjlwZ3JwTEUxb2ZEdXFidThLZFNpV2ZsaEVIbE5xTXVEMzl5T3A0dV9MX25JR2JDNTZxUlBDNTRSNndSMGxhZEhhRjVSb1BnTmNNbWZlZTlhVnZsaExYakY?oc=5" target="_blank" rel="noopener">Downtown Austin closures: F1 and Viva La Vida</a></h4><p>KXAN reports downtown street closures this weekend for Formula 1 and the Viva La Vida festival.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Check KXAN's closure list before you drive downtown.</p><div class="src"><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxObHFlUFhPcUtRWWh3REhxcTVMZy1Jak5tal9xNFM3T1VhaXZyVmNwUXBMbDBhYXR5UFlQUUVDVHJJY1lZTnVmR3JJbkpmQVNHaFgwRW9oc3RZMXczakJxc1k5VENqeEZGUlpxQzd4N2xKTC1mRTJ2UWE1VnVFMk1zTHpJT1JST21oM05KNmowaFRPQV8zNXVwWU41VU1uYVNwUTNhNVJoUzlyTEo0R1FpQXJtRE1aNUXSAbwBQVVfeXFMTm9aQ0w5LXVpVG9LYUlpZ3hKMFltd2MzdzFKTnB6TDFDclhyOVhCdkItME1uc2gzdGZmYkQ0ZXRsU0F6UXhUOFpJd1hHT1kzMlRFWFZiN1Ryd3hzRk9rLTJDYmxyVjlwZ3JwTEUxb2ZEdXFidThLZFNpV2ZsaEVIbE5xTXVEMzl5T3A0dV9MX25JR2JDNTZxUlBDNTRSNndSMGxhZEhhRjVSb1BnTmNNbWZlZTlhVnZsaExYakY?oc=5" target="_blank" rel="noopener">KXAN Austin</a></div></details><div class="vote" data-s="texas" data-h="Downtown Austin closures: F1 and Viva La Vida" data-u="https://news.google.com/rss/articles/CBMitwFBVV95cUxObHFlUFhPcUtRWWh3REhxcTVMZy1Jak5tal9xNFM3T1VhaXZyVmNwUXBMbDBhYXR5UFlQUUVDVHJJY1lZTnVmR3JJbkpmQVNHaFgwRW9oc3RZMXczakJxc1k5VENqeEZGUlpxQzd4N2xKTC1mRTJ2UWE1VnVFMk1zTHpJT1JST21oM05KNmowaFRPQV8zNXVwWU41VU1uYVNwUTNhNVJoUzlyTEo0R1FpQXJtRE1aNUXSAbwBQVVfeXFMTm9aQ0w5LXVpVG9LYUlpZ3hKMFltd2MzdzFKTnB6TDFDclhyOVhCdkItME1uc2gzdGZmYkQ0ZXRsU0F6UXhUOFpJd1hHT1kzMlRFWFZiN1Ryd3hzRk9rLTJDYmxyVjlwZ3JwTEUxb2ZEdXFidThLZFNpV2ZsaEVIbE5xTXVEMzl5T3A0dV9MX25JR2JDNTZxUlBDNTRSNndSMGxhZEhhRjVSb1BnTmNNbWZlZTlhVnZsaExYakY?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.reddit.com/r/Austin/comments/1xiy588/apd_pushes_for_legislative_solutions_after/" target="_blank" rel="noopener">APD wants new laws after F1 police escorts</a></h4><p>A r/Austin thread claims APD is pushing for legislative fixes after F1 police escorts zoomed through town, but details are thin (Unverified).</p>
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Only the headline is in hand. Details are thin.</p><div class="src"><a href="https://www.reddit.com/r/Austin/comments/1xiy588/apd_pushes_for_legislative_solutions_after/" target="_blank" rel="noopener">r/Austin</a></div></details><div class="vote" data-s="texas" data-h="APD wants new laws after F1 police escorts" data-u="https://www.reddit.com/r/Austin/comments/1xiy588/apd_pushes_for_legislative_solutions_after/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="austin">
+      <div class="sec-head"><h3>Around Austin</h3><span class="note">Eat, listen, go</span></div>
+      <div class="item">
+      <h4><a href="https://austin.eater.com/restaurant-news/118547/mi-vecino-new-mexican-seafood-restaurant-opening-2027-roya-hospitality" target="_blank" rel="noopener">Mi Vecino brings fire-grilled seafood to Circle C</a></h4><p>Mi Vecino is slated to open at 5701 West Slaughter Lane in Circle C between now and early 2027.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Expect ceviche, oysters, shrimp enchiladas with white mole and a full margarita bar. It replaces Keeper's Coastal Kitchen, which closed Oct. 24.</p><div class="src"><a href="https://austin.eater.com/restaurant-news/118547/mi-vecino-new-mexican-seafood-restaurant-opening-2027-roya-hospitality" target="_blank" rel="noopener">Eater Austin</a></div></details><div class="vote" data-s="austin" data-h="Mi Vecino brings fire-grilled seafood to Circle C" data-u="https://austin.eater.com/restaurant-news/118547/mi-vecino-new-mexican-seafood-restaurant-opening-2027-roya-hospitality"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxQZXVGY2J1YWotQ0t4Vkk4VjNBS1ozWGpMVmFOUEEtWUQ4Qm50aXJiRjBUSG5ub1RPT1lLNXZMRm8tQ3BaZ0gtRDVLcUlxT0VxOGtBYTcyQ01qMkxNWVZFR2VhNVBmak5FaWRtcVVoZ0pfalhiYWxWTVpPU01BbG4xMUh0cEg5M3Z5QmY5U1FUY0FkaS1rU0lQVmtaRmUzdUN0ZUJFbDNSd0dBMHVpbTN5c2VYMW1XSzlPT0R5U0lRcDB3VEsxQ2FYaEp0bXF3bUVLSWxvZVdtTHpUOGNZSDZnY2RiQ2E1TU0tTTlGUHUwV0tVQkFDb0wydjBFRWY?oc=5" target="_blank" rel="noopener">Noah Kahan is coming to Darrell K Royal-Texas Memorial Stadium</a></h4><p>His Last of the Bugs World Tour stops at DKR on May 15.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><div class="src"><a href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxQZXVGY2J1YWotQ0t4Vkk4VjNBS1ozWGpMVmFOUEEtWUQ4Qm50aXJiRjBUSG5ub1RPT1lLNXZMRm8tQ3BaZ0gtRDVLcUlxT0VxOGtBYTcyQ01qMkxNWVZFR2VhNVBmak5FaWRtcVVoZ0pfalhiYWxWTVpPU01BbG4xMUh0cEg5M3Z5QmY5U1FUY0FkaS1rU0lQVmtaRmUzdUN0ZUJFbDNSd0dBMHVpbTN5c2VYMW1XSzlPT0R5U0lRcDB3VEsxQ2FYaEp0bXF3bUVLSWxvZVdtTHpUOGNZSDZnY2RiQ2E1TU0tTTlGUHUwV0tVQkFDb0wydjBFRWY?oc=5" target="_blank" rel="noopener">Texas Athletics</a></div></details><div class="vote" data-s="austin" data-h="Noah Kahan is coming to Darrell K Royal-Texas Memorial Stadium" data-u="https://news.google.com/rss/articles/CBMi_AFBVV95cUxQZXVGY2J1YWotQ0t4Vkk4VjNBS1ozWGpMVmFOUEEtWUQ4Qm50aXJiRjBUSG5ub1RPT1lLNXZMRm8tQ3BaZ0gtRDVLcUlxT0VxOGtBYTcyQ01qMkxNWVZFR2VhNVBmak5FaWRtcVVoZ0pfalhiYWxWTVpPU01BbG4xMUh0cEg5M3Z5QmY5U1FUY0FkaS1rU0lQVmtaRmUzdUN0ZUJFbDNSd0dBMHVpbTN5c2VYMW1XSzlPT0R5U0lRcDB3VEsxQ2FYaEp0bXF3bUVLSWxvZVdtTHpUOGNZSDZnY2RiQ2E1TU0tTTlGUHUwV0tVQkFDb0wydjBFRWY?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section></div><div class="group" id="g-money"><h2 class="gtitle">Money Minute</h2><section class="sec" id="bottlenecks">
+      <div class="sec-head"><h3>Smart Money Idea</h3><span class="note">Ideas, not advice</span></div>
+      <div class="item">
+      <div class="bn-top"><h4><a href="https://www.cnbc.com/2026/10/29/microsoft-25-billion-debt-offering.html" target="_blank" rel="noopener">Power: gas turbines</a></h4><span class="tag t-warn">Booked for years</span></div>
+      <p>AI data centers need power, and only a few firms build the big gas turbines. GE Vernova's backlog plus reserved slots hit 116 GW, but only 53 GW is firm orders. It is taking 2031 delivery reservations. Siemens Energy quotes lead times of three years or more. Demand driver: Microsoft alone targets $170B of 2026 capex.</p>
+      <div class="ticks">Exposed: <span class="tick">GEV <span class="up">+7.3% 5d</span></span><span class="tick">Siemens Energy</span><span class="tick">Mitsubishi Heavy</span></div>
+      <p class="risk"><b>Risk:</b> Reservations aren't firm orders. AI financing worries or new suppliers could cool it. GEV is $887.85, up 7.3% in five days and 54.6% over 52 weeks (date unclear), so much good news may be priced in. It reported Q3 Oct 28; check the results.</p>
+      <div class="src"><a href="https://www.cnbc.com/2026/10/29/microsoft-25-billion-debt-offering.html" target="_blank" rel="noopener">CNBC (AI spending context)</a></div><div class="vote" data-s="bottlenecks" data-h="Power: gas turbines" data-u="https://www.cnbc.com/2026/10/29/microsoft-25-billion-debt-offering.html"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="bigmoney">
+      <div class="sec-head"><h3>Big Money Moves</h3><span class="note">Follow the whales</span></div>
+      <div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNUllCQmNjUGZIczBYYUNPRG1vM2l2SHZzNmRiUDZCUEtCNjRQU19jWDVkZXllZ0FTUVFZdDBwejR3NDlDRWx4MW53SkdnUS1aZi00aS11ME83U0xwRGFLUlJVVnZDUjE4TnFGOTFFUEZjQTU3aXdrVjR0RnBjb05iQWhMTXRteWtaaFYtdGdNSnU5ako3T2JJY09abVUteVJYNzFlSHZwSkhtLWp6bHlPQkRVYW8?oc=5" target="_blank" rel="noopener">Berkshire adds to Bending Spoons</a></h4><p>StreetInsider reports Berkshire Hathaway added $330M to its Bending Spoons stake (Unverified; filing date not confirmed).</p>
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> We only have the headline, not the filing date or terms.</p><div class="src"><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNUllCQmNjUGZIczBYYUNPRG1vM2l2SHZzNmRiUDZCUEtCNjRQU19jWDVkZXllZ0FTUVFZdDBwejR3NDlDRWx4MW53SkdnUS1aZi00aS11ME83U0xwRGFLUlJVVnZDUjE4TnFGOTFFUEZjQTU3aXdrVjR0RnBjb05iQWhMTXRteWtaaFYtdGdNSnU5ako3T2JJY09abVUteVJYNzFlSHZwSkhtLWp6bHlPQkRVYW8?oc=5" target="_blank" rel="noopener">StreetInsider</a></div></details><div class="vote" data-s="bigmoney" data-h="Berkshire adds to Bending Spoons" data-u="https://news.google.com/rss/articles/CBMitAFBVV95cUxNUllCQmNjUGZIczBYYUNPRG1vM2l2SHZzNmRiUDZCUEtCNjRQU19jWDVkZXllZ0FTUVFZdDBwejR3NDlDRWx4MW53SkdnUS1aZi00aS11ME83U0xwRGFLUlJVVnZDUjE4TnFGOTFFUEZjQTU3aXdrVjR0RnBjb05iQWhMTXRteWtaaFYtdGdNSnU5ako3T2JJY09abVUteVJYNzFlSHZwSkhtLWp6bHlPQkRVYW8?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section></div><div class="group" id="g-sports"><h2 class="gtitle">Sports</h2><section class="sec" id="sports">
+      <div class="sec-head"><h3>Games &amp; Picks</h3><span class="note">Picks, not facts</span></div>
+      <div class="board">
+      <div class="score"><span class="wl w">W</span>
+      <span class="teams">Texas 34, Ole Miss 27 <span class="rec">5-2 · 8th in SEC</span><span class="nxt">Next: vs Mississippi St · Sat, Oct 31, 6:30 PM CT · <b>90% to win</b> · TEX -20.5</span></span>
+      <span class="when">Sat</span></div>
+      <div class="score"><span class="wl l">L</span>
+      <span class="teams">Falcons 29, 49ers 20 <span class="rec">6-1 · 1st in NFC West</span><span class="nxt">Next: vs Raiders · Sun, Nov 8, 3:25 PM CT · <b>84% to win</b> · SF -9.5</span></span>
+      <span class="when">Sun</span></div>
+      <div class="score"><span class="wl w">W</span>
+      <span class="teams">Steelers 16, Saints 10 <span class="rec">5-2 · 1st in AFC North</span><span class="nxt">Next: vs Browns · Sun, Nov 1, 12:00 PM CT · <b>66% to win</b> · PIT -3.5</span></span>
+      <span class="when">Sun</span></div>
+      <div class="score"><span class="wl w">W</span>
+      <span class="teams">Spurs 117, Jazz 111 <span class="rec">3-2 · 3rd in Southwest Division</span><span class="nxt">Next: vs Timberwolves · Sat, Oct 31, 7:00 PM CT · <b>72% to win</b></span></span>
+      <span class="when">Wed</span></div></div><p class="filter">Longhorns (5-2): vs Mississippi State, Sat 6:30 PM CT. ESPN gives Texas 90%, line -20.5. Alfred's pick: Texas 35, Mississippi State 13.</p><p class="filter">49ers (6-1, first in NFC West): vs Raiders, Sun Nov 8, 3:25 PM CT. ESPN says 84%, line -9.5. Alfred's pick: 49ers 28, Raiders 17, with Purdy bouncing back from the Falcons loss.</p><details class="moreitems"><summary>+3 more in Games &amp; Picks</summary><p class="filter">Steelers (5-2) with Aaron Rodgers: vs Browns, Sun 12:00 PM CT. ESPN says 66%, line -3.5, total 39.5. Alfred's pick: Steelers 21, Browns 17.</p><p class="filter">Spurs (3-2, 3rd in Southwest Division): vs Timberwolves, Sat 7:00 PM CT. ESPN says 72%. Alfred's pick: Spurs 116, Timberwolves 108.</p><div class="item">
+      <h4><a href="https://www.burntorangenation.com/texas-longhorns-football/106539/hollywood-smothers-cam-coleman-injury-report-texas-longhorns" target="_blank" rel="noopener">Smothers and Coleman cleared for Saturday</a></h4><p>Running back Hollywood Smothers and receiver Cam Coleman (both shoulder) came off Texas's injury report Thursday.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Left tackle Trevor Goosby (knee) and edge Richard Wesley (ankle) are out.</p><div class="src"><a href="https://www.burntorangenation.com/texas-longhorns-football/106539/hollywood-smothers-cam-coleman-injury-report-texas-longhorns" target="_blank" rel="noopener">Burnt Orange Nation</a></div></details><div class="vote" data-s="sports" data-h="Smothers and Coleman cleared for Saturday" data-u="https://www.burntorangenation.com/texas-longhorns-football/106539/hollywood-smothers-cam-coleman-injury-report-texas-longhorns"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div></details>
+    </section><section class="sec" id="fbgossip">
+      <div class="sec-head"><h3>Football Gossip</h3><span class="note">Villain watch</span></div>
+      <div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPUUoxQUh3SnY0MTVBM2FzUngzRm9fUzU1TkxIalVMMnllek9MZHRkQVNreUlKZS13MlVQZ3V0TXJjbWI1WUs3aE14d3lmV1VyU3pNd081LV9QbjhnR2tyZXpvSTFDaVZsdGVfVXZhaGJOX3kyVThzekI1T3l0NWRQaldTRmhhaE40Smc0VmwzNmJpSHAzN0dGdXF3LTItazU5Y1dSMl9KdnFyM0NvMVE?oc=5" target="_blank" rel="noopener">Kiffin cries foul over Alabama kickoff time</a></h4><p>Lane Kiffin is fuming over Alabama kickoff time and says the SEC's night-game selection shows bias toward LSU.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> The AJC says he infers bias in night-game selection. Texas just beat his old Ole Miss team, so he has company in the grievance department.</p><div class="src"><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPUUoxQUh3SnY0MTVBM2FzUngzRm9fUzU1TkxIalVMMnllek9MZHRkQVNreUlKZS13MlVQZ3V0TXJjbWI1WUs3aE14d3lmV1VyU3pNd081LV9QbjhnR2tyZXpvSTFDaVZsdGVfVXZhaGJOX3kyVThzekI1T3l0NWRQaldTRmhhaE40Smc0VmwzNmJpSHAzN0dGdXF3LTItazU5Y1dSMl9KdnFyM0NvMVE?oc=5" target="_blank" rel="noopener">Fox News</a> · <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNS0lVMm9qTkI2dHd1U05fTGQ4dmZTMG9KaXk1ZUpObENkVlVNN2tDNkJPM1FTcXVNeWtSbGR1VHFNcUtaaGp3MDJScVNxcE9pWTgxUEkI0S0NpWTgxUG9DSS1DOGJMMTZlS2RjWEVhV3ctTUkzZ3h3SF9TNkJxc2NncllWYklFSWNVcU5lVGlTc2lKcHZueF9aS2F0QklrS2w4VXQ5LV81aFRjM0YydTZwVjM?oc=5" target="_blank" rel="noopener">Atlanta Journal-Constitution</a></div></details><div class="vote" data-s="fbgossip" data-h="Kiffin cries foul over Alabama kickoff time" data-u="https://news.google.com/rss/articles/CBMirgFBVV95cUxPUUoxQUh3SnY0MTVBM2FzUngzRm9fUzU1TkxIalVMMnllek9MZHRkQVNreUlKZS13MlVQZ3V0TXJjbWI1WUs3aE14d3lmV1VyU3pNd081LV9QbjhnR2tyZXpvSTFDaVZsdGVfVXZhaGJOX3kyVThzekI1T3l0NWRQaldTRmhhaE40Smc0VmwzNmJpSHAzN0dGdXF3LTItazU5Y1dSMl9KdnFyM0NvMVE?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNTTFiMUZlMDYzZTB5Z3pYRW9ld1Z2QVpVN1MyQkgxaVhDbEtld2phLTFCSF9ZQ3VMRy1sV1JyS1YxWENSb2ZybUpvNlBDR2ljMk9ROTJ0UGR1SzFoMWZlaXU3QVltMDZqM3Y2R21nOGQ5YmNUcFgzek1ONk10eG1HOXhqTlhyRmRyMDl2T1VyU3pCNEpja1N4MzlwcHQ4blg3Qm5DV2M0TWd4MzJOWS1tb2JENEs?oc=5" target="_blank" rel="noopener">Kiffin affirmed his Ole Miss exit for LSU, saying, 'I've never thought twice.'</a></h4><p>Sports Illustrated says Kiffin affirmed his Ole Miss exit for LSU: &quot;I've never thought twice.&quot;</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><div class="src"><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxNTTFiMUZlMDYzZTB5Z3pYRW9ld1Z2QVpVN1MyQkgxaVhDbEtld2phLTFCSF9ZQ3VMRy1sV1JyS1YxWENSb2ZybUpvNlBDR2ljMk9ROTJ0UGR1SzFoMWZlaXU3QVltMDZqM3Y2R21nOGQ5YmNUcFgzek1ONk10eG1HOXhqTlhyRmRyMDl2T1VyU3pCNEpja1N4MzlwcHQ4blg3Qm5DV2M0TWd4MzJOWS1tb2JENEs?oc=5" target="_blank" rel="noopener">Sports Illustrated</a></div></details><div class="vote" data-s="fbgossip" data-h="Kiffin affirmed his Ole Miss exit for LSU, saying, 'I've never thought twice.'" data-u="https://news.google.com/rss/articles/CBMitAFBVV95cUxNTTFiMUZlMDYzZTB5Z3pYRW9ld1Z2QVpVN1MyQkgxaVhDbEtld2phLTFCSF9ZQ3VMRy1sV1JyS1YxWENSb2ZybUpvNlBDR2ljMk9ROTJ0UGR1SzFoMWZlaXU3QVltMDZqM3Y2R21nOGQ5YmNUcFgzek1ONk10eG1HOXhqTlhyRmRyMDl2T1VyU3pCNEpja1N4MzlwcHQ4blg3Qm5DV2M0TWd4MzJOWS1tb2JENEs?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><details class="moreitems"><summary>+1 more in Football Gossip</summary><div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNRENsMmtnVzZXREtvLVd2X0tJVGVxaXJRaDM0UmN3UTdhX0xXQmN3ZmVKb2k1a2ZRNHRMTlBuR0xTUVdUNTdDRGVqaUVBSkl0MlA0T3NjSGtpRVVNSC1RSlNsN2I3UUlfdlJQNnRkemxqbHdER1MwSHpMMXJrcDVZOGR5T1FZN0pDZXM4cndGUWVzc3V2?oc=5" target="_blank" rel="noopener">Sark says the SEC is eating itself</a></h4><p>Yahoo Sports reports Steve Sarkisian accuses the SEC of cannibalizing itself with its schedule.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><div class="src"><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNRENsMmtnVzZXREtvLVd2X0tJVGVxaXJRaDM0UmN3UTdhX0xXQmN3ZmVKb2k1a2ZRNHRMTlBuR0xTUVdUNTdDRGVqaUVBSkl0MlA0T3NjSGtpRVVNSC1RSlNsN2I3UUlfdlJQNnRkemxqbHdER1MwSHpMMXJrcDVZOGR5T1FZN0pDZXM4cndGUWVzc3V2?oc=5" target="_blank" rel="noopener">Yahoo Sports</a></div></details><div class="vote" data-s="fbgossip" data-h="Sark says the SEC is eating itself" data-u="https://news.google.com/rss/articles/CBMilAFBVV95cUxNRENsMmtnVzZXREtvLVd2X0tJVGVxaXJRaDM0UmN3UTdhX0xXQmN3ZmVKb2k1a2ZRNHRMTlBuR0xTUVdUNTdDRGVqaUVBSkl0MlA0T3NjSGtpRVVNSC1RSlNsN2I3UUlfdlJQNnRkemxqbHdER1MwSHpMMXJrcDVZOGR5T1FZN0pDZXM4cndGUWVzc3V2?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div></details>
+    </section></div>
+  
+  <footer class="foot">
+    <p style="margin:0">Picked by Gemini, written by Claude, fact-checked by GPT. Tags are the agents' best read, not verdicts. Nothing here is financial advice.</p>
+    <p style="margin:0">Your 👍/👎 shape only your own edition.</p>
+    <p style="margin:0">This edition: <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-29-sir.html" target="_blank" rel="noopener">https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-29-sir.html</a></p>
+  </footer>
+</div>
+<script>
+(() => {
+  const CFG = {"url":"https://desktop-u5ut9ih.tail9f72eb.ts.net/webhook/signal-vote","people":[["U07PS2CUUUC","Sir Coulter"],["U07Q28B5LUR","Madam Marisol"]],"edition":"2026-10-29","who":"U07PS2CUUUC"};
+  const ls = { get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} } };
+  const box = document.getElementById('voter');
+  let who = CFG.who || ls.get('signal_who');
+  const nameOf = (id) => (CFG.people.find(p => p[0] === id) || [])[1] || '';
+  function drawVoter(prompt) {
+    if (!CFG.url || !CFG.people.length) return;
+    box.hidden = false;
+    box.innerHTML = (prompt ? '<b>Who’s voting?</b>' : 'Voting as') + CFG.people.map(p => '<button type="button" data-who="' + p[0] + '" aria-pressed="' + (p[0] === who) + '">' + p[1] + '</button>').join('');
+  }
+  let after = null;
+  box.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-who]'); if (!b) return;
+    who = b.dataset.who; ls.set('signal_who', who); drawVoter(false);
+    if (after) { const f = after; after = null; f(); }
+  });
+  const queue = () => { try { return JSON.parse(ls.get('signal_queue') || '[]'); } catch (e) { return []; } };
+  const saveQueue = (a) => ls.set('signal_queue', JSON.stringify(a.slice(-300)));
+  async function flush() {
+    const a = queue(); if (!a.length || !CFG.url) return;
+    const left = [];
+    for (const v of a) { try { await fetch(CFG.url + '?' + new URLSearchParams(v).toString(), { mode: 'no-cors', cache: 'no-store' }); } catch (e) { left.push(v); } }
+    saveQueue(left);
+  }
+  const keyOf = (el) => 'signal_vote:' + CFG.edition + ':' + who + ':' + el.dataset.h;
+  document.querySelectorAll('.vote').forEach(el => {
+    const v = ls.get(keyOf(el));
+    el.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === v)));
+  });
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('.vote button'); if (!b) return;
+    const el = b.closest('.vote');
+    const go = () => {
+      const was = ls.get(keyOf(el));
+      const v = was === b.dataset.v ? '0' : b.dataset.v;
+      ls.set(keyOf(el), v);
+      el.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.v === v)));
+      const a = queue();
+      a.push({ who, edition: CFG.edition, section: el.dataset.s, headline: el.dataset.h, url: el.dataset.u || '', vote: v, at: new Date().toISOString() });
+      saveQueue(a); flush();
+    };
+    if (!who) { after = go; drawVoter(true); box.scrollIntoView({ behavior: 'smooth', block: 'center' }); } else go();
+  });
+  flush();
+})();
+</script>
+</body></html>
