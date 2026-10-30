@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Morning Dispatch · Mrs. Roberts · Thursday, October 29</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
 <style>
 /* Layout: one email-width column, read top to bottom; sections are labelled bands, items are hairline-separated rows. */
 :root {
@@ -224,42 +224,96 @@ details.moreitems>summary{padding:6px 0 10px}
 .voter button{font:inherit;padding:3px 8px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:3px;cursor:pointer}
 .voter button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
 
-/* ---- The Morning Dispatch: walnut, brass and ivory ---- */
-:root{--paper:#f7f2e8;--sheet:#fdfaf4;--ink:#2b241c;--muted:#6f6353;--rule:#e6dccb;--accent:#8a6a3b;--band:#231811;--band-ink:#efe5d2;--band-muted:#b9a68a;
- --left:#2f4a6d;--right:#7d2e2b;--ok:#3f6b4a;--warn:#8a6a3b;--unv:#5d4a77;--chip-bg:#efe7d8;
- --font-display:"Cormorant Garamond","Iowan Old Style",Garamond,Georgia,serif;--font-body:"EB Garamond","Iowan Old Style",Garamond,Georgia,serif;--font-mono:"EB Garamond","Iowan Old Style",Georgia,serif;color-scheme:light}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#1c140e;--sheet:#251b14;--ink:#efe5d2;--muted:#b9a68a;--rule:#3a2c21;--accent:#c9a46a;--band:#2e2118;--band-ink:#efe5d2;--band-muted:#b9a68a;
- --left:#9db4d6;--right:#d99a8f;--ok:#9cc4a4;--warn:#d8b77d;--unv:#b9a6d6;--chip-bg:#2e2219;color-scheme:dark}}
-:root[data-theme="dark"]{--paper:#1c140e;--sheet:#251b14;--ink:#efe5d2;--muted:#b9a68a;--rule:#3a2c21;--accent:#c9a46a;--band:#2e2118;--band-ink:#efe5d2;--band-muted:#b9a68a;--left:#9db4d6;--right:#d99a8f;--ok:#9cc4a4;--warn:#d8b77d;--unv:#b9a6d6;--chip-bg:#2e2219;color-scheme:dark}
-body{font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
-.mast{align-items:center;text-align:center;border-bottom:3px double var(--rule);padding-bottom:18px}
-.mast h1,.mast h1 span{font-family:var(--font-display);font-weight:500;text-transform:none;letter-spacing:.005em;font-size:clamp(40px,11vw,60px);line-height:1;color:var(--ink)}
-.dateline,.jump a,.tag,.one .kicker,.nav a,.sixty a,.voter,.score .rec,.wx-grid span,.legend{font-family:var(--font-body);letter-spacing:.16em;text-transform:uppercase;font-size:11.5px}
-.voter{justify-content:center;text-transform:none;letter-spacing:0;font-size:14px;font-style:italic}
-.nav a,.jump a{background:transparent;border:1px solid var(--rule);border-radius:999px;padding:6px 12px;color:var(--muted)}
-.nav a:hover,.jump a:hover{color:var(--ink);border-color:var(--muted)}
-.one{border-radius:2px;padding:26px 24px}
-.one .kicker{color:#c9a46a}
-.one h2,.sec-head h2,.sec-head h3,.gtitle,.wx-t{font-family:var(--font-display);font-weight:500;text-transform:none;letter-spacing:0}
-.one h2{font-size:clamp(28px,7.5vw,38px);line-height:1.1}
-.gtitle{font-size:clamp(32px,8.5vw,42px);color:var(--ink);margin:18px 0 -4px;padding-top:14px;border-top:1px solid var(--rule)}
-.sec-head{border-bottom:1px solid var(--muted)}
-.sec-head h2{font-size:26px}.sec-head h3{font-size:23px}
-.item h4{font-family:var(--font-display);font-weight:600;font-size:21px;line-height:1.2}
-.tag{font-size:10px;border-radius:999px;padding:2px 8px}
-.wx{border-radius:2px}
-.wx-t{font-size:46px}
-.vote button{border-radius:999px}
-.wx-t,.wx-grid b,.score,.wx-l small{font-variant-numeric:lining-nums tabular-nums}
-.dateline{letter-spacing:.12em}
-.mast .legend,.mast .tags{justify-content:center}
+/* ---- The Morning Dispatch: an old broadsheet, set for a phone ---- */
+:root{--paper:#f5efe2;--sheet:#fbf7ee;--ink:#1f1a14;--muted:#5f5446;--rule:#d9ccb4;--accent:#7a5a2e;--band:#1f1a14;--band-ink:#f5efe2;--band-muted:#c9b99c;--left:#2f4a6d;--right:#7d2e2b;--ok:#3f6b4a;--warn:#8a6a3b;--unv:#5d4a77;--chip-bg:#efe6d4;color-scheme:light;--font-display:"Cormorant Garamond","Iowan Old Style",Garamond,Georgia,serif;--font-body:"EB Garamond","Iowan Old Style",Garamond,Georgia,serif;--font-mono:"EB Garamond","Iowan Old Style",Georgia,serif;--font-plate:"UnifrakturMaguntia","Old English Text MT","Cormorant Garamond",serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#f5efe2;--sheet:#fbf7ee;--ink:#1f1a14;--muted:#5f5446;--rule:#d9ccb4;--accent:#7a5a2e;--band:#1f1a14;--band-ink:#f5efe2;--band-muted:#c9b99c;--left:#2f4a6d;--right:#7d2e2b;--ok:#3f6b4a;--warn:#8a6a3b;--unv:#5d4a77;--chip-bg:#efe6d4;color-scheme:light;}}
+:root[data-theme="dark"]{--paper:#f5efe2;--sheet:#fbf7ee;--ink:#1f1a14;--muted:#5f5446;--rule:#d9ccb4;--accent:#7a5a2e;--band:#1f1a14;--band-ink:#f5efe2;--band-muted:#c9b99c;--left:#2f4a6d;--right:#7d2e2b;--ok:#3f6b4a;--warn:#8a6a3b;--unv:#5d4a77;--chip-bg:#efe6d4;color-scheme:light;}
+body{font-size:18.5px;line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--paper);
+ background-image:radial-gradient(rgba(120,90,40,.035) 1px,transparent 1px);background-size:3px 3px}
+.wrap{gap:26px}
+a{text-decoration-color:rgba(122,90,46,.45);text-underline-offset:3px}
+/* nameplate */
+.mast{align-items:stretch;text-align:center;gap:0;padding-bottom:0}
+.ears{display:flex;justify-content:space-between;gap:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:8px}
+.ears span{max-width:46%;line-height:1.35}.ears span:last-child{text-align:right}
+.mast h1{font-family:var(--font-plate);font-weight:400;text-transform:none;letter-spacing:0;font-size:clamp(38px,11.5vw,74px);line-height:1.05;margin:2px 0 8px;color:var(--ink)}
+.mast h1 span{color:inherit;font:inherit}
+.folio{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:6px 2px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.dateline{display:none}
+.voter{justify-content:center;margin-top:12px;font-size:14px;font-style:italic;color:var(--muted);text-transform:none;letter-spacing:0;font-family:var(--font-body)}
+.mast .legend{justify-content:center;margin-top:8px;font-family:var(--font-body);letter-spacing:.12em;text-transform:uppercase;font-size:10.5px}
 .mast .legend .tag{font-size:9.5px;padding:1px 7px}
+.learned{text-align:center;font-style:italic}
+/* small caps everywhere a label lives */
+.tag,.one .kicker,.nav a,.sixty a,.score .rec,.score .when,.wx-grid span,.sec-head .note,.stat .k,.tick,.barlabel,details.more>summary,details.moreitems>summary,.cal dt{font-family:var(--font-body);letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+.tag{border-radius:0;padding:1px 6px;font-size:9.5px}
+/* section index */
+.nav{justify-content:center;flex-wrap:wrap;gap:0;padding:8px 0;border-bottom:1px solid var(--ink);background:var(--paper)}
+.nav a{background:none;border:0;border-radius:0;padding:4px 10px;color:var(--ink);position:relative}
+.nav a+a::before{content:"·";position:absolute;left:-3px;color:var(--muted)}
+.nav a:hover{color:var(--accent)}
+@media (max-width:520px){.nav{flex-wrap:nowrap;justify-content:flex-start}.folio{font-size:10px;letter-spacing:.1em;flex-wrap:nowrap}.folio span:first-child{display:none}}
+/* weather report */
+.wx{border-radius:0;border:1px solid var(--ink);box-shadow:inset 0 0 0 3px var(--sheet),inset 0 0 0 4px var(--rule)}
+.wx-i{filter:grayscale(.35) sepia(.25)}
+.wx-t{font-family:var(--font-display);font-weight:500;font-size:48px}
+.wx-l{font-family:var(--font-display);font-size:20px;font-weight:600}
+.wx-t,.wx-grid b,.score,.wx-l small,.stat .v{font-variant-numeric:lining-nums tabular-nums}
+/* lead story */
+.one{background:none;color:var(--ink);border-radius:0;padding:4px 0 18px;border-bottom:1px solid var(--ink);text-align:left}
+.one .kicker{color:var(--accent);text-align:center}
+.one h2{font-family:var(--font-display);font-weight:600;text-transform:none;letter-spacing:-.005em;font-size:clamp(32px,8.5vw,46px);line-height:1.08;text-align:center;margin:2px 0 6px}
+.one p:not(.why):not(.src)::first-letter{float:left;font-family:var(--font-display);font-weight:600;font-size:3.4em;line-height:.82;padding:6px 8px 0 0;color:var(--ink)}
+.one .why{color:var(--muted);font-style:italic}.one .why b{color:var(--ink);font-style:normal}
+.one .src{color:var(--muted)}
+.one .vote button,.dl .vote button{background:var(--sheet);border-color:var(--rule)}
+/* at a glance */
+.glance{border:1px solid var(--rule);padding:14px 18px;background:var(--sheet)}
+.glance .sec-head{border:0;justify-content:center}
+.sixty a{color:var(--accent);margin-right:8px}
+/* departments */
+.gtitle{font-family:var(--font-display);font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink);text-align:center;font-size:clamp(28px,7.5vw,36px);margin:14px 0 -8px;padding:0;border:0;display:flex;align-items:center;gap:14px}
+.gtitle::before,.gtitle::after{content:"";flex:1;height:0;border-top:3px double var(--ink)}
+.sec-head{border-bottom:1px solid var(--ink);justify-content:center}
+.sec-head h2,.sec-head h3{font-family:var(--font-body);font-weight:500;text-transform:uppercase;letter-spacing:.2em;font-size:12.5px}
+.item{border-top:1px solid var(--rule)}
+.item h4,.item h3{font-family:var(--font-display);font-weight:600;font-size:23px;line-height:1.18;margin-bottom:4px}
+.item p{font-size:17.5px}
+.story-title{font-family:var(--font-display);font-size:22px;font-weight:600}
+.voice{border-radius:0;background:var(--sheet)}
+.cut b,.split b{color:var(--accent)}
+.score{background:var(--sheet);border-bottom:1px solid var(--rule)}
+.score .teams{font-weight:600}
+.wl{font-family:var(--font-display);font-weight:600}
+.stat .v{font-family:var(--font-display);font-weight:500}
+blockquote{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:24px;text-align:center;padding:6px 10px}
+blockquote footer{font-style:normal;font-family:var(--font-body);letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+/* the Daily L, boxed like a column */
+.dl{background:var(--sheet);color:var(--ink);border-radius:0;border:1px solid var(--ink);box-shadow:inset 0 0 0 4px var(--sheet),inset 0 0 0 5px var(--ink);padding:22px 22px 18px}
+.dl .big{font-family:var(--font-plate);font-weight:400;color:var(--right);font-size:96px}
+.dl .kicker{color:var(--right);font-family:var(--font-body);letter-spacing:.2em;text-transform:uppercase;font-size:11px}
+.dl h2{font-family:var(--font-display);font-weight:600;text-transform:none;font-size:32px;line-height:1.05}
+.dl .why{font-style:italic}
+.dl .roast,.dl .src,.dl .src a{color:var(--muted)}
+.dl .roast b{color:var(--ink)}
+.vote button{border-radius:999px;background:var(--sheet)}
+.foot{text-align:center;font-style:italic;border-top:3px double var(--ink)}
+/* a real broadsheet on a big screen */
+@media (min-width:960px){
+ .wrap{max-width:940px}
+ .group .sec{column-count:2;column-gap:44px;column-rule:1px solid var(--rule);display:block}
+ .group .sec>.sec-head,.group .sec>.board,.group .sec>.stats{column-span:all}
+ .item,.voices,details.moreitems,blockquote{break-inside:avoid}
+ .one h2{font-size:52px}
+}
 </style></head>
-<body><!-- dispatch-debug {&quot;from&quot;:&quot;editor&quot;,&quot;topKeys&quot;:[&quot;one_thing&quot;,&quot;sixty_seconds&quot;,&quot;sections&quot;,&quot;daily_l&quot;],&quot;found&quot;:{&quot;big3&quot;:3,&quot;culture&quot;:2,&quot;style&quot;:1,&quot;fun&quot;:2,&quot;wellness&quot;:2,&quot;budget&quot;:1,&quot;sports&quot;:3,&quot;wildcard&quot;:1,&quot;wisdom&quot;:1},&quot;dailyL&quot;:true,&quot;editorChars&quot;:9320,&quot;writerChars&quot;:9849} --><div class="wrap">
+<body><!-- dispatch-debug {&quot;from&quot;:&quot;editor&quot;,&quot;topKeys&quot;:[&quot;one_thing&quot;,&quot;sixty_seconds&quot;,&quot;sections&quot;,&quot;daily_l&quot;],&quot;found&quot;:{&quot;big3&quot;:3,&quot;culture&quot;:2,&quot;style&quot;:2,&quot;fun&quot;:2,&quot;wellness&quot;:2,&quot;home&quot;:2,&quot;budget&quot;:1,&quot;sports&quot;:4,&quot;wisdom&quot;:1},&quot;dailyL&quot;:true,&quot;editorChars&quot;:11124,&quot;writerChars&quot;:11949} --><div class="wrap">
   <header class="mast">
-    <h1>The Morning <span>Dispatch</span></h1>
+    <div class="ears"><span>Austin, Texas<br>Est. MMXXVI</span><span>67° · Cloudy<br>High 73°, low 67°</span></div>
+    <h1>The Morning Dispatch</h1>
+    <div class="folio"><span>No. 302</span><span>Thursday, October 29</span><span>For Mrs. Roberts</span></div>
     <div class="dateline">Thursday, October 29 · Prepared for Mrs. Roberts</div>
-    <div class="voter" id="voter">👍/👎 any story to tune your edition · <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-29-sir.html" target="_blank" rel="noopener">Master Roberts's edition</a></div>
+    <div class="voter" id="voter">👍/👎 any story to tune your edition · <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-29-sir.html" target="_blank" rel="noopener">Master Roberts' edition</a></div>
     
     
   </header>
@@ -275,56 +329,65 @@ body{font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
   </section>
   <nav class="nav" aria-label="Sections"><a href="#g-big">The Big 3</a><a href="#g-fun">The Fun Stuff</a><a href="#g-life">Life &amp; Home</a><a href="#g-sports">Sports</a><a href="#g-lift">Something Good</a><a href="#l">Daily L</a></nav>
   <article class="one" id="one">
-    <div class="kicker">The one thing</div>
-    <h2>Savannah Chrisley's secret wedding twist</h2>
-    <p>Records show Savannah Chrisley and Jason Galanis already wed on July 14 in the Cayman Islands. They married at the Cayman Islands Baptist Church, per records People obtained.</p>
-    <p class="why"><b>Why you care:</b> It's peak reality-TV plot twist, and Todd Chrisley said he initially didn't embrace the relationship but came around.</p>
-    <div class="src"><a href="https://www.eonline.com/news/1437651/savannah-chrisley-married-jason-galanis-in-wedding-before-pregnancy-reveal?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a></div>
-    <div class="vote" data-s="one" data-h="Savannah Chrisley's secret wedding twist" data-u="https://www.eonline.com/news/1437651/savannah-chrisley-married-jason-galanis-in-wedding-before-pregnancy-reveal?cmpid=rss-syndicate-genericrss-us-top_stories"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
+    <div class="kicker">The One Thing</div>
+    <h2>Dakota Johnson and MGK are getting cozier</h2>
+    <p>Dakota Johnson and Machine Gun Kelly are reportedly getting closer, though they haven't put a label on it. She was photographed stopping by his studio for dinner on Tuesday.</p>
+    <p class="why"><b>Why you care:</b> Because a romance that began at Taylor Swift and Travis Kelce's wedding is peak pop culture.</p>
+    <div class="src"><a href="https://www.elle.com/culture/celebrities/a74283831/dakota-johnson-machine-gun-kelly-feelings-october-2026/" target="_blank" rel="noopener">Elle</a></div>
+    <div class="vote" data-s="one" data-h="Dakota Johnson and MGK are getting cozier" data-u="https://www.elle.com/culture/celebrities/a74283831/dakota-johnson-machine-gun-kelly-feelings-october-2026/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
   </article>
-  <section class="sec glance"><div class="sec-head"><h3>At a glance</h3></div><ul class="sixty"><li><a href="#g-big">The Big 3</a> CDC activates emergency response for dengue outbreaks in Florida.</li><li><a href="#g-fun">The Fun Stuff</a> Pete Davidson's years-long tattoo erasing is showing real progress.</li><li><a href="#g-life">Life &amp; Home</a> Black Friday is Nov. 27, but early deals are already live.</li><li><a href="#g-sports">Sports</a> Longhorns host Mississippi State Saturday night, 6:30 CT. Steelers face Browns Sunday.</li><li><a href="#g-lift">Something Good</a> Scientists just recreated Rome's color-changing glass after 1,600 years.</li><li><a href="#l">The Daily L</a> Pete Davidson: paying to un-ink roughly 200 tattoos, and still going.</li></ul></section>
+  <section class="sec glance"><div class="sec-head"><h3>At a glance</h3></div><ul class="sixty"><li><a href="#g-big">The Big 3</a> Vance reportedly floats Iran peace talks, and Trump calls it a medical-supplies letter.</li><li><a href="#g-fun">The Fun Stuff</a> Panther Pat, a doll-and-stop-motion documentary about Pat Palinkas, the first woman to play pro football.</li><li><a href="#g-life">Life &amp; Home</a> A cozy pumpkin pasta that cooks while the noodles boil.</li><li><a href="#g-sports">Sports</a> Longhorns host Mississippi State Saturday at 6:30 PM CT.</li><li><a href="#g-lift">Something Good</a> Black Friday is Nov. 27, so make a gift list and spending cap before browsing.</li><li><a href="#l">The Daily L</a> Tarek El Moussa explains why a $150K BMW isn't spoiling anyone.</li></ul></section>
   <div class="group" id="g-big"><h2 class="gtitle">The Big 3</h2><section class="sec" id="big3">
       <div class="sec-head"><h3></h3><span class="note">Just the big three</span></div>
       <div class="item">
-      <h4><a href="https://www.zerohedge.com/medical/cdc-issues-emergency-response-over-dengue-surge-florida" target="_blank" rel="noopener">CDC activates dengue emergency response</a></h4><p>The CDC has launched a level 3 emergency response to dengue outbreaks in Florida and the Marshall Islands.</p>
-      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> It also prepares for possible increased spread elsewhere in the U.S.</p><div class="src"><a href="https://www.zerohedge.com/medical/cdc-issues-emergency-response-over-dengue-surge-florida" target="_blank" rel="noopener">ZeroHedge</a></div></details><div class="vote" data-s="big3" data-h="CDC activates dengue emergency response" data-u="https://www.zerohedge.com/medical/cdc-issues-emergency-response-over-dengue-surge-florida"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
-      <h4><a href="https://www.nytimes.com/2026/10/28/health/peptides-kennedy-fda.html" target="_blank" rel="noopener">RFK Jr. wants broader peptide access</a></h4><p>RFK Jr. says he will allow broader use of six unapproved peptide injections; the FDA had advised against the move.</p>
-      <div class="tags"><span class="tag t-warn">Disputed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Experts have raised safety concerns, and the move is being contested.</p><div class="src"><a href="https://www.nytimes.com/2026/10/28/health/peptides-kennedy-fda.html" target="_blank" rel="noopener">NYT Well</a> · <a href="https://www.statnews.com/2026/10/29/biotech-news-hhs-green-lights-six-peptides-for-now/?utm_campaign=rss" target="_blank" rel="noopener">STAT News</a></div></details><div class="vote" data-s="big3" data-h="RFK Jr. wants broader peptide access" data-u="https://www.nytimes.com/2026/10/28/health/peptides-kennedy-fda.html"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
-      <h4><a href="https://www.statnews.com/2026/10/29/biotech-news-hhs-green-lights-six-peptides-for-now/?utm_campaign=rss" target="_blank" rel="noopener">Lilly claims its drug beat Ozempic</a></h4><p>Lilly says its &quot;triple-G&quot; drug beat Ozempic in a head-to-head diabetes study, according to a STAT report.</p>
-      <div class="tags"><span class="tag t-unv">Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> That's the company's claim, and we only have headlines so far.</p><div class="src"><a href="https://www.statnews.com/2026/10/29/biotech-news-hhs-green-lights-six-peptides-for-now/?utm_campaign=rss" target="_blank" rel="noopener">STAT News</a></div></details><div class="vote" data-s="big3" data-h="Lilly claims its drug beat Ozempic" data-u="https://www.statnews.com/2026/10/29/biotech-news-hhs-green-lights-six-peptides-for-now/?utm_campaign=rss"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+      <h4><a href="https://www.theamericanconservative.com/iran-war-day-244-vance-proposes-peace-talks-in-letter-to-hardliner/" target="_blank" rel="noopener">Vance reportedly proposes Iran peace talks</a></h4><p>The American Conservative says the New York Times and Wall Street Journal reported that Vice President Vance sent a letter proposing renewed talks with Iran.</p>
+      <div class="tags"><span class="tag t-warn">Disputed: what the letter is for</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Trump says he approved it but described it as being about getting medical supplies into Iran.</p><div class="src"><a href="https://www.theamericanconservative.com/iran-war-day-244-vance-proposes-peace-talks-in-letter-to-hardliner/" target="_blank" rel="noopener">The American Conservative</a></div></details><div class="vote" data-s="big3" data-h="Vance reportedly proposes Iran peace talks" data-u="https://www.theamericanconservative.com/iran-war-day-244-vance-proposes-peace-talks-in-letter-to-hardliner/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.cnbc.com/2026/10/29/circle-tether-freeze-funds-impacted-by-potential-binance-security-issue.html" target="_blank" rel="noopener">Binance reports a $6.3B security incident</a></h4><p>Binance says a security incident had an estimated impact of $6.3 billion, while the current verified frozen total is $2.54 billion; the investigation is ongoing.</p>
+      <div class="tags"><span class="tag t-plain">Company statement, probe ongoing</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> It says it will cover all losses, has paused deposits and withdrawals, and says customer funds remain safe. That's its own account.</p><div class="src"><a href="https://www.cnbc.com/2026/10/29/circle-tether-freeze-funds-impacted-by-potential-binance-security-issue.html" target="_blank" rel="noopener">CNBC</a></div></details><div class="vote" data-s="big3" data-h="Binance reports a $6.3B security incident" data-u="https://www.cnbc.com/2026/10/29/circle-tether-freeze-funds-impacted-by-potential-binance-security-issue.html"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.thefp.com/p/weed-massachusetts-ballot-legal-josh-code" target="_blank" rel="noopener">Massachusetts votes on ending legal weed sales</a></h4><p>Voters decide Question 8 next Tuesday, which would ban retail recreational marijuana sales but keep small-amount possession legal; supporters call it a reset, while opponents warn it would undo a legal industry that has generated about $10 billion in revenue since 2018.</p>
+      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> The state's Cannabis Control Commission also counts about $2 billion in state and local tax revenue.</p><div class="src"><a href="https://www.thefp.com/p/weed-massachusetts-ballot-legal-josh-code" target="_blank" rel="noopener">The Free Press</a></div></details><div class="vote" data-s="big3" data-h="Massachusetts votes on ending legal weed sales" data-u="https://www.thefp.com/p/weed-massachusetts-ballot-legal-josh-code"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section></div><div class="group" id="g-fun"><h2 class="gtitle">The Fun Stuff</h2><section class="sec" id="culture">
-      <div class="sec-head"><h3>Pop Culture</h3><span class="note">Tea, served warm</span></div>
+      <div class="sec-head"><h3>Pop Culture</h3><span class="note">Tea and tattoos</span></div>
       <div class="item">
-      <h4><a href="https://www.eonline.com/news/1437651/savannah-chrisley-married-jason-galanis-in-wedding-before-pregnancy-reveal?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">Savannah Chrisley's secret wedding twist</a></h4><p>Records show Savannah Chrisley and Jason Galanis already wed on July 14 in the Cayman Islands.</p>
-      <details class="more"><summary>More</summary><p>She says a bigger wedding is still planned, now pushed to May 2027. Todd Chrisley said he initially didn't embrace the relationship but came around.</p><div class="src"><a href="https://www.eonline.com/news/1437651/savannah-chrisley-married-jason-galanis-in-wedding-before-pregnancy-reveal?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a> · <a href="https://www.eonline.com/news/1437648/todd-chrisley-reacts-to-savannah-chrisley-jason-galanis-marriage-age-gap?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a></div></details><div class="vote" data-s="culture" data-h="Savannah Chrisley's secret wedding twist" data-u="https://www.eonline.com/news/1437651/savannah-chrisley-married-jason-galanis-in-wedding-before-pregnancy-reveal?cmpid=rss-syndicate-genericrss-us-top_stories"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
-      <h4><a href="https://www.elle.com/culture/celebrities/a74283831/dakota-johnson-machine-gun-kelly-feelings-october-2026/" target="_blank" rel="noopener">Dakota Johnson and MGK: getting closer?</a></h4><p>Insiders tell People the pair are in a &quot;dating phase&quot; with no label yet.</p>
-      <div class="tags"><span class="tag t-unv">Unverified</span></div><details class="more"><summary>More</summary><div class="src"><a href="https://www.elle.com/culture/celebrities/a74283831/dakota-johnson-machine-gun-kelly-feelings-october-2026/" target="_blank" rel="noopener">Elle</a></div></details><div class="vote" data-s="culture" data-h="Dakota Johnson and MGK: getting closer?" data-u="https://www.elle.com/culture/celebrities/a74283831/dakota-johnson-machine-gun-kelly-feelings-october-2026/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+      <h4><a href="https://www.tmz.com/2026/10/29/chrishell-stause-shocked-by-g-flip-breakup/" target="_blank" rel="noopener">Chrishell Stause and G Flip split</a></h4><p>The couple ended their four-year romance, and TMZ reports, citing sources, that Chrishell was blindsided.</p>
+      <div class="tags"><span class="tag t-unv">Unverified: TMZ's sources</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Chrishell said Monday she still loves G and feels &quot;a little bit like a failure.&quot; G said they'll always cherish their memories.</p><div class="src"><a href="https://www.tmz.com/2026/10/29/chrishell-stause-shocked-by-g-flip-breakup/" target="_blank" rel="noopener">TMZ</a></div></details><div class="vote" data-s="culture" data-h="Chrishell Stause and G Flip split" data-u="https://www.tmz.com/2026/10/29/chrishell-stause-shocked-by-g-flip-breakup/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.eonline.com/news/1437647/pete-davidson-reveals-tattoo-removal-process-update-in-shirtless-photo?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">Pete Davidson's tattoo removal is working</a></h4><p>A shirtless pic shows his arms nearly bare and his chest tattoos fading after six-plus years of lasering.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> He's still keeping the tattoos honoring his parents, and he added &quot;Scottie&quot; by his ear for his daughter.</p><div class="src"><a href="https://www.eonline.com/news/1437647/pete-davidson-reveals-tattoo-removal-process-update-in-shirtless-photo?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a></div></details><div class="vote" data-s="culture" data-h="Pete Davidson's tattoo removal is working" data-u="https://www.eonline.com/news/1437647/pete-davidson-reveals-tattoo-removal-process-update-in-shirtless-photo?cmpid=rss-syndicate-genericrss-us-top_stories"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section><section class="sec" id="style">
-      <div class="sec-head"><h3>Style, Beauty &amp; Reality TV</h3><span class="note">Hair goals</span></div>
+      <div class="sec-head"><h3>Style, Beauty &amp; Reality TV</h3><span class="note">Sparkle on a budget</span></div>
       <div class="item">
-      <h4><a href="https://www.elle.com/beauty/hair/a74283653/bob-haircuts-guide/" target="_blank" rel="noopener">Your bob, decoded</a></h4><p>Elle breaks down the blunt, French, A-line and shaggy bobs so you walk into the salon prepared.</p>
-      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> What they all share: a defined line at the bottom and not many layers.</p><div class="src"><a href="https://www.elle.com/beauty/hair/a74283653/bob-haircuts-guide/" target="_blank" rel="noopener">Elle</a></div></details><div class="vote" data-s="style" data-h="Your bob, decoded" data-u="https://www.elle.com/beauty/hair/a74283653/bob-haircuts-guide/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+      <h4><a href="https://www.goodhousekeeping.com/what-to-buy/sales-shopping-news/a74286381/kate-middleton-hoop-earrings/" target="_blank" rel="noopener">Kate's favorite hoops cost just $42</a></h4><p>Kate Middleton keeps wearing triple-banded mixed-metal huggie hoops, and Good Housekeeping found look-alikes.</p>
+      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Dupes include Mejuri twisted huggies and a cheaper Amazon pair from PAVOI.</p><div class="src"><a href="https://www.goodhousekeeping.com/what-to-buy/sales-shopping-news/a74286381/kate-middleton-hoop-earrings/" target="_blank" rel="noopener">Good Housekeeping</a></div></details><div class="vote" data-s="style" data-h="Kate's favorite hoops cost just $42" data-u="https://www.goodhousekeeping.com/what-to-buy/sales-shopping-news/a74286381/kate-middleton-hoop-earrings/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.cosmopolitan.com/style-beauty/fashion/a74276175/90s-tween-fashion-trend/" target="_blank" rel="noopener">'90s tween style is back</a></h4><p>Cosmopolitan's writer is recreating her Limited Too-era look with bandanas, capris, striped tees and backward caps.</p>
+      <details class="more"><summary>More</summary><div class="src"><a href="https://www.cosmopolitan.com/style-beauty/fashion/a74276175/90s-tween-fashion-trend/" target="_blank" rel="noopener">Cosmopolitan</a></div></details><div class="vote" data-s="style" data-h="'90s tween style is back" data-u="https://www.cosmopolitan.com/style-beauty/fashion/a74276175/90s-tween-fashion-trend/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section><section class="sec" id="fun">
-      <div class="sec-head"><h3>Light &amp; Funny</h3></div>
+      <div class="sec-head"><h3>Light &amp; Funny</h3><span class="note">Smile break</span></div>
       <div class="item">
-      <h4><a href="https://www.eonline.com/news/1437647/pete-davidson-reveals-tattoo-removal-process-update-in-shirtless-photo?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">Pete Davidson's tattoo erasing is working</a></h4><p>Machine Gun Kelly's Instagram carousel shows Pete Davidson's tattoos looking dramatically faded.</p>
-      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> He started over six years ago and has an estimated 200 to go.</p><div class="src"><a href="https://www.eonline.com/news/1437647/pete-davidson-reveals-tattoo-removal-process-update-in-shirtless-photo?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a></div></details><div class="vote" data-s="fun" data-h="Pete Davidson's tattoo erasing is working" data-u="https://www.eonline.com/news/1437647/pete-davidson-reveals-tattoo-removal-process-update-in-shirtless-photo?cmpid=rss-syndicate-genericrss-us-top_stories"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
-      <h4><a href="https://www.cosmopolitan.com/entertainment/movies/a66029511/sexy-movies-hbo/" target="_blank" rel="noopener">Steamy HBO Max picks for a lazy night</a></h4><p>Cosmopolitan rounded up spicy movies and shows, including I Love LA and Heated Rivalry.</p>
-      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Consider it a lazy-night cheat sheet.</p><div class="src"><a href="https://www.cosmopolitan.com/entertainment/movies/a66029511/sexy-movies-hbo/" target="_blank" rel="noopener">Cosmopolitan</a></div></details><div class="vote" data-s="fun" data-h="Steamy HBO Max picks for a lazy night" data-u="https://www.cosmopolitan.com/entertainment/movies/a66029511/sexy-movies-hbo/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+      <h4><a href="https://www.goodnewsnetwork.org/panther-pat-shines-a-light-on-the-nearly-forgotten-first-woman-to-play-pro-football/" target="_blank" rel="noopener">Meet Panther Pat, the documentary about Pat Palinkas</a></h4><p>Panther Pat is a 12-minute documentary that uses dolls and stop-motion to tell the story of Pat Palinkas, who became the first woman to play pro football with the Orlando Panthers in 1970.</p>
+      <div class="tags"><span class="tag t-ok">Confirmed</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> It won Slamdance's Grand Jury Prize for Documentary Short, and Eli Manning and Robin Roberts signed on as executive producers.</p><div class="src"><a href="https://www.goodnewsnetwork.org/panther-pat-shines-a-light-on-the-nearly-forgotten-first-woman-to-play-pro-football/" target="_blank" rel="noopener">Good News Network</a></div></details><div class="vote" data-s="fun" data-h="Meet Panther Pat, the documentary about Pat Palinkas" data-u="https://www.goodnewsnetwork.org/panther-pat-shines-a-light-on-the-nearly-forgotten-first-woman-to-play-pro-football/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.nytimes.com/2026/10/28/briefing/the-good-list-houdini-colors.html" target="_blank" rel="noopener">The Good List: six small delights</a></h4><p>NYT Well's list of mood-lifters includes making your life bigger, color stories and back-seat rock.</p>
+      <details class="more"><summary>More</summary><div class="src"><a href="https://www.nytimes.com/2026/10/28/briefing/the-good-list-houdini-colors.html" target="_blank" rel="noopener">NYT Well</a></div></details><div class="vote" data-s="fun" data-h="The Good List: six small delights" data-u="https://www.nytimes.com/2026/10/28/briefing/the-good-list-houdini-colors.html"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section></div><div class="group" id="g-life"><h2 class="gtitle">Life &amp; Home</h2><section class="sec" id="wellness">
-      <div class="sec-head"><h3>Health &amp; Wellness</h3><span class="note">Small, doable habits</span></div>
+      <div class="sec-head"><h3>Health &amp; Wellness</h3><span class="note">Feel good, look good</span></div>
       <div class="item">
-      <h4><a href="https://www.elle.com/beauty/makeup-skin-care/a71282465/best-gel-eye-patches/" target="_blank" rel="noopener">Chill your eye patches first</a></h4><p>A celebrity esthetician says chilled gel eye patches can temporarily help under-eyes look less puffy.</p>
-      <div class="tags"><span class="tag t-warn">Evidence: Early</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Her tip: store them in the fridge before using.</p><div class="src"><a href="https://www.elle.com/beauty/makeup-skin-care/a71282465/best-gel-eye-patches/" target="_blank" rel="noopener">Elle</a></div></details><div class="vote" data-s="wellness" data-h="Chill your eye patches first" data-u="https://www.elle.com/beauty/makeup-skin-care/a71282465/best-gel-eye-patches/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
-      <h4><a href="https://www.zerohedge.com/medical/cdc-issues-emergency-response-over-dengue-surge-florida" target="_blank" rel="noopener">Best dengue defense: skip the bites</a></h4><p>The CDC says the best prevention for dengue is avoiding mosquito bites.</p>
-      <div class="tags"><span class="tag t-warn">Evidence: Strong</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Symptoms can include aches, nausea and rash.</p><div class="src"><a href="https://www.zerohedge.com/medical/cdc-issues-emergency-response-over-dengue-surge-florida" target="_blank" rel="noopener">ZeroHedge</a></div></details><div class="vote" data-s="wellness" data-h="Best dengue defense: skip the bites" data-u="https://www.zerohedge.com/medical/cdc-issues-emergency-response-over-dengue-surge-florida"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+      <h4><a href="https://www.sciencedaily.com/releases/2026/10/261027230715.htm" target="_blank" rel="noopener">Daily fiber may ease knee arthritis pain</a></h4><p>In a Nottingham trial, people with knee osteoarthritis who took inulin fiber reported less pain and better grip strength.</p>
+      <div class="tags"><span class="tag t-warn">Evidence: early (one trial)</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Only 3.6% of the inulin-only group dropped out, versus 21% in the physical therapy-only group. Ask your doctor before adding supplements.</p><div class="src"><a href="https://www.sciencedaily.com/releases/2026/10/261027230715.htm" target="_blank" rel="noopener">ScienceDaily</a></div></details><div class="vote" data-s="wellness" data-h="Daily fiber may ease knee arthritis pain" data-u="https://www.sciencedaily.com/releases/2026/10/261027230715.htm"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.elle.com/beauty/makeup-skin-care/a71282465/best-gel-eye-patches/" target="_blank" rel="noopener">Gel eye patches fake a good night's sleep</a></h4><p>A celebrity esthetician says a good patch can make you look more awake in 10 to 15 minutes.</p>
+      <div class="tags"><span class="tag t-warn">Evidence: early (expert opinion)</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Her tip is to chill them in the fridge first, since cold helps depuff.</p><div class="src"><a href="https://www.elle.com/beauty/makeup-skin-care/a71282465/best-gel-eye-patches/" target="_blank" rel="noopener">Elle</a></div></details><div class="vote" data-s="wellness" data-h="Gel eye patches fake a good night's sleep" data-u="https://www.elle.com/beauty/makeup-skin-care/a71282465/best-gel-eye-patches/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="home">
+      <div class="sec-head"><h3>Home, Food &amp; Austin</h3><span class="note">Cozy and local</span></div>
+      <div class="item">
+      <h4><a href="https://www.bonappetit.com/recipe/creamy-pumpkin-pasta" target="_blank" rel="noopener">Creamy pumpkin pasta in one pot of time</a></h4><p>Bon Appétit's weeknight sauce uses canned pumpkin, Parmesan, lemon zest and a little cream, and it cooks while the pasta boils.</p>
+      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Use unsweetened pumpkin purée, not pie filling. Add sausage if you want it heartier.</p><div class="src"><a href="https://www.bonappetit.com/recipe/creamy-pumpkin-pasta" target="_blank" rel="noopener">Bon Appétit</a></div></details><div class="vote" data-s="home" data-h="Creamy pumpkin pasta in one pot of time" data-u="https://www.bonappetit.com/recipe/creamy-pumpkin-pasta"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4>Fire-grilled Mexican seafood heads to South Austin</h4><p>Eater Austin says a new fire-grilled Mexican seafood spot is on its way to South Austin.</p>
+      <details class="more"><summary>More</summary><div class="src"></div></details><div class="vote" data-s="home" data-h="Fire-grilled Mexican seafood heads to South Austin" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section><section class="sec" id="budget">
-      <div class="sec-head"><h3>Planning &amp; Budget</h3><span class="note">Mark your planner</span></div>
+      <div class="sec-head"><h3>Planning &amp; Budget</h3><span class="note">Plan ahead</span></div>
       <div class="item">
-      <h4><a href="https://www.eonline.com/news/1437643/everything-to-know-about-black-friday-2026-best-deals-sales-to-shop?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">Put Black Friday on your calendar now</a></h4><p>Black Friday is Nov. 27, but many deals roll out in waves starting in early November.</p>
-      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Planner idea: jot Nov. 27, Cyber Monday (Nov. 30) and Travel Tuesday (Dec. 1) on your calendar, plus a spending cap.</p><div class="src"><a href="https://www.eonline.com/news/1437643/everything-to-know-about-black-friday-2026-best-deals-sales-to-shop?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a></div></details><div class="vote" data-s="budget" data-h="Put Black Friday on your calendar now" data-u="https://www.eonline.com/news/1437643/everything-to-know-about-black-friday-2026-best-deals-sales-to-shop?cmpid=rss-syndicate-genericrss-us-top_stories"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+      <h4><a href="https://www.eonline.com/news/1437643/everything-to-know-about-black-friday-2026-best-deals-sales-to-shop?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">Plan before the Black Friday deals</a></h4><p>Black Friday is Nov. 27, but many retailers are rolling out early deals in waves; make your gift list and set a spending cap in your Erin Condren before browsing.</p>
+      <details class="more"><summary>More</summary><div class="src"><a href="https://www.eonline.com/news/1437643/everything-to-know-about-black-friday-2026-best-deals-sales-to-shop?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a></div></details><div class="vote" data-s="budget" data-h="Plan before the Black Friday deals" data-u="https://www.eonline.com/news/1437643/everything-to-know-about-black-friday-2026-best-deals-sales-to-shop?cmpid=rss-syndicate-genericrss-us-top_stories"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section></div><div class="group" id="g-sports"><h2 class="gtitle">Sports</h2><section class="sec" id="sports">
-      <div class="sec-head"><h3></h3><span class="note">Hook 'em, Niners, Steelers</span></div>
+      <div class="sec-head"><h3></h3><span class="note">Hook 'em and more</span></div>
       <div class="board">
       <div class="score"><span class="wl w">W</span>
       <span class="teams">Texas 34, Ole Miss 27 <span class="rec">5-2 · 8th in SEC</span><span class="nxt">Next: vs Mississippi St · Sat, Oct 31, 6:30 PM CT · <b>90% to win</b> · TEX -20.5</span></span>
@@ -337,25 +400,22 @@ body{font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
       <span class="when">Sun</span></div>
       <div class="score"><span class="wl w">W</span>
       <span class="teams">Spurs 117, Jazz 111 <span class="rec">3-2 · 3rd in Southwest Division</span><span class="nxt">Next: vs Timberwolves · Sat, Oct 31, 7:00 PM CT · <b>72% to win</b></span></span>
-      <span class="when">Wed</span></div></div><p class="filter">Longhorns (5-2): Beat Ole Miss 34-27 Saturday. Mississippi State is next, Saturday at 6:30 PM CT on ESPN. Texas is a 20.5-point favorite, and ESPN gives them about a 90% win chance.</p><p class="filter">49ers (6-1): Falcons beat them 29-20 Sunday, a speed bump for the NFC West leaders. Next up is the Raiders on Nov. 8 at 3:25 PM CT; San Francisco is a 9.5-point favorite.</p><details class="moreitems"><summary>+1 more in Sports</summary><p class="filter">Aaron Rodgers and the Steelers (5-2): Beat the Saints 16-10 Sunday. They host the Browns Sunday at noon CT, favored by 3.5.</p></details>
-    </section></div><div class="group" id="g-lift"><h2 class="gtitle">Something Good</h2><section class="sec" id="wildcard">
-      <div class="sec-head"><h3>Wildcard</h3><span class="note">Ancient glow-up</span></div>
-      <div class="item">
-      <h4><a href="https://www.goodnewsnetwork.org/romans-made-color-changing-glass-and-weve-just-replicated-after-1600-years/" target="_blank" rel="noopener">Romans' color-changing glass, recreated</a></h4><p>Scientists recreated the color-changing Roman Lycurgus Cup glass after 1,600 years.</p>
-      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Tiny gold and silver particles do the trick, and lead scientist Lisa Hollands calls it &quot;magic.&quot;</p><div class="src"><a href="https://www.goodnewsnetwork.org/romans-made-color-changing-glass-and-weve-just-replicated-after-1600-years/" target="_blank" rel="noopener">Good News Network</a></div></details><div class="vote" data-s="wildcard" data-h="Romans' color-changing glass, recreated" data-u="https://www.goodnewsnetwork.org/romans-made-color-changing-glass-and-weve-just-replicated-after-1600-years/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
-    </section><section class="sec" id="wisdom">
-      <div class="sec-head"><h3>Wisdom</h3></div>
-      <div class="item"><blockquote>Nothing great was ever achieved without enthusiasm.<footer>Ralph Waldo Emerson</footer></blockquote><p class="after">Pick one thing today and do it with Longhorns-game-day energy.</p><div class="vote" data-s="wisdom" data-h="Nothing great was ever achieved without enthusiasm." data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+      <span class="when">Wed</span></div></div><p class="filter">Longhorns (5-2) beat Ole Miss 34-27. Next: Mississippi State, Saturday at 6:30 PM CT.</p><p class="filter">49ers (6-1) fell to the Falcons 29-20. Next up: Raiders, Nov. 8 at 3:25 PM CT.</p><details class="moreitems"><summary>+2 more in Sports</summary><p class="filter">Aaron Rodgers' Steelers (5-2) beat the Saints 16-10. Next: Browns, Sunday at noon CT.</p><div class="item">
+      <h4><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSjEzZzVGa2pVSWlLZUlReEkxZm9reU5rNVFFNG9Lc080ZmhseE1fMVA4UnRSNm9jNHcxcmNFd082MHMydlA5TGdsdzNiN1FtbjZabUdaTUd6ZDBEcXVMXy13VDVtR0JzUDVnZzhTdWFVYXJQSGxTZDUwclRISHRBN0RsWnFjWjJj?oc=5" target="_blank" rel="noopener">Lane Kiffin gets called out over kick times</a></h4><p>BroBible argues Lane Kiffin got a taste of his own medicine after complaining about LSU-Alabama kickoff time.</p>
+      <div class="tags"><span class="tag t-plain">Commentary: BroBible's opinion</span></div><details class="more"><summary>More</summary><div class="src"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSjEzZzVGa2pVSWlLZUlReEkxZm9reU5rNVFFNG9Lc080ZmhseE1fMVA4UnRSNm9jNHcxcmNFd082MHMydlA5TGdsdzNiN1FtbjZabUdaTUd6ZDBEcXVMXy13VDVtR0JzUDVnZzhTdWFVYXJQSGxTZDUwclRISHRBN0RsWnFjWjJj?oc=5" target="_blank" rel="noopener">BroBible</a></div></details><div class="vote" data-s="sports" data-h="Lane Kiffin gets called out over kick times" data-u="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOSjEzZzVGa2pVSWlLZUlReEkxZm9reU5rNVFFNG9Lc080ZmhseE1fMVA4UnRSNm9jNHcxcmNFd082MHMydlA5TGdsdzNiN1FtbjZabUdaTUd6ZDBEcXVMXy13VDVtR0JzUDVnZzhTdWFVYXJQSGxTZDUwclRISHRBN0RsWnFjWjJj?oc=5"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div></details>
+    </section></div><div class="group" id="g-lift"><h2 class="gtitle">Something Good</h2><section class="sec" id="wisdom">
+      <div class="sec-head"><h3>Wisdom</h3><span class="note">Today's nudge</span></div>
+      <div class="item"><blockquote>Nothing great was ever achieved without enthusiasm.<footer>Ralph Waldo Emerson</footer></blockquote><p class="after">Bring a little extra sparkle to one thing on your to-do list today.</p><div class="vote" data-s="wisdom" data-h="Nothing great was ever achieved without enthusiasm." data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
     </section></div>
   
   <article class="dl" id="l">
     <span class="big" aria-hidden="true">L</span>
-    <div class="kicker">The Daily L</div>
-    <h2>Pete Davidson</h2>
-    <p class="why">Pete Davidson has spent years and a small fortune undoing about 200 tattoos he once bought.</p>
-    <p class="roast">Pete Davidson turned body art into a subscription service: pay to get the ink, then pay for years to take it back.</p>
-    <div class="src"><a href="https://www.eonline.com/news/1437647/pete-davidson-reveals-tattoo-removal-process-update-in-shirtless-photo?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a></div>
-    <div class="vote" data-s="l" data-h="Pete Davidson" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
+    <div class="kicker">The Daily L · A Column</div>
+    <h2>Tarek El Moussa</h2>
+    <p class="why">The &quot;Flip or Flop&quot; alum went on a podcast to defend a $150,000 BMW X5 for his 16-year-old and said he's obsessed with things because he never had things.</p>
+    <p class="roast">Tarek defended buying his 16-year-old daughter a $150,000 BMW, saying she &quot;earned it&quot; with a 4.2 GPA and soccer MVP and that it was about safety—flipping houses is clearly easier than flipping the narrative.</p>
+    <div class="src"><a href="https://pagesix.com/2026/10/29/celebrity-news/hgtv-star-defends-buying-150k-bmw-for-his-16-year-old-daughter/" target="_blank" rel="noopener">Page Six</a></div>
+    <div class="vote" data-s="l" data-h="Tarek El Moussa" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
   </article>
   <footer class="foot">
     <p style="margin:0">Picked by Gemini, written by Claude, fact-checked by GPT. Tags are the agents' best read, not verdicts. Nothing here is financial advice.</p>
