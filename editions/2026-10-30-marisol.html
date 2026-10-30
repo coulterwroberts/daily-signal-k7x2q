@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Morning Dispatch · Mrs. Roberts · Friday, October 30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: one email-width column, read top to bottom; sections are labelled bands, items are hairline-separated rows. */
+:root {
+  --paper: #f4f5f8;
+  --sheet: #ffffff;
+  --ink: #11141b;
+  --muted: #5a6271;
+  --rule: #e2e5eb;
+  --accent: #bf4f0d;
+  --band: #11141b;
+  --band-ink: #f4f5f8;
+  --band-muted: #a9b0bd;
+  --left: #2456c4;
+  --right: #c22f2f;
+  --ok: #1d7a4b;
+  --warn: #a8700f;
+  --unv: #6a4fb8;
+  --chip-bg: #f0f2f6;
+  --font-display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --font-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0d1015; --sheet: #151920; --ink: #eceef2; --muted: #9aa3b2; --rule: #262c36;
+    --accent: #f0803f; --band: #1c222c; --band-ink: #eceef2; --band-muted: #9aa3b2;
+    --left: #79a2ff; --right: #ff7d7d; --ok: #52c58c; --warn: #e6b04c; --unv: #ab92ff; --chip-bg: #1d222b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0d1015; --sheet: #151920; --ink: #eceef2; --muted: #9aa3b2; --rule: #262c36;
+  --accent: #f0803f; --band: #1c222c; --band-ink: #eceef2; --band-muted: #9aa3b2;
+  --left: #79a2ff; --right: #ff7d7d; --ok: #52c58c; --warn: #e6b04c; --unv: #ab92ff; --chip-bg: #1d222b;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 48px;
+}
+.wrap { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Masthead */
+.mast { display: flex; flex-direction: column; gap: 6px; }
+.mast h1 {
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(44px, 12vw, 68px); line-height: 0.9; letter-spacing: 0.01em; margin: 0;
+}
+.mast h1 span { color: var(--accent); }
+.dateline { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.jump { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.jump a {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;
+  text-decoration: none; padding: 4px 8px; background: var(--chip-bg); color: var(--ink); border-radius: 3px;
+}
+.jump a:hover { color: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); }
+
+/* Tags */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 2px 6px; border: 1px solid currentColor; border-radius: 3px; line-height: 1.4; white-space: nowrap;
+}
+.t-ok { color: var(--ok); } .t-warn { color: var(--warn); } .t-unv { color: var(--unv); }
+.t-left { color: var(--left); } .t-right { color: var(--right); } .t-plain { color: var(--muted); }
+
+/* One Thing band */
+.one { background: var(--band); color: var(--band-ink); padding: 22px 20px; border-radius: 6px; display: flex; flex-direction: column; gap: 10px; }
+.one .kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.one h2 { font-family: var(--font-display); font-weight: 800; font-size: clamp(28px, 7vw, 36px); line-height: 1; margin: 0; text-wrap: balance; text-transform: uppercase; }
+.one p { margin: 0; }
+.one .why { color: var(--band-muted); font-size: 15px; }
+.one .why b { color: var(--band-ink); }
+.src { font-size: 12.5px; color: var(--muted); }
+.one .src { color: var(--band-muted); }
+.src a { color: inherit; }
+
+/* Sections */
+section { display: flex; flex-direction: column; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 4px; margin-bottom: 4px; }
+.sec-head h2 { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1; margin: 0; text-transform: uppercase; letter-spacing: 0.01em; }
+.sec-head .note { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: right; }
+.item { padding-block: 14px; border-top: 1px solid var(--rule); min-width: 0; }
+.sec-head + .item, .sec-head + .stats + .item { border-top: 0; }
+.item h3 { font-size: 17px; line-height: 1.3; margin: 0 0 4px; text-wrap: balance; }
+.item h3 a { text-decoration: none; }
+.item h3 a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+.item p { margin: 0; font-size: 15px; }
+.item p + p { margin-top: 6px; }
+.lead { color: var(--muted); }
+.cut { margin-top: 6px; font-size: 14.5px; }
+.cut b { color: var(--accent); }
+
+/* What they're saying */
+.story-title { font-size: 17px; font-weight: 700; margin: 0 0 10px; }
+.voices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.voice { background: var(--sheet); padding: 12px 14px; border-top: 3px solid var(--muted); min-width: 0; }
+.voice.left { border-top-color: var(--left); } .voice.right { border-top-color: var(--right); }
+.voice .who { font-weight: 700; font-size: 14.5px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.voice p { margin: 4px 0 0; font-size: 14.5px; }
+.split { margin-top: 10px; font-size: 14.5px; }
+.split b { color: var(--accent); }
+.filter { font-size: 13.5px; color: var(--muted); padding-top: 12px; border-top: 1px solid var(--rule); }
+
+/* Scoreboard */
+.board { display: flex; flex-direction: column; gap: 6px; padding-block: 12px 4px; }
+.score { display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: center; background: var(--sheet); padding: 8px 12px; font-variant-numeric: tabular-nums; }
+.wl { font-family: var(--font-display); font-weight: 800; font-size: 22px; line-height: 1; text-align: center; }
+.wl.w { color: var(--ok); } .wl.l { color: var(--right); }
+.score .teams { font-weight: 700; font-size: 15px; min-width: 0; }
+.score .when { font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; text-align: right; }
+
+/* Market stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); margin-block: 12px 2px; }
+.stat { background: var(--sheet); padding: 10px 12px; font-variant-numeric: tabular-nums; }
+.stat .k { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat .v { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1.1; }
+.up { color: var(--ok); } .down { color: var(--right); }
+@media (max-width: 520px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.cal { display: grid; grid-template-columns: 56px 1fr; gap: 4px 12px; font-size: 14.5px; margin-top: 6px; }
+.cal dt { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; color: var(--accent); padding-top: 2px; }
+.cal dd { margin: 0; }
+
+/* Odds bars (to scale, 0-100%) */
+.bar { position: relative; height: 12px; background: var(--chip-bg); margin-top: 10px; }
+.bar .ghost { position: absolute; inset: 0 auto 0 0; background: var(--rule); }
+.bar .fill { position: absolute; inset: 0 auto 0 0; background: var(--accent); }
+.bar .fill.d { background: var(--left); }
+.bar .notch { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); }
+.barlabel { display: flex; justify-content: space-between; gap: 8px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 420px) { .duo { grid-template-columns: 1fr; } }
+
+/* Wisdom */
+blockquote { margin: 0; font-size: 19px; line-height: 1.4; font-weight: 600; text-wrap: balance; }
+blockquote footer { font-size: 13px; font-weight: 400; color: var(--muted); margin-top: 6px; }
+
+/* Daily L */
+.dl { background: var(--band); color: var(--band-ink); border-radius: 6px; padding: 20px; display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: start; }
+.dl .big { font-family: var(--font-display); font-weight: 800; font-size: 120px; line-height: 0.78; color: var(--accent); grid-row: span 3; }
+.dl .kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--band-muted); }
+.dl h2 { font-family: var(--font-display); font-weight: 800; font-size: 34px; line-height: 1; margin: 0; text-transform: uppercase; }
+.dl .why { margin: 0; font-weight: 600; }
+.dl .roast { grid-column: 1 / -1; margin: 6px 0 0; color: var(--band-muted); font-size: 15px; }
+.dl .roast b { color: var(--band-ink); }
+.dl .src { grid-column: 1 / -1; color: var(--band-muted); }
+@media (max-width: 420px) { .dl .big { font-size: 88px; } }
+
+.bn-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.bn-top h3 { margin: 0; }
+.ticks { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; font-size: 14px; }
+.tick { font-family: var(--font-mono); font-size: 12px; padding: 2px 7px; background: var(--chip-bg); border-radius: 3px; }
+.risk { color: var(--muted); }
+.risk b { color: var(--right); }
+.intro { font-size: 14.5px; color: var(--muted); padding-top: 10px; margin: 0; }
+.foot { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+*{box-sizing:border-box} body{margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);display:flex;gap:6px;overflow-x:auto;padding-block:10px;border-bottom:1px solid var(--rule);scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:6px 10px;background:var(--chip-bg);color:var(--ink);border-radius:3px;white-space:nowrap}
+.nav a:hover{color:var(--accent)}
+.sixty{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.sixty li{padding-left:0}
+.sixty a{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-right:6px}
+.group{display:flex;flex-direction:column;gap:24px;scroll-margin-top:72px}
+.gtitle{font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:clamp(34px,9vw,46px);line-height:.95;margin:8px 0 -6px;color:var(--accent)}
+.sec{scroll-margin-top:60px}
+.sec-head h3{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1;margin:0;text-transform:uppercase;letter-spacing:.01em}
+.item h4{font-size:17px;line-height:1.3;margin:0 0 4px;text-wrap:balance}
+.item h4 a{text-decoration:none}
+.item h4 a:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.sec-head + .item{border-top:0}
+.after{margin-top:8px!important}
+.score .rec{font-family:var(--font-mono);font-size:11px;color:var(--muted);font-weight:500;margin-left:6px}
+.score .nxt{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+.learned{font-size:13px;color:var(--muted);margin:0}
+.dl .src a{color:var(--band-muted)}
+.vote{display:flex;gap:6px;margin-top:10px}
+.vote button{font:inherit;font-size:15px;line-height:1;padding:6px 10px;border:1px solid var(--rule);background:var(--sheet);border-radius:999px;cursor:pointer;filter:grayscale(1);opacity:.75}
+.vote button:hover{opacity:1;filter:none}
+.vote button[aria-pressed="true"]{filter:none;opacity:1;border-color:var(--accent);background:var(--chip-bg)}
+.one .vote button,.dl .vote button{background:transparent;border-color:rgba(255,255,255,.25)}
+.voter{font-family:var(--font-mono);font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.wx{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+.wx-now{display:flex;align-items:center;gap:12px}
+.wx-i{font-size:34px;line-height:1}
+.wx-t{font-family:var(--font-display);font-weight:800;font-size:44px;line-height:1}
+.wx-l{display:flex;flex-direction:column;font-weight:600;font-size:16px}
+.wx-l small{font-weight:400;font-size:12.5px;color:var(--muted)}
+.wx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.wx-grid div{display:flex;flex-direction:column;min-width:0}
+.wx-grid b{font-size:15px;font-variant-numeric:tabular-nums}
+.wx-grid span{font-size:11.5px;color:var(--muted)}
+.wx-tmw{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:10px}
+@media (max-width:480px){.wx-grid{grid-template-columns:repeat(2,1fr);row-gap:10px}}
+details.more{margin-top:6px}
+details.more>summary,details.moreitems>summary{cursor:pointer;list-style:none;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);padding:4px 0}
+details.more>summary::-webkit-details-marker,details.moreitems>summary::-webkit-details-marker{display:none}
+details.more>summary::after{content:" ▾"} details.more[open]>summary::after{content:" ▴"}
+details.more p{margin-top:6px!important}
+details.moreitems{border-top:1px solid var(--rule);padding-top:8px}
+details.moreitems>summary{padding:6px 0 10px}
+.glance .sixty{font-size:15.5px}
+.voter button{font:inherit;padding:3px 8px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:3px;cursor:pointer}
+.voter button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+
+/* ---- The Morning Dispatch: an old broadsheet, set for a phone ---- */
+:root{--paper:#f5efe2;--sheet:#fbf7ee;--ink:#1f1a14;--muted:#5f5446;--rule:#d9ccb4;--accent:#7a5a2e;--band:#1f1a14;--band-ink:#f5efe2;--band-muted:#c9b99c;--left:#2f4a6d;--right:#7d2e2b;--ok:#3f6b4a;--warn:#8a6a3b;--unv:#5d4a77;--chip-bg:#efe6d4;color-scheme:light;--font-display:"Cormorant Garamond","Iowan Old Style",Garamond,Georgia,serif;--font-body:"EB Garamond","Iowan Old Style",Garamond,Georgia,serif;--font-mono:"EB Garamond","Iowan Old Style",Georgia,serif;--font-plate:"UnifrakturMaguntia","Old English Text MT","Cormorant Garamond",serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#f5efe2;--sheet:#fbf7ee;--ink:#1f1a14;--muted:#5f5446;--rule:#d9ccb4;--accent:#7a5a2e;--band:#1f1a14;--band-ink:#f5efe2;--band-muted:#c9b99c;--left:#2f4a6d;--right:#7d2e2b;--ok:#3f6b4a;--warn:#8a6a3b;--unv:#5d4a77;--chip-bg:#efe6d4;color-scheme:light;}}
+:root[data-theme="dark"]{--paper:#f5efe2;--sheet:#fbf7ee;--ink:#1f1a14;--muted:#5f5446;--rule:#d9ccb4;--accent:#7a5a2e;--band:#1f1a14;--band-ink:#f5efe2;--band-muted:#c9b99c;--left:#2f4a6d;--right:#7d2e2b;--ok:#3f6b4a;--warn:#8a6a3b;--unv:#5d4a77;--chip-bg:#efe6d4;color-scheme:light;}
+body{font-size:18.5px;line-height:1.6;-webkit-font-smoothing:antialiased;background:var(--paper);
+ background-image:radial-gradient(rgba(120,90,40,.035) 1px,transparent 1px);background-size:3px 3px}
+.wrap{gap:26px}
+a{text-decoration-color:rgba(122,90,46,.45);text-underline-offset:3px}
+/* nameplate */
+.mast{align-items:stretch;text-align:center;gap:0;padding-bottom:0}
+.ears{display:flex;justify-content:space-between;gap:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:8px}
+.ears span{max-width:46%;line-height:1.35}.ears span:last-child{text-align:right}
+.mast h1{font-family:var(--font-plate);font-weight:400;text-transform:none;letter-spacing:0;font-size:clamp(38px,11.5vw,74px);line-height:1.05;margin:2px 0 8px;color:var(--ink)}
+.mast h1 span{color:inherit;font:inherit}
+.folio{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:3px double var(--ink);border-bottom:3px double var(--ink);padding:6px 2px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.dateline{display:none}
+.voter{justify-content:center;margin-top:12px;font-size:14px;font-style:italic;color:var(--muted);text-transform:none;letter-spacing:0;font-family:var(--font-body)}
+.mast .legend{justify-content:center;margin-top:8px;font-family:var(--font-body);letter-spacing:.12em;text-transform:uppercase;font-size:10.5px}
+.mast .legend .tag{font-size:9.5px;padding:1px 7px}
+.learned{text-align:center;font-style:italic}
+/* small caps everywhere a label lives */
+.tag,.one .kicker,.nav a,.sixty a,.score .rec,.score .when,.wx-grid span,.sec-head .note,.stat .k,.tick,.barlabel,details.more>summary,details.moreitems>summary,.cal dt{font-family:var(--font-body);letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+.tag{border-radius:0;padding:1px 6px;font-size:9.5px}
+/* section index */
+.nav{justify-content:center;flex-wrap:wrap;gap:0;padding:8px 0;border-bottom:1px solid var(--ink);background:var(--paper)}
+.nav a{background:none;border:0;border-radius:0;padding:4px 10px;color:var(--ink);position:relative}
+.nav a+a::before{content:"·";position:absolute;left:-3px;color:var(--muted)}
+.nav a:hover{color:var(--accent)}
+@media (max-width:520px){.nav{flex-wrap:nowrap;justify-content:flex-start}.folio{font-size:10px;letter-spacing:.1em;flex-wrap:nowrap}.folio span:first-child{display:none}}
+/* weather report */
+.wx{border-radius:0;border:1px solid var(--ink);box-shadow:inset 0 0 0 3px var(--sheet),inset 0 0 0 4px var(--rule)}
+.wx-i{filter:grayscale(.35) sepia(.25)}
+.wx-t{font-family:var(--font-display);font-weight:500;font-size:48px}
+.wx-l{font-family:var(--font-display);font-size:20px;font-weight:600}
+.wx-t,.wx-grid b,.score,.wx-l small,.stat .v{font-variant-numeric:lining-nums tabular-nums}
+/* lead story */
+.one{background:none;color:var(--ink);border-radius:0;padding:4px 0 18px;border-bottom:1px solid var(--ink);text-align:left}
+.one .kicker{color:var(--accent);text-align:center}
+.one h2{font-family:var(--font-display);font-weight:600;text-transform:none;letter-spacing:-.005em;font-size:clamp(32px,8.5vw,46px);line-height:1.08;text-align:center;margin:2px 0 6px}
+.one p:not(.why):not(.src)::first-letter{float:left;font-family:var(--font-display);font-weight:600;font-size:3.4em;line-height:.82;padding:6px 8px 0 0;color:var(--ink)}
+.one .why{color:var(--muted);font-style:italic}.one .why b{color:var(--ink);font-style:normal}
+.one .src{color:var(--muted)}
+.one .vote button,.dl .vote button{background:var(--sheet);border-color:var(--rule)}
+/* at a glance */
+.glance{border:1px solid var(--rule);padding:14px 18px;background:var(--sheet)}
+.glance .sec-head{border:0;justify-content:center}
+.sixty a{color:var(--accent);margin-right:8px}
+/* departments */
+.gtitle{font-family:var(--font-display);font-weight:600;text-transform:none;letter-spacing:.01em;color:var(--ink);text-align:center;font-size:clamp(28px,7.5vw,36px);margin:14px 0 -8px;padding:0;border:0;display:flex;align-items:center;gap:14px}
+.gtitle::before,.gtitle::after{content:"";flex:1;height:0;border-top:3px double var(--ink)}
+.sec-head{border-bottom:1px solid var(--ink);justify-content:center}
+.sec-head h2,.sec-head h3{font-family:var(--font-body);font-weight:500;text-transform:uppercase;letter-spacing:.2em;font-size:12.5px}
+.item{border-top:1px solid var(--rule)}
+.item h4,.item h3{font-family:var(--font-display);font-weight:600;font-size:23px;line-height:1.18;margin-bottom:4px}
+.item p{font-size:17.5px}
+.story-title{font-family:var(--font-display);font-size:22px;font-weight:600}
+.voice{border-radius:0;background:var(--sheet)}
+.cut b,.split b{color:var(--accent)}
+.score{background:var(--sheet);border-bottom:1px solid var(--rule)}
+.score .teams{font-weight:600}
+.wl{font-family:var(--font-display);font-weight:600}
+.stat .v{font-family:var(--font-display);font-weight:500}
+blockquote{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:24px;text-align:center;padding:6px 10px}
+blockquote footer{font-style:normal;font-family:var(--font-body);letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+/* the Daily L, boxed like a column */
+.dl{background:var(--sheet);color:var(--ink);border-radius:0;border:1px solid var(--ink);box-shadow:inset 0 0 0 4px var(--sheet),inset 0 0 0 5px var(--ink);padding:22px 22px 18px}
+.dl .big{font-family:var(--font-plate);font-weight:400;color:var(--right);font-size:96px}
+.dl .kicker{color:var(--right);font-family:var(--font-body);letter-spacing:.2em;text-transform:uppercase;font-size:11px}
+.dl h2{font-family:var(--font-display);font-weight:600;text-transform:none;font-size:32px;line-height:1.05}
+.dl .why{font-style:italic}
+.dl .roast,.dl .src,.dl .src a{color:var(--muted)}
+.dl .roast b{color:var(--ink)}
+.vote button{border-radius:999px;background:var(--sheet)}
+.foot{text-align:center;font-style:italic;border-top:3px double var(--ink)}
+/* a real broadsheet on a big screen */
+@media (min-width:960px){
+ .wrap{max-width:940px}
+ .group .sec{column-count:2;column-gap:44px;column-rule:1px solid var(--rule);display:block}
+ .group .sec>.sec-head,.group .sec>.board,.group .sec>.stats{column-span:all}
+ .item,.voices,details.moreitems,blockquote{break-inside:avoid}
+ .one h2{font-size:52px}
+}
+</style></head>
+<body><!-- dispatch-debug {&quot;from&quot;:&quot;editor&quot;,&quot;topKeys&quot;:[&quot;one_thing&quot;,&quot;sixty_seconds&quot;,&quot;sections&quot;,&quot;daily_l&quot;],&quot;found&quot;:{&quot;culture&quot;:3,&quot;style&quot;:1,&quot;fun&quot;:2,&quot;wellness&quot;:2,&quot;home&quot;:2,&quot;budget&quot;:1,&quot;sports&quot;:5,&quot;wisdom&quot;:1},&quot;dailyL&quot;:true,&quot;editorChars&quot;:9687,&quot;writerChars&quot;:9528} --><div class="wrap">
+  <header class="mast">
+    <div class="ears"><span>Austin, Texas<br>Est. MMXXVI</span><span>64° · Cloudy<br>High 68°, low 64°</span></div>
+    <h1>The Morning Dispatch</h1>
+    <div class="folio"><span>No. 303</span><span>Friday, October 30</span><span>For Mrs. Roberts</span></div>
+    <div class="dateline">Friday, October 30 · Prepared for Mrs. Roberts</div>
+    <div class="voter" id="voter">👍/👎 any story to tune your edition · <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-30-sir.html" target="_blank" rel="noopener">Master Roberts' edition</a></div>
+    
+    
+  </header>
+  <section class="wx" aria-label="Weather">
+    <div class="wx-now"><span class="wx-i" aria-hidden="true">☁️</span><span class="wx-t">64°</span><span class="wx-l">Cloudy<small>Austin · feels 64°</small></span></div>
+    <div class="wx-grid">
+      <div><b>68° / 64°</b><span>High / low</span></div>
+      <div><b>53%</b><span>Rain from 1 PM</span></div>
+      <div><b>6 mph</b><span>Wind · UV 2</span></div>
+      <div><b>6:45 PM</b><span>Sunset · rise 7:44 AM</span></div>
+    </div>
+    <div class="wx-tmw">Tomorrow: 🌦️ Drizzle · 74° / 64° · 16% rain</div>
+  </section>
+  <nav class="nav" aria-label="Sections"><a href="#g-big">The Big 3</a><a href="#g-fun">The Fun Stuff</a><a href="#g-life">Life &amp; Home</a><a href="#g-sports">Sports</a><a href="#g-lift">Something Good</a><a href="#l">Daily L</a></nav>
+  <article class="one" id="one">
+    <div class="kicker">The One Thing</div>
+    <h2>Patrick Stewart, a true screen legend, dies at 86</h2>
+    <p>The &quot;Star Trek&quot; and &quot;X-Men&quot; star died Wednesday in Los Angeles. His spokesperson described &quot;a brief and poignant journey&quot; with Alzheimer's disease and Lewy Body Dementia. Stewart spent more of his career on stage than on the USS Enterprise, and won three Olivier Awards.</p>
+    <p class="why"><b>Why you care:</b> Captain Picard and Professor X shaped a lot of TV and movie nights, so he's worth a moment today.</p>
+    <div class="src"><a href="https://www.kxan.com/entertainment-news/ap-patrick-stewart-stage-giant-also-of-star-trek-and-x-men-fame-dies-at-86/" target="_blank" rel="noopener">KXAN Austin (AP)</a></div>
+    <div class="vote" data-s="one" data-h="Patrick Stewart, a true screen legend, dies at 86" data-u="https://www.kxan.com/entertainment-news/ap-patrick-stewart-stage-giant-also-of-star-trek-and-x-men-fame-dies-at-86/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
+  </article>
+  <section class="sec glance"><div class="sec-head"><h3>At a glance</h3></div><ul class="sixty"><li><a href="#g-big">The Big 3</a> Patrick Stewart, Picard and Professor X, has died at 86.</li><li><a href="#g-fun">The Fun Stuff</a> Celebrity Halloween costumes are rolling in, and Kim went full North West.</li><li><a href="#g-life">Life &amp; Home</a> Try the 'water method': apply skincare to slightly damp skin.</li><li><a href="#g-sports">Sports</a> Longhorns host Mississippi State Saturday at 6:30 PM CT as 20.5-point favorites.</li><li><a href="#g-lift">Something Good</a> NYT Well suggests a few hopeful habits, including picking up trash and pruning your social feeds.</li><li><a href="#l">The Daily L</a> Kyle Cooke posted a spicy 6:51 a.m. comment, then deleted it.</li></ul></section>
+  <div class="group" id="g-big"><h2 class="gtitle">The Big 3</h2><section class="sec"><p>Patrick Stewart, Picard and Professor X, has died at 86.</p></section></div><div class="group" id="g-fun"><h2 class="gtitle">The Fun Stuff</h2><section class="sec" id="culture">
+      <div class="sec-head"><h3>Pop Culture</h3><span class="note">Spooky season</span></div>
+      <div class="item">
+      <h4><a href="https://www.cosmopolitan.com/entertainment/celebs/a74229584/2026-celebrity-halloween-costume-roundup/" target="_blank" rel="noopener">Celebrity Halloween costumes are officially here</a></h4><p>Paris Hilton dressed as Britney Spears and as Belle; Winnie Harlow also dressed as Britney Spears.</p>
+      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Jordyn Woods and Karl-Anthony Towns went as Game of Thrones characters.</p><div class="src"><a href="https://www.cosmopolitan.com/entertainment/celebs/a74229584/2026-celebrity-halloween-costume-roundup/" target="_blank" rel="noopener">Cosmopolitan</a></div></details><div class="vote" data-s="culture" data-h="Celebrity Halloween costumes are officially here" data-u="https://www.cosmopolitan.com/entertainment/celebs/a74229584/2026-celebrity-halloween-costume-roundup/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.eonline.com/news/1437486/kardashian-jenner-halloween-costumes-over-the-years?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">Kim Kardashian dressed as her own daughter</a></h4><p>Kim Kardashian posted a look channeling her daughter North West, with a turquoise wig, grill and piercings.</p>
+      <details class="more"><summary>More</summary><p>Kris Jenner commented &quot;This is so fun!!!&quot; and Khloe said they looked like &quot;Twins!!!!!!&quot;</p><div class="src"><a href="https://www.eonline.com/news/1437486/kardashian-jenner-halloween-costumes-over-the-years?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a></div></details><div class="vote" data-s="culture" data-h="Kim Kardashian dressed as her own daughter" data-u="https://www.eonline.com/news/1437486/kardashian-jenner-halloween-costumes-over-the-years?cmpid=rss-syndicate-genericrss-us-top_stories"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><details class="moreitems"><summary>+1 more in Pop Culture</summary><div class="item">
+      <h4><a href="https://www.eonline.com/news/1437588/see-every-one-of-heidi-klums-halloween-costumes-before-2026-reveal?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">Heidi Klum teases a 'very, very bloody' costume</a></h4><p>Halloween's reigning queen shared a prosthetics sneak peek and asked fans, &quot;Have u figured it out yet??&quot;</p>
+      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Last year she was Medusa, with moving snakes.</p><div class="src"><a href="https://www.eonline.com/news/1437588/see-every-one-of-heidi-klums-halloween-costumes-before-2026-reveal?cmpid=rss-syndicate-genericrss-us-top_stories" target="_blank" rel="noopener">E! News</a></div></details><div class="vote" data-s="culture" data-h="Heidi Klum teases a 'very, very bloody' costume" data-u="https://www.eonline.com/news/1437588/see-every-one-of-heidi-klums-halloween-costumes-before-2026-reveal?cmpid=rss-syndicate-genericrss-us-top_stories"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div></details>
+    </section><section class="sec" id="style">
+      <div class="sec-head"><h3>Style, Beauty &amp; Reality TV</h3><span class="note">Reality TV watch</span></div>
+      <div class="item">
+      <h4><a href="https://www.cosmopolitan.com/entertainment/tv/a74293653/who-will-win-dwts/" target="_blank" rel="noopener">Derek Hough picks his DWTS winner</a></h4><p>Derek Hough said Connor Wood and Rylee Arnold have a strong shot at winning and believes Connor will make the finale.</p>
+      <div class="tags"><span class="tag t-plain">Opinion</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Derek also said he's glad the Judges' Save is gone, because he doesn't want to be the one sending someone home.</p><div class="src"><a href="https://www.cosmopolitan.com/entertainment/tv/a74293653/who-will-win-dwts/" target="_blank" rel="noopener">Cosmopolitan</a> · <a href="https://www.cosmopolitan.com/entertainment/tv/a74293568/derek-hough-against-dwts-judges-save/" target="_blank" rel="noopener">Cosmopolitan</a></div></details><div class="vote" data-s="style" data-h="Derek Hough picks his DWTS winner" data-u="https://www.cosmopolitan.com/entertainment/tv/a74293653/who-will-win-dwts/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="fun">
+      <div class="sec-head"><h3>Light &amp; Funny</h3><span class="note">Smile break</span></div>
+      <div class="item">
+      <h4><a href="https://www.bonappetit.com/story/texas-bbq-new-york-bark-brooklyn" target="_blank" rel="noopener">Texas-style brisket, Dominican-style, in Brooklyn</a></h4><p>Pitmaster Ruben Santana studied Central Texas barbecue online and on TV, then added Dominican flavors.</p>
+      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Bark BBQ serves a 14-hour smoked brisket, and the Friday night line snakes out onto the sidewalk.</p><div class="src"><a href="https://www.bonappetit.com/story/texas-bbq-new-york-bark-brooklyn" target="_blank" rel="noopener">Bon Appétit</a></div></details><div class="vote" data-s="fun" data-h="Texas-style brisket, Dominican-style, in Brooklyn" data-u="https://www.bonappetit.com/story/texas-bbq-new-york-bark-brooklyn"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.nytimes.com/2026/10/30/well/hope-hopeful-inspiration-caitlin-moran-book.html" target="_blank" rel="noopener">Four ways to feel more hopeful</a></h4><p>NYT Well suggests a few hopeful habits, including picking up trash and pruning your social feeds.</p>
+      <details class="more"><summary>More</summary><div class="src"><a href="https://www.nytimes.com/2026/10/30/well/hope-hopeful-inspiration-caitlin-moran-book.html" target="_blank" rel="noopener">NYT Well</a></div></details><div class="vote" data-s="fun" data-h="Four ways to feel more hopeful" data-u="https://www.nytimes.com/2026/10/30/well/hope-hopeful-inspiration-caitlin-moran-book.html"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section></div><div class="group" id="g-life"><h2 class="gtitle">Life &amp; Home</h2><section class="sec" id="wellness">
+      <div class="sec-head"><h3>Health &amp; Wellness</h3><span class="note">Feel good</span></div>
+      <div class="item">
+      <h4><a href="https://www.elle.com/beauty/a74279732/the-water-method-skincare-routine-explained/" target="_blank" rel="noopener">The 'water method' may plump skin; evidence is early</a></h4><p>Pat your face so it's damp, not dripping, then put on a hydrating serum and moisturizer right away.</p>
+      <div class="tags"><span class="tag t-warn">Evidence: Early</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> The trick is to lock in the moisture that's already on your skin.</p><div class="src"><a href="https://www.elle.com/beauty/a74279732/the-water-method-skincare-routine-explained/" target="_blank" rel="noopener">Elle</a></div></details><div class="vote" data-s="wellness" data-h="The 'water method' may plump skin; evidence is early" data-u="https://www.elle.com/beauty/a74279732/the-water-method-skincare-routine-explained/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.goodhousekeeping.com/relationships/pets/a74285908/mental-health-benefits-cats/" target="_blank" rel="noopener">Cats really may be good for your mood</a></h4><p>In an APA and AVMA survey, 84% of pet owners said their pets helped their mental health.</p>
+      <div class="tags"><span class="tag t-warn">Evidence: Moderate</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Experts say a cat isn't a substitute for professional care, and benefits vary.</p><div class="src"><a href="https://www.goodhousekeeping.com/relationships/pets/a74285908/mental-health-benefits-cats/" target="_blank" rel="noopener">Good Housekeeping</a></div></details><div class="vote" data-s="wellness" data-h="Cats really may be good for your mood" data-u="https://www.goodhousekeeping.com/relationships/pets/a74285908/mental-health-benefits-cats/"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="home">
+      <div class="sec-head"><h3>Home, Food &amp; Austin</h3><span class="note">Cozy corner</span></div>
+      <div class="item">
+      <h4><a href="https://www.bonappetit.com/story/recipes-bon-appetit-editors-cooked-october-2026" target="_blank" rel="noopener">Bon Appétit editors' weeknight favorites</a></h4><p>Picks include cottage cheese meatballs, gochujang yogurt chicken and a browned-butter Rice Krispies treat.</p>
+      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> The chicken uses broiled thighs, and one editor got two desk lunches out of it.</p><div class="src"><a href="https://www.bonappetit.com/story/recipes-bon-appetit-editors-cooked-october-2026" target="_blank" rel="noopener">Bon Appétit</a></div></details><div class="vote" data-s="home" data-h="Bon Appétit editors' weeknight favorites" data-u="https://www.bonappetit.com/story/recipes-bon-appetit-editors-cooked-october-2026"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div><div class="item">
+      <h4><a href="https://www.apartmenttherapy.com/how-to-remove-dog-odor-from-couch-37522312?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main" target="_blank" rel="noopener">Getting dog smell out of your couch</a></h4><p>A writer tested three methods and found the simplest one worked best.</p>
+      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> The steamer only scored 2/5. One tested mix was 1/4 cup white vinegar, 3/4 cup warm water and 1 tablespoon dish soap.</p><div class="src"><a href="https://www.apartmenttherapy.com/how-to-remove-dog-odor-from-couch-37522312?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main" target="_blank" rel="noopener">Apartment Therapy</a></div></details><div class="vote" data-s="home" data-h="Getting dog smell out of your couch" data-u="https://www.apartmenttherapy.com/how-to-remove-dog-odor-from-couch-37522312?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section><section class="sec" id="budget">
+      <div class="sec-head"><h3>Planning &amp; Budget</h3><span class="note">Plan ahead</span></div>
+      <div class="item">
+      <h4><a href="https://www.cntraveler.com/story/what-happens-if-your-passport-expires-while-youre-abroad" target="_blank" rel="noopener">Check your passport date before you book</a></h4><p>Many countries want at least six months left on your passport, and some EU destinations want three months past your departure.</p>
+      <details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> Planner tip: jot your passport expiration date on your calendar so a trip never gets derailed.</p><div class="src"><a href="https://www.cntraveler.com/story/what-happens-if-your-passport-expires-while-youre-abroad" target="_blank" rel="noopener">Condé Nast Traveler</a></div></details><div class="vote" data-s="budget" data-h="Check your passport date before you book" data-u="https://www.cntraveler.com/story/what-happens-if-your-passport-expires-while-youre-abroad"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section></div><div class="group" id="g-sports"><h2 class="gtitle">Sports</h2><section class="sec" id="sports">
+      <div class="sec-head"><h3></h3><span class="note">Game days</span></div>
+      <div class="board">
+      <div class="score"><span class="wl w">W</span>
+      <span class="teams">Texas 34, Ole Miss 27 <span class="rec">5-2 · 8th in SEC</span><span class="nxt">Next: vs Mississippi St · Sat, Oct 31, 6:30 PM CT · <b>90% to win</b> · TEX -20.5</span></span>
+      <span class="when">Sat</span></div>
+      <div class="score"><span class="wl l">L</span>
+      <span class="teams">Falcons 29, 49ers 20 <span class="rec">6-1 · 1st in NFC West</span><span class="nxt">Next: vs Raiders · Sun, Nov 8, 3:25 PM CT · <b>84% to win</b> · SF -9.5</span></span>
+      <span class="when">Sun</span></div>
+      <div class="score"><span class="wl w">W</span>
+      <span class="teams">Steelers 16, Saints 10 <span class="rec">5-2 · 1st in AFC North</span><span class="nxt">Next: vs Browns · Sun, Nov 1, 12:00 PM CT · <b>66% to win</b> · PIT -3.5</span></span>
+      <span class="when">Sun</span></div>
+      <div class="score"><span class="wl w">W</span>
+      <span class="teams">Spurs 117, Jazz 111 <span class="rec">3-2 · 3rd in Southwest Division</span><span class="nxt">Next: vs Timberwolves · Sat, Oct 31, 7:00 PM CT · <b>71% to win</b></span></span>
+      <span class="when">Wed</span></div></div><p class="filter">Longhorns (5-2): host Mississippi State Saturday at 6:30 PM CT, fresh off the 34-27 win over Ole Miss. ESPN gives Texas a 90% win chance as a 20.5-point favorite.</p><p class="filter">49ers (6-1, first in NFC West) are coming off a 29-20 loss to the Falcons and host the Raiders Nov. 8 at 3:25 PM CT; ESPN gives them an 84% win chance.</p><details class="moreitems"><summary>+3 more in Sports</summary><p class="filter">Aaron Rodgers and the Steelers (5-2) beat the Saints 16-10 and face the Browns Sunday at 12:00 PM CT. ESPN gives Pittsburgh 66% as a 3.5-point favorite.</p><p class="filter">Bonus for Austin-adjacent fans: the Spurs (3-2, with Wembanyama) host the Timberwolves Saturday at 7:00 PM CT.</p><div class="item">
+      <h4><a href="https://www.youtube.com/watch?v=HTdg-mxjJho" target="_blank" rel="noopener">Brewers crash The Pat McAfee Show</a></h4><p>Based on the title alone, the Brewers appear to have taken over Pat McAfee's show after a World Series win, but the video wasn't watched.</p>
+      <div class="tags"><span class="tag t-unv">Unverified</span></div><details class="more"><summary>More</summary><p class="cut"><b>Cut through it:</b> We only have the title, not the video, so go watch for the details.</p><div class="src"><a href="https://www.youtube.com/watch?v=HTdg-mxjJho" target="_blank" rel="noopener">Pat McAfee (YouTube)</a></div></details><div class="vote" data-s="sports" data-h="Brewers crash The Pat McAfee Show" data-u="https://www.youtube.com/watch?v=HTdg-mxjJho"><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div></details>
+    </section></div><div class="group" id="g-lift"><h2 class="gtitle">Something Good</h2><section class="sec" id="wisdom">
+      <div class="sec-head"><h3>Wisdom</h3><span class="note">Little nudge</span></div>
+      <div class="item"><blockquote>&quot;Hope&quot; is the thing with feathers.<footer>Emily Dickinson</footer></blockquote><p class="after">Pair it with the NYT tip: pick up a bit of litter, trim your feed, enjoy the lift.</p><div class="vote" data-s="wisdom" data-h="&quot;Hope&quot; is the thing with feathers." data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div></div>
+    </section></div>
+  
+  <article class="dl" id="l">
+    <span class="big" aria-hidden="true">L</span>
+    <div class="kicker">The Daily L · A Column</div>
+    <h2>Kyle Cooke</h2>
+    <p class="why">Kyle Cooke posted a deleted early-morning comment on West Wilson's Instagram; Page Six reported the 6:51 a.m. timestamp.</p>
+    <p class="roast">Nothing says healthy boundaries like a spicy comment before breakfast. Page Six confirmed the 6:51 a.m. timestamp, which is a lot of feelings before coffee. The comment vanished, though it's unclear whether Kyle or West Wilson deleted it. By Thursday he was posting a statement about wanting to &quot;leave this alone,&quot; and admitting he sometimes fights &quot;too hard.&quot; Next time, Kyle, try the drafts folder: it can't screenshot you.</p>
+    <div class="src"><a href="https://pagesix.com/2026/10/30/entertainment/kyle-cooke-raises-concerns-about-ex-amanda-batulas-wellbeing-as-he-breaks-his-silence-after-brutal-west-wilson-dig/" target="_blank" rel="noopener">Page Six</a></div>
+    <div class="vote" data-s="l" data-h="Kyle Cooke" data-u=""><button type="button" data-v="1" aria-label="More like this">👍</button><button type="button" data-v="-1" aria-label="Less like this">👎</button></div>
+  </article>
+  <footer class="foot">
+    <p style="margin:0">Picked by Gemini, written by Claude, fact-checked by GPT. Tags are the agents' best read, not verdicts. Nothing here is financial advice.</p>
+    <p style="margin:0">Your 👍/👎 shape only your own edition.</p>
+    <p style="margin:0">This edition: <a href="https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-30-marisol.html" target="_blank" rel="noopener">https://coulterwroberts.github.io/daily-signal-k7x2q/editions/2026-10-30-marisol.html</a></p>
+  </footer>
+</div>
+<script>
+(() => {
+  const CFG = {"url":"https://desktop-u5ut9ih.tail9f72eb.ts.net/webhook/signal-vote","people":[["U07PS2CUUUC","Master Roberts"],["U07Q28B5LUR","Mrs. Roberts"]],"edition":"2026-10-30","who":"U07Q28B5LUR"};
+  const ls = { get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} } };
+  const box = document.getElementById('voter');
+  let who = CFG.who || ls.get('signal_who');
+  const nameOf = (id) => (CFG.people.find(p => p[0] === id) || [])[1] || '';
+  function drawVoter(prompt) {
+    if (!CFG.url || !CFG.people.length) return;
+    box.hidden = false;
+    box.innerHTML = (prompt ? '<b>Who’s voting?</b>' : 'Voting as') + CFG.people.map(p => '<button type="button" data-who="' + p[0] + '" aria-pressed="' + (p[0] === who) + '">' + p[1] + '</button>').join('');
+  }
+  let after = null;
+  box.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-who]'); if (!b) return;
+    who = b.dataset.who; ls.set('signal_who', who); drawVoter(false);
+    if (after) { const f = after; after = null; f(); }
+  });
+  const queue = () => { try { return JSON.parse(ls.get('signal_queue') || '[]'); } catch (e) { return []; } };
+  const saveQueue = (a) => ls.set('signal_queue', JSON.stringify(a.slice(-300)));
+  async function flush() {
+    const a = queue(); if (!a.length || !CFG.url) return;
+    const left = [];
+    for (const v of a) { try { await fetch(CFG.url + '?' + new URLSearchParams(v).toString(), { mode: 'no-cors', cache: 'no-store' }); } catch (e) { left.push(v); } }
+    saveQueue(left);
+  }
+  const keyOf = (el) => 'signal_vote:' + CFG.edition + ':' + who + ':' + el.dataset.h;
+  document.querySelectorAll('.vote').forEach(el => {
+    const v = ls.get(keyOf(el));
+    el.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === v)));
+  });
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('.vote button'); if (!b) return;
+    const el = b.closest('.vote');
+    const go = () => {
+      const was = ls.get(keyOf(el));
+      const v = was === b.dataset.v ? '0' : b.dataset.v;
+      ls.set(keyOf(el), v);
+      el.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.v === v)));
+      const a = queue();
+      a.push({ who, edition: CFG.edition, section: el.dataset.s, headline: el.dataset.h, url: el.dataset.u || '', vote: v, at: new Date().toISOString() });
+      saveQueue(a); flush();
+    };
+    if (!who) { after = go; drawVoter(true); box.scrollIntoView({ behavior: 'smooth', block: 'center' }); } else go();
+  });
+  flush();
+})();
+</script>
+</body></html>
